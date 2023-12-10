@@ -4,6 +4,7 @@ import ManufacturerSelect from "./ui/ManufacturerSelect";
 import ModelSelect from "../components/ui/ModelSelect";
 import CarDetails from "../components/ui/CarDetails";
 import ImageDisplay from "../components/ui/ImageDisplay";
+import ManufacturerDetails from "./ui/ManufacturerDetails";
 
 function CarPickerForm() {
   const [selectedManufacturer, setSelectedManufacturer] = useState("");
@@ -30,12 +31,18 @@ function CarPickerForm() {
             handleManufacturerChange={handleManufacturerChange}
           />
           {selectedManufacturer && (
-            <ModelSelect
-              selectedManufacturer={selectedManufacturer}
-              selectedModel={selectedModel}
-              handleModelChange={handleModelChange}
-              carMakes={carMakes}
-            />
+            <>
+              <ModelSelect
+                selectedManufacturer={selectedManufacturer}
+                selectedModel={selectedModel}
+                handleModelChange={handleModelChange}
+                carMakes={carMakes}
+              />
+              <ManufacturerDetails
+                logo={logo}
+                ManufacturerDescription={ManufacturerDescription}
+              />
+            </>
           )}
         </div>
         {selectedModel && (

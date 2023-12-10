@@ -1,5 +1,7 @@
 const carMakes = {
   Ferrari: {
+    logo: "Hello",
+    description: "Helllooooo",
     "Ferrari 488 GTB": {
       description:
         "The Ferrari 488 GTB is a stunning mid-engine supercar, boasting a 3.9-liter twin-turbocharged V8 engine that generates around 660 horsepower. Its sleek design, combined with advanced aerodynamics, results in impressive performance, capable of reaching 0 to 60 mph in under 3 seconds.",
