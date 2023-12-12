@@ -2,7 +2,7 @@
 import React from "react";
 
 function CarDetails({ selectedManufacturer, selectedModel, carMakes }) {
-  const carDetails = carMakes[selectedManufacturer][selectedModel];
+  const carDetails = carMakes[selectedManufacturer].cars[selectedModel];
 
   if (!carDetails) return null;
 

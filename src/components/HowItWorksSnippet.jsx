@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from "react";
 
 function HowItWorksSnippet({ title, description, image, flipImage }) {
   const containerRef = useRef(null);
@@ -7,14 +7,16 @@ function HowItWorksSnippet({ title, description, image, flipImage }) {
   useEffect(() => {
     const options = {
       root: null,
-      rootMargin: '0px',
+      rootMargin: "0px",
       threshold: 0.5,
     };
 
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
-        setIsVisible(true);
-        observer.unobserve(entry.target);
+        setTimeout(() => {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }, 250);
       }
     }, options);
 

@@ -1,9 +1,18 @@
 import React from "react";
 
-function ManufacturerDetails() {
+function ManufacturerDetails({
+  manufacturerDetails,
+  selectedManufacturer,
+  carMakes,
+}) {
+  const logo = carMakes[selectedManufacturer].logo;
+  const description = carMakes[selectedManufacturer].description;
+  console.log(logo);
+
   return (
-    <div>
-      <h1></h1>
+    <div className="w-full flex justify-center items-center flex-col">
+      <img src={logo} className="h-1/2" />
+      <p>{description} </p>
     </div>
   );
 }

@@ -5,10 +5,13 @@ import ModelSelect from "../components/ui/ModelSelect";
 import CarDetails from "../components/ui/CarDetails";
 import ImageDisplay from "../components/ui/ImageDisplay";
 import ManufacturerDetails from "./ui/ManufacturerDetails";
+import PriceButton from "./ui/PriceButton";
+import PricingStructure from "./ui/PricingStructure";
 
 function CarPickerForm() {
   const [selectedManufacturer, setSelectedManufacturer] = useState("");
   const [selectedModel, setSelectedModel] = useState("");
+  const [manufacturerDetails, setManufacturerDetails] = useState("");
   const carManufacturer = Object.keys(carMakes).sort();
 
   const handleManufacturerChange = (event) => {
@@ -18,6 +21,7 @@ function CarPickerForm() {
 
   const handleModelChange = (event) => {
     setSelectedModel(event.target.value);
+    setManufacturerDetails("");
   };
 
   return (
@@ -38,28 +42,48 @@ function CarPickerForm() {
                 handleModelChange={handleModelChange}
                 carMakes={carMakes}
               />
-              <ManufacturerDetails
-                logo={logo}
-                ManufacturerDescription={ManufacturerDescription}
-              />
             </>
           )}
         </div>
-        {selectedModel && (
+        {selectedManufacturer && !selectedModel && (
           <>
-            <CarDetails
-              selectedManufacturer={selectedManufacturer}
-              selectedModel={selectedModel}
+            <ManufacturerDetails
               carMakes={carMakes}
-            />
-            <ImageDisplay
+              carManufacturer={carManufacturer}
               selectedManufacturer={selectedManufacturer}
-              selectedModel={selectedModel}
-              carMakes={carMakes}
+              manufacturerDetails={manufacturerDetails}
             />
           </>
         )}
+        {selectedModel && (
+          <>
+            <div className="">
+              <CarDetails
+                selectedManufacturer={selectedManufacturer}
+                selectedModel={selectedModel}
+                carMakes={carMakes}
+              />
+              <ImageDisplay
+                selectedManufacturer={selectedManufacturer}
+                selectedModel={selectedModel}
+                carMakes={carMakes}
+              />
+            </div>
+            <div className="">
+              <PriceButton />
+            </div>
+          </>
+        )}
       </div>
+      {selectedModel && (
+        <div>
+          <PricingStructure
+            selectedManufacturer={selectedManufacturer}
+            selectedModel={selectedModel}
+            carMakes={carMakes}
+          />
+        </div>
+      )}
     </div>
   );
 }
