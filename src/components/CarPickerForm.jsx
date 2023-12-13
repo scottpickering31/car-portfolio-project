@@ -6,13 +6,18 @@ import CarDetails from "../components/ui/CarDetails";
 import ImageDisplay from "../components/ui/ImageDisplay";
 import ManufacturerDetails from "./ui/ManufacturerDetails";
 import PriceButton from "./ui/PriceButton";
-import PricingStructure from "./ui/PricingStructure";
+import PricingStructure from "../components/PricingStructure";
 
 function CarPickerForm() {
   const [selectedManufacturer, setSelectedManufacturer] = useState("");
   const [selectedModel, setSelectedModel] = useState("");
   const [manufacturerDetails, setManufacturerDetails] = useState("");
+  const [pricing, setPricing] = useState(false);
   const carManufacturer = Object.keys(carMakes).sort();
+
+  const handlePricing = () => {
+    setPricing(true);
+  };
 
   const handleManufacturerChange = (event) => {
     setSelectedManufacturer(event.target.value);
@@ -57,7 +62,7 @@ function CarPickerForm() {
         )}
         {selectedModel && (
           <>
-            <div className="">
+            <div>
               <CarDetails
                 selectedManufacturer={selectedManufacturer}
                 selectedModel={selectedModel}
@@ -69,8 +74,8 @@ function CarPickerForm() {
                 carMakes={carMakes}
               />
             </div>
-            <div className="">
-              <PriceButton />
+            <div>
+              <PriceButton handlePricing={handlePricing} />
             </div>
           </>
         )}
@@ -78,8 +83,9 @@ function CarPickerForm() {
       {selectedModel && (
         <div>
           <PricingStructure
-            selectedManufacturer={selectedManufacturer}
             selectedModel={selectedModel}
+            pricing={pricing}
+            selectedManufacturer={selectedManufacturer}
             carMakes={carMakes}
           />
         </div>

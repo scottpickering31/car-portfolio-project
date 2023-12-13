@@ -1,7 +1,8 @@
 const carMakes = {
   Ferrari: {
     logo: "src/assets/Logos/Ferarri-Logo.png",
-    description: "Helllooooo",
+    description:
+      "Ferrari, an iconic Italian sports car manufacturer, embodies a legacy of racing heritage, innovation, and passion. Famed for their striking design, high-performance engines, and unparalleled racing success, Ferrari cars capture the essence of speed, precision, and automotive excellence.",
     cars: {
       "Ferrari 488 GTB": {
         description:
@@ -12,6 +13,23 @@ const carMakes = {
         engine: "Twin-turbocharged V8",
         speed: 3,
         image: "src/assets/Ferrari/Ferrari-488-GTB.png",
+        dayRate: 850,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
 
       "Ferrari LaFerrari": {
@@ -24,6 +42,23 @@ const carMakes = {
         engine: "Hybrid (V12 engine with electric motor)",
         speed: 2.9,
         image: "src/assets/Ferrari/Ferrari-La-Ferrari.png",
+        dayRate: 800,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
 
       "Ferrari F40": {
@@ -35,13 +70,31 @@ const carMakes = {
         engine: "Twin-turbocharged V8",
         speed: 4.1,
         image: "src/assets/Ferrari/Ferrari-F40.png",
+        dayRate: 700,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
     },
   },
 
   Lamborghini: {
     logo: "src/assets/Logos/Lamborghini-Logo.png",
-    description: "Helllooooo",
+    description:
+      "Lamborghini, an Italian supercar manufacturer, symbolizes flamboyance, power, and striking design. Renowned for their aggressive styling, roaring engines, and lightning-fast acceleration, Lamborghini cars offer an adrenaline-fueled driving experience combined with luxurious comfort.",
     cars: {
       "Lamborghini Aventador": {
         description:
@@ -52,6 +105,23 @@ const carMakes = {
         engine: "Naturally aspirated V12",
         speed: 2.9,
         image: "src/assets/Lambourghini/Lambourghini-Aventador.png",
+        dayRate: 600,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
       "Lamborghini Huracán": {
         description:
@@ -62,6 +132,23 @@ const carMakes = {
         engine: "Naturally aspirated V10",
         speed: 2.5,
         image: "src/assets/Lambourghini/Lamborghini-Huracán.png",
+        dayRate: 450,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
 
       "Lamborghini Diablo": {
@@ -74,13 +161,31 @@ const carMakes = {
         engine: "Naturally aspirated V12",
         speed: 4.0,
         image: "src/assets/Lambourghini/Lambourghini-Diablo.png",
+        dayRate: 400,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
     },
   },
 
   Bugatti: {
     logo: "src/assets/Logos/Bugatti-Logo.png",
-    description: "Helllooooo",
+    description:
+      "Bugatti Automobiles, a French manufacturer, creates some of the fastest, most exclusive, and luxurious hypercars in the world. Renowned for their unparalleled engineering, top-speed records, and exquisite craftsmanship, Bugatti cars represent the pinnacle of automotive engineering and opulence.",
     cars: {
       "Bugatti Veyron": {
         description:
@@ -91,6 +196,23 @@ const carMakes = {
         engine: "Quad-turbocharged W16",
         speed: 2.5,
         image: "src/assets/Bugatti/Bugatti-Veyron.png",
+        dayRate: 1100,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
       "Bugatti Chiron": {
         description:
@@ -101,6 +223,23 @@ const carMakes = {
         engine: "Quad-turbocharged W16",
         speed: 2.4,
         image: "src/assets/Bugatti/Bugatti Chiron.png",
+        dayRate: 1200,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
       "Bugatti Divo": {
         description:
@@ -111,13 +250,31 @@ const carMakes = {
         engine: "Quad-turbocharged W16",
         speed: 2.4,
         image: "src/assets/Bugatti/Bugatti-Divo.png",
+        dayRate: 1450,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
     },
   },
 
   McLaren: {
     logo: "src/assets/Logos/McLaren-Logo.png",
-    description: "Helllooooo",
+    description:
+      "McLaren Automotive, a British manufacturer, is acclaimed for its range of high-performance sports cars and supercars. Known for their aerodynamic prowess, technological innovation, and track-focused performance, McLaren cars showcase a blend of lightweight design and impressive power, providing an unparalleled driving thrill.",
     cars: {
       "McLaren 720S": {
         description:
@@ -128,6 +285,23 @@ const carMakes = {
         engine: "Twin-turbocharged V8",
         speed: 2.8,
         image: "src/assets/McLaren/McLaren-720s.png",
+        dayRate: 550,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
       "McLaren P1": {
         description:
@@ -139,6 +313,23 @@ const carMakes = {
         engine: "Hybrid (Twin-turbocharged V8 with electric motor)",
         speed: 2.8,
         image: "src/assets/McLaren/McLaren-P1.png",
+        dayRate: 800,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
       "McLaren F1": {
         description:
@@ -149,13 +340,31 @@ const carMakes = {
         engine: "Naturally aspirated V12",
         speed: 3.2,
         image: "src/assets/McLaren/McLaren-F1.png",
+        dayRate: 1200,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
     },
   },
 
   Porsche: {
     logo: "src/assets/Logos/Porsche-Logo.png",
-    description: "Helllooooo",
+    description:
+      "Porsche, a legendary German sports car manufacturer, is synonymous with precision engineering, iconic design, and exceptional performance. Famed for its lineup of high-performance sports cars, SUVs, and sedans, Porsche vehicles combine cutting-edge technology with a rich racing heritage, delivering an exhilarating driving experience.",
     cars: {
       "Porsche 911 GT2 RS": {
         description:
@@ -166,6 +375,23 @@ const carMakes = {
         engine: "Twin-turbocharged flat-six",
         speed: 2.7,
         image: "src/assets/Porsche/Porsche 911 GT2 RS.png",
+        dayRate: 450,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
       "Porsche 918 Spyder": {
         description:
@@ -177,6 +403,23 @@ const carMakes = {
         engine: "Hybrid (Naturally aspirated V8 with electric motors)",
         speed: 2.2,
         image: "src/assets/Porsche/Porsche 918 Spyder.png",
+        dayRate: 500,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
       "Porsche Carrera GT": {
         description:
@@ -187,13 +430,31 @@ const carMakes = {
         engine: "Naturally aspirated V10",
         speed: 3.5,
         image: "src/assets/Porsche/Porsche Carrera GT.png",
+        dayRate: 480,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
     },
   },
 
   "Aston Martin": {
     logo: "src/assets/Logos/Aston-Martin-Logo.png",
-    description: "Helllooooo",
+    description:
+      "Aston Martin, a British luxury marque, epitomizes the fusion of elegance and performance. Revered for their iconic sports cars and grand tourers, Aston Martin vehicles embody timeless design, sophisticated craftsmanship, and thrilling driving dynamics, representing the epitome of automotive elegance.",
     cars: {
       "Aston Martin DB11": {
         description:
@@ -204,6 +465,23 @@ const carMakes = {
         engine: "Twin-turbocharged V8 or V12",
         speed: 3.7,
         image: "src/assets/Aston Martin/HOR_XB1_AM_DB11.webp",
+        dayRate: 400,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
       "Aston Martin Vulcan": {
         description:
@@ -214,6 +492,23 @@ const carMakes = {
         engine: "Naturally aspirated V12",
         speed: 3,
         image: "src/assets/Aston Martin/HOR_XB1_AM_Vulcan.webp",
+        dayRate: 600,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
       "Aston Martin One-77": {
         description:
@@ -224,13 +519,31 @@ const carMakes = {
         engine: "Naturally aspirated V12",
         speed: 3.7,
         image: "src/assets/Aston Martin/HOR_XB1_AM_One-77.webp",
+        dayRate: 650,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
     },
   },
 
   Keonigsegg: {
     logo: "src/assets/Logos/Koenigsegg-Logo.png",
-    description: "Helllooooo",
+    description:
+      "Koenigsegg Automotive, a Swedish hypercar manufacturer, stands at the forefront of automotive innovation and performance. Celebrated for their record-breaking speeds, advanced engineering, and handcrafted precision, Koenigsegg hypercars redefine the boundaries of automotive excellence.",
     cars: {
       "Koenigsegg Agera RS": {
         description:
@@ -241,6 +554,23 @@ const carMakes = {
         engine: "Twin-turbocharged V8",
         speed: 2.8,
         image: "src/assets/Keonigsegg/Koenigsegg-Agera-r.png",
+        dayRate: 730,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
       "Koenigsegg Jesko": {
         description:
@@ -251,6 +581,23 @@ const carMakes = {
         engine: "Twin-turbocharged V8",
         speed: 2.5,
         image: "src/assets/Keonigsegg/Koenigsegg-Jesko 14.44.14.png",
+        dayRate: 950,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
       "Koenigsegg Regera": {
         description:
@@ -262,13 +609,31 @@ const carMakes = {
         engine: "Hybrid (Internal Combustion Engine + Electric Motors)",
         speed: 2.8,
         image: "src/assets/Keonigsegg/Koenigsegg-Regera.png",
+        dayRate: 700,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
     },
   },
 
   Pagani: {
     logo: "src/assets/Logos/Pagani-Logo.png",
-    description: "Helllooooo",
+    description:
+      "Pagani Automobili, an Italian manufacturer, crafts some of the world's most exclusive and meticulously designed hypercars. Renowned for their breathtaking aesthetics, exceptional performance, and limited production, Pagani cars showcase an exquisite blend of artistry, engineering, and performance.",
     cars: {
       "Pagani Huayra": {
         description:
@@ -279,6 +644,23 @@ const carMakes = {
         engine: "Twin-turbocharged V12",
         speed: 3.0,
         image: "src/assets/Pagani/Pagani Huayra.png",
+        dayRate: 700,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
       "Pagani Zonda": {
         description:
@@ -289,6 +671,23 @@ const carMakes = {
         engine: "N/A",
         speed: 2.7,
         image: "src/assets/Pagani/Pagani Zonda.png",
+        dayRate: 600,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
       "Pagani Huayra BC": {
         description:
@@ -299,13 +698,31 @@ const carMakes = {
         engine: "Twin-turbocharged V12",
         speed: 3.3,
         image: "src/assets/Pagani/Pagani Huayra BC.png",
+        dayRate: 720,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
     },
   },
 
   Maserati: {
     logo: "src/assets/Logos/Maserati-Logo.png",
-    description: "Helllooooo",
+    description:
+      "Maserati, an emblem of Italian luxury and performance, specializes in producing elegant and powerful sports cars, sedans, and SUVs. Known for their distinctive style, thrilling performance, and luxurious interiors, Maserati vehicles offer a harmonious balance of refined craftsmanship and dynamic driving experiences.",
     cars: {
       "Maserati MC12": {
         description:
@@ -316,6 +733,23 @@ const carMakes = {
         engine: "Naturally aspirated V12",
         speed: 3.8,
         image: "src/assets/Maserati/Maserati-MC12.png",
+        dayRate: 500,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
       "Maserati GranTurismo": {
         description:
@@ -327,6 +761,23 @@ const carMakes = {
         engine: "Naturally aspirated V8 or V12",
         speed: 3.4,
         image: "src/assets/Maserati/Maserati-GranTurismo.png",
+        dayRate: 480,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
       "Maserati MC20": {
         description:
@@ -337,13 +788,31 @@ const carMakes = {
         engine: "Twin-turbocharged V6",
         speed: 2.9,
         image: "src/assets/Maserati/Maserati-MC20.png",
+        dayRate: 550,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
     },
   },
 
   Audi: {
     logo: "src/assets/Logos/Audi-Logo.png",
-    description: "Helllooooo",
+    description:
+      "Audi, a renowned German automobile manufacturer, is synonymous with cutting-edge technology, elegant design, and remarkable performance. Known for its range of luxurious sedans, SUVs, and high-performance sports cars, Audi combines engineering precision with innovative features, making each model a symbol of sophistication and driving pleasure.",
     cars: {
       "Audi R8": {
         description:
@@ -355,6 +824,23 @@ const carMakes = {
         engine: "Naturally aspirated V10 or V8",
         speed: 3.2,
         image: "src/assets/Audi/Audi-R8.png",
+        dayRate: 450,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
       "Audi RS e-tron GT": {
         description:
@@ -365,6 +851,23 @@ const carMakes = {
         engine: "Electric motors (all-wheel drive)",
         speed: 2.9,
         image: "src/assets/Audi/HOR_XB1_Audi_RS_e-tron.webp",
+        dayRate: 480,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
       "Audi RS6 Avant": {
         description:
@@ -375,13 +878,31 @@ const carMakes = {
         engine: "Twin-turbocharged V8",
         speed: 2.6,
         image: "src/assets/Audi/FH5_Audi_RS_6_Avant_2021_Large.webp",
+        dayRate: 470,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
     },
   },
 
   Mercedes: {
     logo: "src/assets/Logos/Mercedes-Benz-Logo.png",
-    description: "Helllooooo",
+    description:
+      "Mercedes-Benz, an iconic luxury automobile brand, stands as a beacon of automotive excellence and innovation. From elegant sedans to powerful sports cars and SUVs, Mercedes-Benz epitomizes refined luxury, advanced technology, and exceptional performance. With a history steeped in craftsmanship, Mercedes continues to set benchmarks in the automotive industry.",
     cars: {
       "Mercedes-AMG One": {
         description:
@@ -393,6 +914,23 @@ const carMakes = {
         engine: "Hybrid (1.6-liter turbocharged V6 with electric motors)",
         speed: 2.4,
         image: "src/assets/Mercedes/Mercedes-AMG One.png",
+        dayRate: 490,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
       "Mercedes-AMG GT": {
         description:
@@ -403,6 +941,23 @@ const carMakes = {
         engine: "Twin-turbocharged V8",
         speed: 2.8,
         image: "src/assets/Mercedes/Mercedes-AMG GT.png",
+        dayRate: 460,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
       "Mercedes-AMG SLS": {
         description:
@@ -413,13 +968,31 @@ const carMakes = {
         engine: "Naturally aspirated V8",
         speed: 2.8,
         image: "src/assets/Mercedes/Mercedes-AMG SLS.png",
+        dayRate: 470,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
     },
   },
 
   Lexus: {
     logo: "src/assets/Logos/Lexus-Logo.png",
-    description: "Helllooooo",
+    description:
+      "Lexus, the luxury division of Toyota, embodies a fusion of comfort, performance, and reliability. Recognized for its meticulously crafted vehicles, Lexus offers a range of sedans, SUVs, and coupes that blend high-end features with a focus on comfort and refinement, catering to those seeking a premium driving experience.",
     cars: {
       "Lexus LFA": {
         description:
@@ -430,6 +1003,23 @@ const carMakes = {
         engine: "Naturally aspirated V10",
         speed: 3.6,
         image: "src/assets/Lexus/Lexus-LFA.png",
+        dayRate: 460,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
       "Lexus LC 500": {
         description:
@@ -440,6 +1030,23 @@ const carMakes = {
         engine: "Naturally aspirated V8",
         speed: 3.4,
         image: "src/assets/Lexus/Lexus-LC-500.png",
+        dayRate: 450,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
       "Lexus RC F": {
         description:
@@ -450,13 +1057,31 @@ const carMakes = {
         engine: "Naturally aspirated V8",
         speed: 3.2,
         image: "src/assets/Lexus/Lexus-RC-F.png",
+        dayRate: 440,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
     },
   },
 
   Ford: {
     logo: "src/assets/Logos/Ford-Logo.png",
-    description: "Helllooooo",
+    description:
+      "Ford, a pioneering American automaker, boasts a legacy of producing iconic vehicles that blend performance with heritage. Renowned for its Mustangs, GTs, and high-performance variants, Ford combines raw power with modern technology, offering a range of vehicles that cater to enthusiasts and everyday drivers alike.",
     cars: {
       "Ford GT": {
         description:
@@ -467,6 +1092,23 @@ const carMakes = {
         engine: "Twin-turbocharged V6",
         speed: 2.8,
         image: "src/assets/Ford/Ford-GT.png",
+        dayRate: 480,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
       "Ford GT40": {
         description:
@@ -477,6 +1119,23 @@ const carMakes = {
         engine: "Naturally aspirated V8",
         speed: 3,
         image: "src/assets/Ford/Ford-GT40.png",
+        dayRate: 450,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
       "Ford Mustang Shelby GT500": {
         description:
@@ -487,13 +1146,31 @@ const carMakes = {
         engine: "Supercharged V8",
         speed: 3.2,
         image: "src/assets/Ford/Ford-Mustang-Shelby-GT500.png",
+        dayRate: 470,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
     },
   },
 
   Lotus: {
     logo: "src/assets/Logos/Lotus-Logo.png",
-    description: "Helllooooo",
+    description:
+      "Lotus Cars, synonymous with lightweight engineering and agile performance, creates sports cars renowned for their precision handling and track prowess. Embracing a philosophy of 'simplify, then add lightness,' Lotus vehicles offer a unique driving experience, emphasizing nimbleness and driver engagement.",
     cars: {
       "Lotus Evija": {
         description:
@@ -504,6 +1181,23 @@ const carMakes = {
         engine: "Electric motors",
         speed: 3.0,
         image: "src/assets/Lotus/Lotus-Evija.png",
+        dayRate: 490,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
       "Lotus Exige": {
         description:
@@ -514,6 +1208,23 @@ const carMakes = {
         engine: "Supercharged inline-four or V6",
         speed: 2.9,
         image: "src/assets/Lotus/Lotus-Exige.png",
+        dayRate: 450,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
       "Lotus Elise": {
         description:
@@ -524,13 +1235,31 @@ const carMakes = {
         engine: "Naturally aspirated inline-four",
         speed: 2.8,
         image: "src/assets/Lotus/Lotus-Elise.png",
+        dayRate: 440,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
     },
   },
 
   Bentley: {
     logo: "src/assets/Logos/Bentley-Logo.png",
-    description: "Helllooooo",
+    description:
+      "Bentley Motors, a pinnacle of British luxury, epitomizes opulence, craftsmanship, and refined performance. Known for its grand tourers, sedans, and SUVs, Bentley marries handcrafted interiors with powerful engines, delivering an unmatched combination of luxury and exhilarating performance.",
     cars: {
       "Bentley Continental GT": {
         description:
@@ -541,6 +1270,23 @@ const carMakes = {
         engine: "Twin-turbocharged V8 or W12",
         speed: 3.6,
         image: "src/assets/Bentley/Bentley-Continental-GT.png",
+        dayRate: 470,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
       "Bentley Bentayga Speed": {
         description:
@@ -551,6 +1297,23 @@ const carMakes = {
         engine: "Twin-turbocharged W12",
         speed: 3.2,
         image: "src/assets/Bentley/Bentley-Bentayga-Speed.png",
+        dayRate: 480,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
       "Bentley Mulsanne": {
         description:
@@ -561,13 +1324,31 @@ const carMakes = {
         engine: "Twin-turbocharged V8",
         speed: 3.4,
         image: "src/assets/Bentley/Bentley-Mulsanne.png",
+        dayRate: 470,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
     },
   },
 
   "Rolls Royce": {
     logo: "src/assets/Logos/Rolls-Royce-Logo.png",
-    description: "Helllooooo",
+    description:
+      "Rolls-Royce Motor Cars sets the standard for ultimate luxury and exclusivity in the automotive world. Renowned for its handcrafted elegance, bespoke features, and V12-powered vehicles, Rolls-Royce embodies a pinnacle of automotive opulence and refined craftsmanship.",
     cars: {
       "Rolls-Royce Wraith": {
         description:
@@ -578,6 +1359,23 @@ const carMakes = {
         engine: "Twin-turbocharged V12",
         speed: 4.4,
         image: "src/assets/Rolls Royce/Rolls-Royce Wraith.png",
+        dayRate: 490,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
       "Rolls-Royce Dawn": {
         description:
@@ -588,6 +1386,23 @@ const carMakes = {
         engine: "Twin-turbocharged V12",
         speed: 4,
         image: "src/assets/Rolls Royce/Rolls-Royce Dawn.png",
+        dayRate: 480,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
       "Rolls-Royce Phantom": {
         description:
@@ -598,13 +1413,31 @@ const carMakes = {
         engine: "Twin-turbocharged V12",
         speed: 4.2,
         image: "src/assets/Rolls Royce/Rolls-Royce Phantom.png",
+        dayRate: 470,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
     },
   },
 
   Tesla: {
     logo: "src/assets/Logos/Tesla-Logo.png",
-    description: "Helllooooo",
+    description:
+      "Tesla, an innovative electric vehicle manufacturer, leads the way in sustainable, high-performance cars. With a focus on electric powertrains, cutting-edge technology, and impressive acceleration, Tesla cars redefine the concept of eco-friendly, yet powerful, automotive innovation.",
     cars: {
       "Tesla Roadster": {
         description:
@@ -615,6 +1448,23 @@ const carMakes = {
         engine: "Electric motors",
         speed: 2.0,
         image: "src/assets/Tesla/Tesla Roadster.png",
+        dayRate: 460,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
       "Tesla Model S Plaid": {
         description:
@@ -625,6 +1475,23 @@ const carMakes = {
         engine: "Electric motors",
         speed: 1.9,
         image: "src/assets/Tesla/Tesla Model S Plaid.png",
+        dayRate: 470,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
       "Tesla Model X Plaid": {
         description:
@@ -635,13 +1502,31 @@ const carMakes = {
         engine: "Electric motors",
         speed: 1.9,
         image: "src/assets/Tesla/Tesla Model X Plaid.png",
+        dayRate: 480,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
     },
   },
 
   Rimac: {
     logo: "src/assets/Logos/RImac-Logo.svg",
-    description: "Helllooooo",
+    description:
+      "Rimac Automobili, a Croatian manufacturer of high-performance electric hypercars, pushes the boundaries of electric vehicle technology. Recognized for its lightning-fast acceleration, innovative engineering, and futuristic designs, Rimac represents the forefront of electric car performance and innovation.",
     cars: {
       "Rimac C_Two": {
         description:
@@ -652,6 +1537,23 @@ const carMakes = {
         engine: "Electric motors",
         speed: 1.9,
         image: "src/assets/Rimac/Rimac C_Two.png",
+        dayRate: 490,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
       "Rimac Concept_One": {
         description:
@@ -662,6 +1564,23 @@ const carMakes = {
         engine: "Electric motors",
         speed: 1.8,
         image: "src/assets/Rimac/Rimac C_Two.png",
+        dayRate: 470,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
       "Rimac Nevera": {
         description:
@@ -672,6 +1591,23 @@ const carMakes = {
         engine: "Electric motors",
         speed: 1.9,
         image: "src/assets/Rimac/Rimac Nevera.png",
+        dayRate: 480,
+        weekRate: function () {
+          const weekRates = this.dayRate * 6;
+          return weekRates;
+        },
+        weekRateBreakDown: function () {
+          const weekRateBreakDown = (this.dayRate * 6.5) / 7;
+          return weekRateBreakDown.toFixed(2);
+        },
+        monthRate: function () {
+          const monthRate = this.dayRate * 22;
+          return monthRate;
+        },
+        monthRateBreakDown: function () {
+          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          return monthRateBreakDown.toFixed(2);
+        },
       },
     },
   },

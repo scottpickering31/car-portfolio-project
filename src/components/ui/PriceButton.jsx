@@ -1,7 +1,7 @@
-function PriceButton() {
+function PriceButton({ handlePricing }) {
   return (
     <>
-      <button>Click for Pricing details</button>
+      <button onClick={handlePricing}>Click for Pricing details</button>
     </>
   );
 }

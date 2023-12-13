@@ -18,12 +18,12 @@ export default {
       },
       keyframes: {
         flipAnimation: {
-          "0%": { transform: "translateX(100%)" },
+          "0%": { transform: "translateX(150%)" },
           "100%": { transform: "translateX(0)" },
         },
       },
       transitionProperty: {
-        'opacity-transform': 'opacity, transform',
+        "opacity-transform": "opacity, transform",
       },
     },
   },

@@ -13,10 +13,8 @@ function HowItWorksSnippet({ title, description, image, flipImage }) {
 
     const observer = new IntersectionObserver(([entry]) => {
       if (entry.isIntersecting) {
-        setTimeout(() => {
-          setIsVisible(true);
-          observer.unobserve(entry.target);
-        }, 250);
+        setIsVisible(true);
+        observer.unobserve(entry.target);
       }
     }, options);
 
