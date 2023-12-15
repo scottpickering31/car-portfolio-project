@@ -1,7 +1,7 @@
 import PricingRates from "./ui/PricingRates";
 import AddToBasketButton from "./ui/AddToBasketButton";
-import BasketContents from "./ui/BasketContents";
 import ShowBasketButton from "./ui/ShowBasketButton";
+import Basket from "./ui/Basket";
 import { useState } from "react";
 
 function PricingStructure({
@@ -9,47 +9,39 @@ function PricingStructure({
   pricing,
   selectedManufacturer,
   carMakes,
+  addToBasket,
+  basketItem,
+  resetBasket,
 }) {
-  const [basketCount, setBasketCount] = useState(0);
-  const [basketItem, setBasketItem] = useState([]);
   const [toggleSideBar, setToggleSideBar] = useState(false);
 
-  const randomMath = Math.floor(Math.random() * itemArray.length);
-  const itemArray = [
-    "Ferrari",
-    "Lambourghini",
-    "Jaguar",
-    "Porsche",
-    "Rolls Royce",
-  ];
-
-  function addToBasket() {
-    setBasketCount(basketCount + 1);
-    setBasketItem([...basketItem, itemArray[randomMath]]);
-  }
-
-  function resetBasket() {
-    setBasketCount(0);
-    setBasketItem([]);
-  }
-
   function toggleSideBarShow() {
-    toggleSideBar === false ? setToggleSideBar(true) : setToggleSideBar(false);
+    setToggleSideBar(!toggleSideBar);
   }
 
   return (
     <div>
-      <PricingRates
-        selectedModel={selectedModel}
-        pricing={pricing}
-        selectedManufacturer={selectedManufacturer}
-        carMakes={carMakes}
-      />
-      <br></br>
       <div>
-        <ShowBasketButton toggleSideBar={toggleSideBarShow} />
-        <AddToBasketButton addToBasket={addToBasket} />
-        {toggleSideBar && <BasketContents basketItem={basketItem} />}
+        <PricingRates
+          selectedModel={selectedModel}
+          pricing={pricing}
+          selectedManufacturer={selectedManufacturer}
+          carMakes={carMakes}
+        />
+        <br></br>
+        {pricing && (
+          <div>
+            <ShowBasketButton toggleSideBarShow={toggleSideBarShow} />
+            <AddToBasketButton addToBasket={addToBasket} />
+          </div>
+        )}
+      </div>
+      <div>
+        <Basket
+          basketItem={basketItem}
+          resetBasket={resetBasket}
+          toggleSideBar={toggleSideBar}
+        />
       </div>
     </div>
   );

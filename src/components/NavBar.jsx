@@ -2,9 +2,8 @@ import React, { useState } from "react";
 import BasketIcon from "./ui/BasketIcon";
 import { UilBars } from "@iconscout/react-unicons";
 
-function NavBarDropDown({ basketCount, resetBasket }) {
+function NavBar({ basketCount, resetBasket }) {
   const [menuOpen, setMenuOpen] = useState(false);
-
 
   const pages = ["Home", "About", "Pricing", "Basket"];
 
@@ -45,4 +44,4 @@ function NavBarDropDown({ basketCount, resetBasket }) {
   );
 }
 
-export default NavBarDropDown;
+export default NavBar;
