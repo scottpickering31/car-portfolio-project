@@ -1,4 +1,5 @@
-import React from "react";
+import { connect } from "react-redux";
+import { resetBasket } from "../../../redux/actions/basketAction";
 
 function ResetBasketAmountButton({ resetBasket }) {
   return (
@@ -8,4 +9,8 @@ function ResetBasketAmountButton({ resetBasket }) {
   );
 }
 
-export default ResetBasketAmountButton;
+const mapDispatchToProps = {
+  resetBasket,
+};
+
+export default connect(null, mapDispatchToProps)(ResetBasketAmountButton);

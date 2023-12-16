@@ -1,7 +1,7 @@
 function ShowBasketButton({ toggleSideBarShow }) {
   return (
     <div>
-      <button onClick={toggleSideBarShow}>Show Basket</button>
+      <button onClick={toggleSideBarShow}>View Basket</button>
     </div>
   );
 }

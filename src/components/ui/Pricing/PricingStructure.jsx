@@ -1,7 +1,7 @@
 import PricingRates from "./PricingRates";
 import AddToBasketButton from "../Buttons/AddToBasketButton";
 import ShowBasketButton from "../Buttons/ShowBasketButton";
-import { useState } from "react";
+import { useState, createContext, useContext } from "react";
 
 function PricingStructure({
   selectedModel,
