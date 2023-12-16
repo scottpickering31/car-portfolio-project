@@ -1,7 +1,6 @@
-import PricingRates from "./ui/PricingRates";
-import AddToBasketButton from "./ui/AddToBasketButton";
-import ShowBasketButton from "./ui/ShowBasketButton";
-import Basket from "./ui/Basket";
+import PricingRates from "./PricingRates";
+import AddToBasketButton from "../Buttons/AddToBasketButton";
+import ShowBasketButton from "../Buttons/ShowBasketButton";
 import { useState } from "react";
 
 function PricingStructure({
@@ -9,9 +8,6 @@ function PricingStructure({
   pricing,
   selectedManufacturer,
   carMakes,
-  addToBasket,
-  basketItem,
-  resetBasket,
 }) {
   const [toggleSideBar, setToggleSideBar] = useState(false);
 
@@ -32,16 +28,9 @@ function PricingStructure({
         {pricing && (
           <div>
             <ShowBasketButton toggleSideBarShow={toggleSideBarShow} />
-            <AddToBasketButton addToBasket={addToBasket} />
+            <AddToBasketButton />
           </div>
         )}
-      </div>
-      <div>
-        <Basket
-          basketItem={basketItem}
-          resetBasket={resetBasket}
-          toggleSideBar={toggleSideBar}
-        />
       </div>
     </div>
   );

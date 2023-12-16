@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import BasketIcon from "./ui/BasketIcon";
+import BasketIcon from "../components/ui/Basket/BasketIcon";
 import { UilBars } from "@iconscout/react-unicons";
 
-function NavBar({ basketCount, resetBasket }) {
+function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const pages = ["Home", "About", "Pricing", "Basket"];
@@ -17,7 +17,7 @@ function NavBar({ basketCount, resetBasket }) {
 
   return (
     <>
-      <BasketIcon basketCount={basketCount} resetBasket={resetBasket} />
+      <BasketIcon />
       <div
         className="relative"
         onMouseEnter={handleHover}

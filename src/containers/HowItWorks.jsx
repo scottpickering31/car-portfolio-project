@@ -1,4 +1,4 @@
-import HowItWorksSnippet from "../components/HowItWorksSnippet";
+import HowItWorksSnippet from "../components/ui/HowItWorksSnippet";
 
 function HowItWorks() {
   const sectionObject = {

@@ -1,6 +1,6 @@
 import React from "react";
 
-function ResetBasketAmount({ resetBasket }) {
+function ResetBasketAmountButton({ resetBasket }) {
   return (
     <div>
       <button onClick={resetBasket}>Reset Basket</button>
@@ -8,4 +8,4 @@ function ResetBasketAmount({ resetBasket }) {
   );
 }
 
-export default ResetBasketAmount;
+export default ResetBasketAmountButton;
