@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { resetBasket } from "../../../redux/actions/basketAction";
+import { resetBasket } from "../../../statemanagement/actions/basketAction";
 
 function ResetBasketAmountButton({ resetBasket }) {
   return (

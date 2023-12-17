@@ -3,16 +3,19 @@ import CarPickerForm from "./containers/CarPickerForm.jsx";
 import Header from "./containers/Header.jsx";
 import HowItWorksSection from "./containers/HowItWorks.jsx";
 import { Provider } from "react-redux";
-import store from "./redux/store/store.js";
+import { BasketProvider } from "./statemanagement/context/BasketContext";
+import store from "./statemanagement/store/store.js";
 
 export default function App() {
   return (
     <Provider store={store}>
       <div>
-        <Header />
-        <HowItWorksSection />
-        <CarPickerForm />
-        <Basket />
+        <BasketProvider>
+          <Header />
+          <HowItWorksSection />
+          <CarPickerForm />
+          <Basket />
+        </BasketProvider>
       </div>
     </Provider>
   );

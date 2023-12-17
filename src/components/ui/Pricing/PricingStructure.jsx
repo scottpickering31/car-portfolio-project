@@ -1,7 +1,6 @@
 import PricingRates from "./PricingRates";
 import AddToBasketButton from "../Buttons/AddToBasketButton";
 import ShowBasketButton from "../Buttons/ShowBasketButton";
-import { useState, createContext, useContext } from "react";
 
 function PricingStructure({
   selectedModel,
@@ -9,12 +8,6 @@ function PricingStructure({
   selectedManufacturer,
   carMakes,
 }) {
-  const [toggleSideBar, setToggleSideBar] = useState(false);
-
-  function toggleSideBarShow() {
-    setToggleSideBar(!toggleSideBar);
-  }
-
   return (
     <div>
       <div>
@@ -27,7 +20,7 @@ function PricingStructure({
         <br></br>
         {pricing && (
           <div>
-            <ShowBasketButton toggleSideBarShow={toggleSideBarShow} />
+            <ShowBasketButton />
             <AddToBasketButton />
           </div>
         )}

@@ -1,7 +1,11 @@
-function ShowBasketButton({ toggleSideBarShow }) {
+import { useBasket } from "../../../statemanagement/context/BasketContext";
+
+function ShowBasketButton() {
+  const { toggleShowBasket } = useBasket();
+
   return (
     <div>
-      <button onClick={toggleSideBarShow}>View Basket</button>
+      <button onClick={toggleShowBasket}>View Basket</button>
     </div>
   );
 }

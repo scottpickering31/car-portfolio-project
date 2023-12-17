@@ -30,7 +30,7 @@ function CarPickerForm() {
   };
 
   return (
-    <div className="flex justify-center flex-col items-center mt-40 h-2/3 mb-96">
+    <div className="flex justify-center flex-col items-center mt-40 h-2/3">
       <h1 className="mb-8 text-3xl font-bold">Car Selection</h1>
       <div className="flex border border-gray-400 w-11/12">
         <div className="border-r-2 flex flex-col justify-center p-5 w-2/6">

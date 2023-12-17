@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { addToBasket } from "../../../redux/actions/basketAction";
+import { addToBasket } from "../../../statemanagement/actions/basketAction";
 
 function AddToBasketButton({ addToBasket }) {
   return (
