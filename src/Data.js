@@ -15,7 +15,7 @@ const carMakes = {
         image: "src/assets/Ferrari/Ferrari-488-GTB.png",
         dayRate: 850,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -23,11 +23,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -44,7 +44,7 @@ const carMakes = {
         image: "src/assets/Ferrari/Ferrari-La-Ferrari.png",
         dayRate: 800,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -52,11 +52,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -72,7 +72,7 @@ const carMakes = {
         image: "src/assets/Ferrari/Ferrari-F40.png",
         dayRate: 700,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -80,11 +80,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -107,7 +107,7 @@ const carMakes = {
         image: "src/assets/Lambourghini/Lambourghini-Aventador.png",
         dayRate: 600,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -115,11 +115,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -134,7 +134,7 @@ const carMakes = {
         image: "src/assets/Lambourghini/Lamborghini-Huracán.png",
         dayRate: 450,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -142,11 +142,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -163,7 +163,7 @@ const carMakes = {
         image: "src/assets/Lambourghini/Lambourghini-Diablo.png",
         dayRate: 400,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -171,11 +171,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -198,7 +198,7 @@ const carMakes = {
         image: "src/assets/Bugatti/Bugatti-Veyron.png",
         dayRate: 1100,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -206,11 +206,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -225,7 +225,7 @@ const carMakes = {
         image: "src/assets/Bugatti/Bugatti Chiron.png",
         dayRate: 1200,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -233,11 +233,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -252,7 +252,7 @@ const carMakes = {
         image: "src/assets/Bugatti/Bugatti-Divo.png",
         dayRate: 1450,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -260,11 +260,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -287,7 +287,7 @@ const carMakes = {
         image: "src/assets/McLaren/McLaren-720s.png",
         dayRate: 550,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -295,11 +295,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -315,7 +315,7 @@ const carMakes = {
         image: "src/assets/McLaren/McLaren-P1.png",
         dayRate: 800,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -323,11 +323,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -342,7 +342,7 @@ const carMakes = {
         image: "src/assets/McLaren/McLaren-F1.png",
         dayRate: 1200,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -350,11 +350,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -377,7 +377,7 @@ const carMakes = {
         image: "src/assets/Porsche/Porsche 911 GT2 RS.png",
         dayRate: 450,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -385,11 +385,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -405,7 +405,7 @@ const carMakes = {
         image: "src/assets/Porsche/Porsche 918 Spyder.png",
         dayRate: 500,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -413,11 +413,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -432,7 +432,7 @@ const carMakes = {
         image: "src/assets/Porsche/Porsche Carrera GT.png",
         dayRate: 480,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -440,11 +440,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -467,7 +467,7 @@ const carMakes = {
         image: "src/assets/Aston Martin/HOR_XB1_AM_DB11.webp",
         dayRate: 400,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -475,11 +475,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -494,7 +494,7 @@ const carMakes = {
         image: "src/assets/Aston Martin/HOR_XB1_AM_Vulcan.webp",
         dayRate: 600,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -502,11 +502,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -521,7 +521,7 @@ const carMakes = {
         image: "src/assets/Aston Martin/HOR_XB1_AM_One-77.webp",
         dayRate: 650,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -529,11 +529,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -556,7 +556,7 @@ const carMakes = {
         image: "src/assets/Keonigsegg/Koenigsegg-Agera-r.png",
         dayRate: 730,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -564,11 +564,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -583,7 +583,7 @@ const carMakes = {
         image: "src/assets/Keonigsegg/Koenigsegg-Jesko 14.44.14.png",
         dayRate: 950,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -591,11 +591,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -611,7 +611,7 @@ const carMakes = {
         image: "src/assets/Keonigsegg/Koenigsegg-Regera.png",
         dayRate: 700,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -619,11 +619,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -646,7 +646,7 @@ const carMakes = {
         image: "src/assets/Pagani/Pagani Huayra.png",
         dayRate: 700,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -654,11 +654,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -673,7 +673,7 @@ const carMakes = {
         image: "src/assets/Pagani/Pagani Zonda.png",
         dayRate: 600,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -681,11 +681,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -700,7 +700,7 @@ const carMakes = {
         image: "src/assets/Pagani/Pagani Huayra BC.png",
         dayRate: 720,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -708,11 +708,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -735,7 +735,7 @@ const carMakes = {
         image: "src/assets/Maserati/Maserati-MC12.png",
         dayRate: 500,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -743,11 +743,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -763,7 +763,7 @@ const carMakes = {
         image: "src/assets/Maserati/Maserati-GranTurismo.png",
         dayRate: 480,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -771,11 +771,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -790,7 +790,7 @@ const carMakes = {
         image: "src/assets/Maserati/Maserati-MC20.png",
         dayRate: 550,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -798,11 +798,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -826,7 +826,7 @@ const carMakes = {
         image: "src/assets/Audi/Audi-R8.png",
         dayRate: 450,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -834,11 +834,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -853,7 +853,7 @@ const carMakes = {
         image: "src/assets/Audi/HOR_XB1_Audi_RS_e-tron.webp",
         dayRate: 480,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -861,11 +861,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -880,7 +880,7 @@ const carMakes = {
         image: "src/assets/Audi/FH5_Audi_RS_6_Avant_2021_Large.webp",
         dayRate: 470,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -888,11 +888,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -916,7 +916,7 @@ const carMakes = {
         image: "src/assets/Mercedes/Mercedes-AMG One.png",
         dayRate: 490,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -924,11 +924,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -943,7 +943,7 @@ const carMakes = {
         image: "src/assets/Mercedes/Mercedes-AMG GT.png",
         dayRate: 460,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -951,11 +951,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -970,7 +970,7 @@ const carMakes = {
         image: "src/assets/Mercedes/Mercedes-AMG SLS.png",
         dayRate: 470,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -978,11 +978,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -1005,7 +1005,7 @@ const carMakes = {
         image: "src/assets/Lexus/Lexus-LFA.png",
         dayRate: 460,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -1013,11 +1013,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -1032,7 +1032,7 @@ const carMakes = {
         image: "src/assets/Lexus/Lexus-LC-500.png",
         dayRate: 450,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -1040,11 +1040,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -1059,7 +1059,7 @@ const carMakes = {
         image: "src/assets/Lexus/Lexus-RC-F.png",
         dayRate: 440,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -1067,11 +1067,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -1094,7 +1094,7 @@ const carMakes = {
         image: "src/assets/Ford/Ford-GT.png",
         dayRate: 480,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -1102,11 +1102,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -1121,7 +1121,7 @@ const carMakes = {
         image: "src/assets/Ford/Ford-GT40.png",
         dayRate: 450,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -1129,11 +1129,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -1148,7 +1148,7 @@ const carMakes = {
         image: "src/assets/Ford/Ford-Mustang-Shelby-GT500.png",
         dayRate: 470,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -1156,11 +1156,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -1183,7 +1183,7 @@ const carMakes = {
         image: "src/assets/Lotus/Lotus-Evija.png",
         dayRate: 490,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -1191,11 +1191,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -1210,7 +1210,7 @@ const carMakes = {
         image: "src/assets/Lotus/Lotus-Exige.png",
         dayRate: 450,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -1218,11 +1218,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -1237,7 +1237,7 @@ const carMakes = {
         image: "src/assets/Lotus/Lotus-Elise.png",
         dayRate: 440,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -1245,11 +1245,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -1272,7 +1272,7 @@ const carMakes = {
         image: "src/assets/Bentley/Bentley-Continental-GT.png",
         dayRate: 470,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -1280,11 +1280,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -1299,7 +1299,7 @@ const carMakes = {
         image: "src/assets/Bentley/Bentley-Bentayga-Speed.png",
         dayRate: 480,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -1307,11 +1307,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -1326,7 +1326,7 @@ const carMakes = {
         image: "src/assets/Bentley/Bentley-Mulsanne.png",
         dayRate: 470,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -1334,11 +1334,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -1361,7 +1361,7 @@ const carMakes = {
         image: "src/assets/Rolls Royce/Rolls-Royce Wraith.png",
         dayRate: 490,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -1369,11 +1369,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -1388,7 +1388,7 @@ const carMakes = {
         image: "src/assets/Rolls Royce/Rolls-Royce Dawn.png",
         dayRate: 480,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -1396,11 +1396,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -1415,7 +1415,7 @@ const carMakes = {
         image: "src/assets/Rolls Royce/Rolls-Royce Phantom.png",
         dayRate: 470,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -1423,11 +1423,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -1450,7 +1450,7 @@ const carMakes = {
         image: "src/assets/Tesla/Tesla Roadster.png",
         dayRate: 460,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -1458,11 +1458,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -1477,7 +1477,7 @@ const carMakes = {
         image: "src/assets/Tesla/Tesla Model S Plaid.png",
         dayRate: 470,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -1485,11 +1485,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -1504,7 +1504,7 @@ const carMakes = {
         image: "src/assets/Tesla/Tesla Model X Plaid.png",
         dayRate: 480,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -1512,11 +1512,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -1539,7 +1539,7 @@ const carMakes = {
         image: "src/assets/Rimac/Rimac C_Two.png",
         dayRate: 490,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -1547,11 +1547,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -1566,7 +1566,7 @@ const carMakes = {
         image: "src/assets/Rimac/Rimac C_Two.png",
         dayRate: 470,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -1574,11 +1574,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },
@@ -1593,7 +1593,7 @@ const carMakes = {
         image: "src/assets/Rimac/Rimac Nevera.png",
         dayRate: 480,
         weekRate: function () {
-          const weekRates = this.dayRate * 6;
+          const weekRates = this.dayRate * 6.5;
           return weekRates;
         },
         weekRateBreakDown: function () {
@@ -1601,11 +1601,11 @@ const carMakes = {
           return weekRateBreakDown.toFixed(2);
         },
         monthRate: function () {
-          const monthRate = this.dayRate * 22;
+          const monthRate = this.dayRate * 27;
           return monthRate;
         },
         monthRateBreakDown: function () {
-          const monthRateBreakDown = (this.dayRate * 25) / 31;
+          const monthRateBreakDown = (this.dayRate * 27) / 31;
           return monthRateBreakDown.toFixed(2);
         },
       },

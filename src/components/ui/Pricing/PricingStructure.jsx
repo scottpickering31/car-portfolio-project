@@ -1,5 +1,4 @@
 import PricingRates from "./PricingRates";
-import AddToBasketButton from "../Buttons/AddToBasketButton";
 import ShowBasketButton from "../Buttons/ShowBasketButton";
 
 function PricingStructure({
@@ -21,7 +20,6 @@ function PricingStructure({
         {pricing && (
           <div>
             <ShowBasketButton />
-            <AddToBasketButton />
           </div>
         )}
       </div>

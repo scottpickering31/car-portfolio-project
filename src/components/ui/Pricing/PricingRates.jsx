@@ -21,31 +21,32 @@ function PricingRates({
                 <p>{carDetails.dayRate}</p>
                 <p>Price Breakdown</p>
                 <p>{carDetails.dayRate} Per Day</p>
-                <button className="border-2">Day</button>
                 <br />
                 <br />
               </div>
               <div>
-                <p>Weekly Rental</p>
+                <p>Weekly Rental (7+ days)</p>
                 <p>Weekly Price</p>
                 <p>{carDetails.weekRate()}</p>
                 <p>Price Breakdown</p>
-                <p>{carDetails.weekRateBreakDown()} Per Day</p>
-                <button className="border-2">Week</button>
+                <p>{Math.round(carDetails.weekRateBreakDown())} Per Day</p>
                 <br />
                 <br />
               </div>
               <div>
-                <p>Monthly Rental (31 days)</p>
+                <p>Monthly Rental (31+ days)</p>
                 <p>Monthly Price</p>
                 <p>{carDetails.monthRate()}</p>
                 <p>Price Breakdown</p>
-                <p>{carDetails.monthRateBreakDown()} Per Day</p>
-                <button className="border-2">Month</button>
+                <p>{Math.round(carDetails.monthRateBreakDown())} Per Day</p>
               </div>
             </div>
             <div>
-              <PricingCalender />
+              <PricingCalender
+                selectedModel={selectedModel}
+                selectedManufacturer={selectedManufacturer}
+                carMakes={carMakes}
+              />
             </div>
           </div>
         </div>

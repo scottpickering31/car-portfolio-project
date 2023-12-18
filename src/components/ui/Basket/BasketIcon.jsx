@@ -1,11 +1,17 @@
 import React from "react";
 import { connect } from "react-redux";
+import { useBasket } from "../../../statemanagement/context/BasketContext";
 
 function BasketIcon({ basketCount }) {
+  const { toggleShowBasket } = useBasket();
   return (
-    <div style={{ display: "flex", justifyContent: "flex-start" }}>
-      <i className="fa fa-shopping-basket" style={{ fontSize: "30px" }}></i>
-      <p>{basketCount}</p>
+    <div className="flex flex-start flex-col items-center text-2xl p-3">
+      <i
+        onClick={toggleShowBasket}
+        className="fa fa-shopping-basket cursor-pointer"
+        style={{ color: "rgb(255, 140, 40" }}
+      ></i>
+      <p className="text-center">{basketCount}</p>
     </div>
   );
 }

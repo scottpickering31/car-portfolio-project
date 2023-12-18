@@ -31,19 +31,19 @@ function HowItWorksSnippet({ title, description, image, flipImage }) {
 
   const containerClasses = isVisible
     ? flipImage
-      ? "flex w-full flex-row-reverse mt-40 animate-opacity-transform"
-      : "flex w-full mt-40 animate-opacity-transform"
-    : "flex w-full mt-40 opacity-0";
+      ? "flex w-full flex-row-reverse mt-20 animate-opacity-transform p-5"
+      : "flex w-full mt-20 animate-opacity-transform p-5"
+    : "flex w-full mt-20 opacity-0";
 
   const textClasses = isVisible
     ? flipImage
-      ? "flex items-center text-center w-1/2 text-2xl p-5 opacity-0 transition-opacity-transform duration-1000 delay-1000 opacity-100"
+      ? "flex items-center text-center w-1/2 text-2xl p-5 opacity-0 transition-opacity-transform duration-1000 delay-1000 opacity-100 "
       : "flex items-center text-center w-1/2 text-2xl p-5 opacity-0 transition-opacity-transform duration-1000 delay-1000 opacity-100"
-    : "flex items-center text-center w-1/2 text-2xl p-5 opacity-0";
+    : "flex items-center text-center w-1/2 text-2xl p-5 opacity-0 ";
 
   const imageClasses = isVisible
     ? flipImage
-      ? "flex flex-col w-1/2 h-1/2 animate-flip"
+      ? "flex flex-col w-1/2 h-1/2 animate-flip pt-10"
       : "flex flex-col w-1/2 h-1/2 animate-flip"
     : "flex flex-col w-1/2 h-1/2";
 
