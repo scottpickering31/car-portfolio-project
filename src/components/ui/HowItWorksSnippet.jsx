@@ -37,7 +37,7 @@ function HowItWorksSnippet({ title, description, image, flipImage }) {
 
   const textClasses = isVisible
     ? flipImage
-      ? "flex items-center text-center w-1/2 text-2xl p-5 opacity-0 transition-opacity-transform duration-1000 delay-1000 opacity-100 "
+      ? "flex items-center text-center w-1/2 text-2xl p-5 opacity-0 transition-opacity-transform duration-1000 delay-1000 opacity-100"
       : "flex items-center text-center w-1/2 text-2xl p-5 opacity-0 transition-opacity-transform duration-1000 delay-1000 opacity-100"
     : "flex items-center text-center w-1/2 text-2xl p-5 opacity-0 ";
 

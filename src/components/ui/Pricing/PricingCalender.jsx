@@ -13,7 +13,13 @@ function CalendarDisplay({
 }) {
   const [value, onChange] = useState([new Date(), new Date()]);
   const [prices, setPrices] = useState([]);
+  const [total, setTotal] = useState(0);
   const [isDateSelected, setIsDateSelected] = useState(false);
+  const [hidden, setHidden] = useState(false);
+
+  function togglePriceBreakdown() {
+    setHidden(!hidden);
+  }
 
   const carDetails = carMakes[selectedManufacturer].cars[selectedModel];
 
@@ -43,7 +49,14 @@ function CalendarDisplay({
     }
 
     setPrices(newPrices);
-    setIsDateSelected(true); // Set the flag to indicate a date has been selected
+
+    const totalPrice =
+      newPrices.length > 0
+        ? Math.round(newPrices[newPrices.length - 1].price)
+        : 0;
+
+    setTotal(totalPrice);
+    setIsDateSelected(true);
   };
 
   const handleRangeChange = (newValue) => {
@@ -62,11 +75,19 @@ function CalendarDisplay({
           className="custom-calendar"
         />
         <div>
-          {prices.map((dayPrice) => (
-            <p key={dayPrice.date.toString()}>
-              {dayPrice.date.toDateString()} - £{Math.round(dayPrice.price)}
-            </p>
-          ))}
+          <p>Total Cost for Rented Period of: £{total}</p>
+          <button onClick={togglePriceBreakdown}>
+            See Detailed Cost Breakdown
+          </button>
+          {hidden && (
+            <>
+              {prices.map((dayPrice) => (
+                <p key={dayPrice.date.toString()}>
+                  {dayPrice.date.toDateString()} - £{Math.round(dayPrice.price)}
+                </p>
+              ))}
+            </>
+          )}
         </div>
         {isDateSelected && (
           <AddToBasketButton

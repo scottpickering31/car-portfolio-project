@@ -3,6 +3,10 @@ export const addToBasket = (rentalDetails) => ({
   payload: rentalDetails,
 });
 
+export const removeFromBasket = (index) => ({
+  type: "REMOVE_BASKET_ITEM",
+  payload: index,
+});
 
 export const resetBasket = () => ({
   type: "RESET_BASKET",
