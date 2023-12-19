@@ -15,7 +15,7 @@ function Basket() {
   return (
     <div className="relative">
       <div
-        className={`fixed top-0 right-0 h-full w-1/3 flex justify-end items-start transition-transform duration-300 ease-in-out overflow-auto ${
+        className={`fixed top-0 right-0 h-full w-5/6 flex justify-end items-start transition-transform duration-300 ease-in-out overflow-auto ${
           isVisible ? "translate-x-0" : "translate-x-full"
         }`}
       >

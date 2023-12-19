@@ -16,7 +16,7 @@ function NavBar() {
   };
 
   return (
-    <div className="fixed flex flex-row border w-full bg-white justify-end">
+    <div className="fixed flex flex-row border w-full bg-white justify-end z-0">
       <BasketIcon />
       <div
         className="relative"
