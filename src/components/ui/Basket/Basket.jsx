@@ -5,6 +5,7 @@ import { useBasket } from "../../../statemanagement/context/BasketContext";
 
 function Basket() {
   const { toggleBasketShow } = useBasket();
+  const { toggleShowBasket } = useBasket();
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -19,8 +20,13 @@ function Basket() {
         }`}
       >
         <div className="w-full h-full bg-gray-200 opacity-80">
-          <div className="w-1/3 p-5">
+          <div className="w-1/2 p-5">
             <BasketItems />
+            <img
+              src="src/assets/IconScout/arrow-right.svg"
+              onClick={toggleShowBasket}
+              className="cursor-pointer h-full w-1/3"
+            />
             <ResetBasketAmountButton />
           </div>
         </div>
@@ -30,3 +36,17 @@ function Basket() {
 }
 
 export default Basket;
+
+// import { useBasket } from "../../../statemanagement/context/BasketContext";
+
+// function ShowBasketButton() {
+//   const { toggleShowBasket } = useBasket();
+
+//   return (
+//     <div>
+//       <button onClick={toggleShowBasket}>View Basket</button>
+//     </div>
+//   );
+// }
+
+// export default ShowBasketButton;

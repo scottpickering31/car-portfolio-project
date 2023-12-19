@@ -16,7 +16,7 @@ function NavBar() {
   };
 
   return (
-    <>
+    <div className="fixed flex flex-row border w-full bg-white justify-end">
       <BasketIcon />
       <div
         className="relative"
@@ -40,7 +40,7 @@ function NavBar() {
           </div>
         )}
       </div>
-    </>
+    </div>
   );
 }
 
