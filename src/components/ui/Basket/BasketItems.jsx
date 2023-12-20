@@ -8,7 +8,6 @@ function BasketItems({ basketItem, removeFromBasket }) {
   }
 
   function removeItem(index) {
-    console.log("Removing item at index:", index);
     removeFromBasket(index);
   }
 

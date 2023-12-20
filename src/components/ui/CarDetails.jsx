@@ -1,14 +1,11 @@
 // CarDetails.js
 import React, { useState } from "react";
 import PriceButton from "./Buttons/PriceButton";
+import ShowBasketButton from "./Buttons/ShowBasketButton";
 
 function CarDetails({ selectedManufacturer, selectedModel, carMakes }) {
-  const [pricing, setPricing] = useState(false);
   const carDetails = carMakes[selectedManufacturer].cars[selectedModel];
 
-  const handlePricing = () => {
-    setPricing(!pricing);
-  };
 
   if (!carDetails) return null;
 
@@ -42,9 +39,6 @@ function CarDetails({ selectedManufacturer, selectedModel, carMakes }) {
           <p>0 to 60 mph:</p>
           <p className={rightText}>{carDetails.speed} seconds</p>
         </div>
-      </div>{" "}
-      <div>
-        <PriceButton handlePricing={handlePricing} />
       </div>
     </div>
   );

@@ -10,10 +10,6 @@ function PricingStructure({ selectedModel, selectedManufacturer, carMakes }) {
           selectedManufacturer={selectedManufacturer}
           carMakes={carMakes}
         />
-        <br></br>
-        <div>
-          <ShowBasketButton />
-        </div>
       </div>
     </div>
   );

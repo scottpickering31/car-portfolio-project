@@ -7,7 +7,7 @@ const pricingReducer = (state = initialState, action) => {
     case "TOGGLE_PRICING_RATES":
       return {
         ...state,
-        pricing: !state,
+        pricing: !state.pricing,
       };
     default:
       return state;

@@ -1,7 +1,17 @@
-import PricingCalender from "./PricingCalender";
+import { connect } from "react-redux";
+import CalendarDisplay from "./PricingCalender";
 
-function PricingRates({ selectedModel, carMakes, selectedManufacturer }) {
+function PricingRates({
+  selectedModel,
+  carMakes,
+  selectedManufacturer,
+  pricing,
+}) {
   const carDetails = carMakes[selectedManufacturer].cars[selectedModel];
+
+  if (!pricing) {
+    return null;
+  }
 
   return (
     <div className="flex flex-col items-center">
@@ -36,7 +46,7 @@ function PricingRates({ selectedModel, carMakes, selectedManufacturer }) {
             </div>
           </div>
           <div>
-            <PricingCalender
+            <CalendarDisplay
               selectedModel={selectedModel}
               selectedManufacturer={selectedManufacturer}
               carMakes={carMakes}
@@ -48,4 +58,8 @@ function PricingRates({ selectedModel, carMakes, selectedManufacturer }) {
   );
 }
 
-export default PricingRates;
+const mapStateToProps = (state) => ({
+  pricing: state.price.pricing,
+});
+
+export default connect(mapStateToProps)(PricingRates);
