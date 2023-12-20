@@ -1,9 +1,16 @@
-function PriceButton({ handlePricing }) {
+import { connect } from "react-redux";
+import { togglePricing } from "../../../statemanagement/actions/pricingAction";
+
+function PriceButton({ togglePricing }) {
   return (
-    <>
-      <button onClick={handlePricing}>Click for Pricing details</button>
-    </>
+    <div className="relative">
+      <button onClick={togglePricing}>Click for Pricing details</button>
+    </div>
   );
 }
 
-export default PriceButton;
+const mapDispatchToProps = {
+  togglePricing,
+};
+
+export default connect(null, mapDispatchToProps)(PriceButton);

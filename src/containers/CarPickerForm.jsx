@@ -5,19 +5,13 @@ import ModelSelect from "../components/ui/ModelSelect";
 import CarDetails from "../components/ui/CarDetails";
 import ImageDisplay from "../components/ui/ImageDisplay";
 import ManufacturerDetails from "../components/ui/Manufacturers/ManufacturerDetails";
-import PriceButton from "../components/ui/Buttons/PriceButton";
 import PricingStructure from "../components/ui/Pricing/PricingStructure";
 
 function CarPickerForm() {
   const [selectedManufacturer, setSelectedManufacturer] = useState("");
   const [selectedModel, setSelectedModel] = useState("");
   const [manufacturerDetails, setManufacturerDetails] = useState("");
-  const [pricing, setPricing] = useState(false);
   const carManufacturer = Object.keys(carMakes).sort();
-
-  const handlePricing = () => {
-    setPricing(!pricing);
-  };
 
   const handleManufacturerChange = (event) => {
     setSelectedManufacturer(event.target.value);
@@ -30,9 +24,9 @@ function CarPickerForm() {
   };
 
   return (
-    <div className="flex justify-center flex-col items-center mt-40 h-2/3 mb-40">
+    <div className="flex justify-center flex-col items-center mt-40 h-2/3 mb-40 bg-white">
       <h1 className="mb-8 text-3xl font-bold">Car Selection</h1>
-      <div className="flex border border-gray-400 w-11/12">
+      <div className="flex border border-gray-400 w-11/12 rounded-lg shadow-2xl">
         <div className="border-r-2 flex flex-col justify-center p-5 w-2/6">
           <ManufacturerSelect
             carManufacturer={carManufacturer}
@@ -83,9 +77,6 @@ function CarPickerForm() {
                 carMakes={carMakes}
               />
             </div>
-            <div>
-              <PriceButton handlePricing={handlePricing} />
-            </div>
           </>
         )}
       </div>
@@ -93,7 +84,6 @@ function CarPickerForm() {
         <div>
           <PricingStructure
             selectedModel={selectedModel}
-            pricing={pricing}
             selectedManufacturer={selectedManufacturer}
             carMakes={carMakes}
           />

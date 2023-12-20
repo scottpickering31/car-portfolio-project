@@ -1,9 +1,10 @@
 import { useState } from "react";
-import "./Calendar.css";
 import Calendar from "react-calendar";
 import AddToBasketButton from "../Buttons/AddToBasketButton";
 import { connect } from "react-redux";
 import { addToBasket } from "../../../statemanagement/actions/basketAction";
+import "react-calendar/dist/Calendar.css";
+import "./Calendar.css";
 
 function CalendarDisplay({
   carMakes,
@@ -65,15 +66,10 @@ function CalendarDisplay({
   };
 
   return (
-    <div className="calendar-container">
+    <div>
       <>
-        <p>Choose Rental Period</p>
-        <Calendar
-          selectRange
-          onChange={handleRangeChange}
-          value={value}
-          className="custom-calendar"
-        />
+        <button onClick={togglePriceBreakdown}>Choose Rental Period</button>
+        <Calendar selectRange onChange={handleRangeChange} value={value} />
         <div>
           <p>Total Cost for Rented Period of: £{total}</p>
           <button onClick={togglePriceBreakdown}>

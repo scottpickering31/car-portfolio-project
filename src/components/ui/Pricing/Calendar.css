@@ -4,6 +4,9 @@
   background: white;
   border: 2px solid black;
   font-family: Arial, sans-serif;
+  width: 400px; /* Increase the width for a larger calendar */
+  font-size: 18px; /* Increase the font size for better visibility */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
 }
 
 /* Override default selected day color to orange */
@@ -12,7 +15,44 @@
   color: white;
 }
 
-/* Custom styles for the container */
+/* Style the header for a more professional appearance */
+.react-calendar__navigation {
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.react-calendar__navigation button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.react-calendar__navigation button:hover {
+  color: #555;
+}
+
+.react-calendar__navigation button:disabled {
+  color: #999;
+  cursor: not-allowed;
+}
+
+/* Day labels */
+.react-calendar__month-view__weekdays {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.react-calendar__month-view__days {
+  font-size: 18px;
+}
+
+/* Additional styles for the container */
 .calendar-container {
   display: flex;
   flex-direction: column;
@@ -20,8 +60,11 @@
   margin-top: 20px;
 }
 
-/* Additional styles for the calendar */
-.custom-calendar {
-  width: 300px; /* Adjust the width as needed */
-  max-width: 100%;
+/* Additional styles for the detailed cost breakdown */
+.calendar-details {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f9f9f9;
 }
