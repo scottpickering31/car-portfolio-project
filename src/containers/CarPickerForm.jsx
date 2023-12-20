@@ -71,8 +71,8 @@ function CarPickerForm() {
           </div>
         )}
         {selectedModel && (
-          <>
-            <div>
+          <div>
+            <div className="flex flex-row">
               <CarDetails
                 selectedManufacturer={selectedManufacturer}
                 selectedModel={selectedModel}
@@ -83,12 +83,12 @@ function CarPickerForm() {
                 selectedModel={selectedModel}
                 carMakes={carMakes}
               />
-              <div>
-                <PriceButton handlePricing={handlePricing} />
-                <ShowBasketButton />
-              </div>
             </div>
-          </>
+            <div className="flex justify-evenly mb-5">
+              <PriceButton handlePricing={handlePricing} />
+              <ShowBasketButton />
+            </div>
+          </div>
         )}
       </div>
       {selectedModel && (

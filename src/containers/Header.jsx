@@ -3,7 +3,7 @@ import NavBar from "./NavBar";
 function Header() {
   return (
     <div>
-      <div className="flex justify-end">
+      <div className="flex justify-end bg-white">
         <NavBar />
       </div>
       <div className="w-full h-screen">

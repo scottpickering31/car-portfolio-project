@@ -14,13 +14,13 @@ function PricingRates({
   }
 
   return (
-    <div className="flex flex-col items-center">
-      <div>
+    <div className="flex flex-row">
+      <div className="flex justify-center">
         <h1>{selectedModel}</h1>
-        <div className="flex justify-center gap-5">
-          <div className="p-4 rounded-lg text-white bg-bronze">
-            <div>
-              <p>24 Hour Rental</p>
+        <div className="flex justify-center items-center gap-5">
+          <div className="flex justify-center">
+            <div className="p-4 rounded-lg text-black ">
+              <p className="text-center">24 Hour Rental</p>
               <p>Day Price</p>
               <p>{carDetails.dayRate}</p>
               <p>Price Breakdown</p>
@@ -28,8 +28,8 @@ function PricingRates({
               <br />
               <br />
             </div>
-            <div className="p-4 rounded-lg text-white bg-silver">
-              <p>Weekly Rental (7+ days)</p>
+            <div className="p-4 rounded-lg text-black">
+              <p className="text-center">Weekly Rental (7+ days)</p>
               <p>Weekly Price</p>
               <p>{carDetails.weekRate()}</p>
               <p>Price Breakdown</p>
@@ -37,8 +37,8 @@ function PricingRates({
               <br />
               <br />
             </div>
-            <div className="p-4 rounded-lg text-white bg-gold">
-              <p>Monthly Rental (31+ days)</p>
+            <div className="p-4 rounded-lg text-black bg-gold">
+              <p className="text-center">Monthly Rental (31+ days)</p>
               <p>Monthly Price</p>
               <p>{carDetails.monthRate()}</p>
               <p>Price Breakdown</p>
