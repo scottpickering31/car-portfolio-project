@@ -16,11 +16,11 @@ function PricingRates({
   return (
     <div className="flex flex-row h-full border border-gray-400 w-11/12 p-5 bg-white rounded-b-lg shadow-2xl">
       <div className="flex flex-col items-center text-center">
-        <h1>{selectedModel}</h1>
         <div className="flex justify-between items-center gap-12">
+          <h1>{selectedModel}</h1>
           <div className="flex justify-center">
-            <div className="p-4 rounded-lg text-black ">
-              <p className="text-center">24 Hour Rental</p>
+            <div className="p-4 rounded-lg text-black flex-row ">
+              <p className="text-center">Day Rental</p>
               <p>Day Price</p>
               <p>{carDetails.dayRate}</p>
               <p>Price Breakdown</p>
