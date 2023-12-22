@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import BasketItems from "../Basket/BasketItems";
 import ResetBasketAmountButton from "../Buttons/ResetBasketAmountButton";
 import { useBasket } from "../../../statemanagement/context/BasketContext";
+import CheckoutButton from "../Buttons/CheckoutButton";
 
 function Basket() {
   const { toggleBasketShow } = useBasket();
@@ -19,7 +20,7 @@ function Basket() {
           isVisible ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="w-full h-full bg-gray-200 opacity-80">
+        <div className="w-full h-full bg-gray-200 opacity-95">
           <div className="w-1/2 p-5">
             <BasketItems />
             <img
@@ -27,7 +28,10 @@ function Basket() {
               onClick={toggleShowBasket}
               className="cursor-pointer h-full w-1/3"
             />
-            <ResetBasketAmountButton />
+            <div className="flex justify-between flex-row">
+              <ResetBasketAmountButton />
+              <CheckoutButton />
+            </div>
           </div>
         </div>
       </div>

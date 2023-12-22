@@ -68,7 +68,7 @@ function CalendarDisplay({
   return (
     <div>
       <>
-        <h1>Choose Rental Period</h1>
+        <h1>Choose Rental Period Range</h1>
         <Calendar selectRange onChange={handleRangeChange} value={value} />
         <div>
           <p>Total Cost for Rented Period of: £{total}</p>
