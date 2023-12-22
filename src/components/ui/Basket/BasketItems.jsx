@@ -12,18 +12,26 @@ function BasketItems({ basketItem, removeFromBasket }) {
   }
 
   return (
-    <div className="flex flex-col justify-between w-full">
+    <div className="flex flex-col justify-between w-full p-5">
       <h1 className="text-center">Your Basket</h1>
       {basketItem.map((item, index) => (
         <div
           key={index}
-          className="flex flex-row border border-white m-5 bg-white p-5 w-full h-40 justify-around"
+          className="flex flex-row border border-white m-5 bg-white p-6 w-full h-40 justify-around rounded-xl shadow-lg"
         >
           <div>
-            <p>Manufacturer: {item.manufacturer}</p>
-            <p>Model: {item.model}</p>
-            <p>Total Price: {item.price}</p>
-            <p>Rental Duration: {item.duration} days</p>
+            <p>
+              <strong>Manufacturer:</strong> {item.manufacturer}
+            </p>
+            <p>
+              <strong>Model:</strong> {item.model}
+            </p>
+            <p>
+              <strong>Total Price:</strong> {item.price}
+            </p>
+            <p>
+              <strong>Rental Duration:</strong> {item.duration} days
+            </p>
           </div>
           <div className="flex justify-center items-center">
             <img

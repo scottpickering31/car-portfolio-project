@@ -20,18 +20,26 @@ function Basket() {
           isVisible ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="w-full h-full bg-gray-200 opacity-95">
-          <div className="p-5">
-            <BasketItems />
+        <div className="w-full bg-gray-200 opacity-95 relative p-5">
+          <div className="sticky top-0 w-full p-2">
+            <p className="text-sm gray-400">Close Basket</p>
             <img
               src="src/assets/IconScout/arrow-right.svg"
               onClick={toggleShowBasket}
-              className="cursor-pointer h-1/3 w-1/3"
+              className="cursor-pointer w-10 h-10 ml-auto mr-4 float-left"
+              style={{
+                left: "50%",
+                transform: "translateX(-50%)",
+                zIndex: 999,
+              }}
             />
-            <div className="flex justify-between flex-row">
-              <ResetBasketAmountButton />
-              <CheckoutButton />
-            </div>
+          </div>
+          <div>
+            <BasketItems />
+          </div>
+          <div className="flex justify-around mt-4">
+            <ResetBasketAmountButton />
+            <CheckoutButton />
           </div>
         </div>
       </div>
