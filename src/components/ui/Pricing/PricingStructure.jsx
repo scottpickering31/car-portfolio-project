@@ -1,5 +1,4 @@
 import PricingRates from "./PricingRates";
-import ShowBasketButton from "../Buttons/ShowBasketButton";
 
 function PricingStructure({ selectedModel, selectedManufacturer, carMakes }) {
   return (

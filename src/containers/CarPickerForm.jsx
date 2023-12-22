@@ -84,9 +84,10 @@ function CarPickerForm() {
                 carMakes={carMakes}
               />
             </div>
-            <div className="flex justify-evenly mb-5">
+            <div className="flex justify-center items-center flex-col mb-5 gap-2 p-5">
+              <p>Interested? Check out our</p>
               <PriceButton handlePricing={handlePricing} />
-              <ShowBasketButton />
+              <p>for the {selectedModel}</p>
             </div>
           </div>
         )}

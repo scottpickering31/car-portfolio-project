@@ -1,7 +1,5 @@
 // CarDetails.js
-import React, { useState } from "react";
-import PriceButton from "./Buttons/PriceButton";
-import ShowBasketButton from "./Buttons/ShowBasketButton";
+import React from "react";
 
 function CarDetails({ selectedManufacturer, selectedModel, carMakes }) {
   const carDetails = carMakes[selectedManufacturer].cars[selectedModel];
