@@ -12,21 +12,29 @@ function BasketItems({ basketItem, removeFromBasket }) {
   }
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col justify-between w-full">
       <h1 className="text-center">Your Basket</h1>
       {basketItem.map((item, index) => (
         <div
           key={index}
-          className="flex flex-row border border-white m-5 bg-white p-5 w-full h-48"
+          className="flex flex-row border border-white m-5 bg-white p-5 w-full h-40 justify-around"
         >
-          <p>Manufacturer: {item.manufacturer}</p>
-          <p>Model: {item.model}</p>
-          <p>Total Price: {item.price}</p>
-          <p>Rental Duration: {item.duration} days</p>
-          <img src={item.image} alt={`${item.manufacturer} ${item.model}`} />
+          <div>
+            <p>Manufacturer: {item.manufacturer}</p>
+            <p>Model: {item.model}</p>
+            <p>Total Price: {item.price}</p>
+            <p>Rental Duration: {item.duration} days</p>
+          </div>
+          <div className="flex justify-center items-center">
+            <img
+              src={item.image}
+              alt={`${item.manufacturer} ${item.model}`}
+              className="w-40 rounded-full "
+            />
+          </div>
           <button
             onClick={() => removeItem(index)}
-            className="bg-red-500 text-white font-semibold py-2 px-4 rounded-md shadow-md transition duration-300 transform hover:scale-105 hover:red-500 hover:shadow-lg focus:outline-none focus:ring focus:ring-red-400 focus:ring-opacity-50"
+            className="bg-red-500 h-30 text-white font-semibold py-2 px-4 rounded-md shadow-md transition duration-300 transform hover:scale-105 hover:red-500 hover:shadow-lg focus:outline-none focus:ring focus:ring-red-400 focus:ring-opacity-50"
           >
             Remove
           </button>

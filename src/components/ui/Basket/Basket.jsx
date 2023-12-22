@@ -21,12 +21,12 @@ function Basket() {
         }`}
       >
         <div className="w-full h-full bg-gray-200 opacity-95">
-          <div className="w-1/2 p-5">
+          <div className="p-5">
             <BasketItems />
             <img
               src="src/assets/IconScout/arrow-right.svg"
               onClick={toggleShowBasket}
-              className="cursor-pointer h-full w-1/3"
+              className="cursor-pointer h-1/3 w-1/3"
             />
             <div className="flex justify-between flex-row">
               <ResetBasketAmountButton />
