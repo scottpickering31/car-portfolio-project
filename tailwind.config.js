@@ -9,6 +9,15 @@ export default {
           darker: "rgb(200, 90, 10)",
           lighter: "rgb(255, 140, 40)",
         },
+        bronze: {
+          DEFAULT: "#CD7F32",
+        },
+        silver: {
+          DEFAULT: "#C0C0C0",
+        },
+        gold: {
+          DEFAULT: "#FFD700",
+        },
       },
       fontFamily: {
         whisper: ["Whisper"],
