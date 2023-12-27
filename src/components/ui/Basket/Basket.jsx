@@ -14,15 +14,14 @@ function Basket() {
   }, [toggleBasketShow]);
 
   return (
-    <div className="relative">
+    <div className="relative z-20">
       <div
-        className={`fixed top-0 right-0 h-full w-5/6 flex justify-end items-start transition-transform duration-300 ease-in-out overflow-auto ${
-          isVisible ? "translate-x-0" : "translate-x-full"
+        className={`fixed top-0 right-0 h-full w-5/6 flex justify-end overflow-auto items-start transition-transform duration-300 ease-in-out ${
+          isVisible ? "translate-x-0 " : "translate-x-full "
         }`}
       >
         <div className="w-full bg-gray-200 opacity-95 relative p-5">
           <div className="sticky top-0 w-full p-2">
-            <p className="text-sm gray-400">Close Basket</p>
             <img
               src="src/assets/IconScout/arrow-right.svg"
               onClick={toggleShowBasket}
@@ -37,8 +36,9 @@ function Basket() {
           <div>
             <BasketItems />
           </div>
-          <div className="flex justify-around mt-4">
+          <div className="sticky bottom-0 w-full flex justify-around mt-4 border border-white bg-white rounded-lg p-5 items-center ">
             <ResetBasketAmountButton />
+            <p>Basket Total: </p>
             <CheckoutButton />
           </div>
         </div>

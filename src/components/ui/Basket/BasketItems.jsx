@@ -4,7 +4,7 @@ import { removeFromBasket } from "../../../statemanagement/actions/basketAction"
 
 function BasketItems({ basketItem, removeFromBasket }) {
   if (!basketItem || basketItem.length === 0) {
-    return <p>Your basket is empty.</p>;
+    return <p className="text-center">Your basket is empty.</p>;
   }
 
   function removeItem(index) {
@@ -12,7 +12,7 @@ function BasketItems({ basketItem, removeFromBasket }) {
   }
 
   return (
-    <div className="flex flex-col justify-between w-full p-5">
+    <div className="flex flex-col justify-between w-full p-5 ">
       <h1 className="text-center">Your Basket</h1>
       {basketItem.map((item, index) => (
         <div

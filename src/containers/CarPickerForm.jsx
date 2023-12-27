@@ -7,7 +7,6 @@ import ImageDisplay from "../components/ui/ImageDisplay";
 import ManufacturerDetails from "../components/ui/Manufacturers/ManufacturerDetails";
 import PricingStructure from "../components/ui/Pricing/PricingStructure";
 import PriceButton from "../components/ui/Buttons/PriceButton";
-import ShowBasketButton from "../components/ui/Buttons/ShowBasketButton";
 
 function CarPickerForm() {
   const [selectedManufacturer, setSelectedManufacturer] = useState("");
@@ -85,9 +84,13 @@ function CarPickerForm() {
               />
             </div>
             <div className="flex justify-center items-center flex-col mb-5 gap-2 p-5">
-              <p>Interested? Check out our</p>
+              <p>
+                <strong>Interested?</strong> Check out our
+              </p>
               <PriceButton handlePricing={handlePricing} />
-              <p>for the {selectedModel}</p>
+              <p>
+                for the <strong>{selectedModel}</strong>
+              </p>
             </div>
           </div>
         )}

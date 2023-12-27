@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Calendar from "react-calendar";
+import ShowBasketButton from "../Buttons/ShowBasketButton";
 import AddToBasketButton from "../Buttons/AddToBasketButton";
 import { connect } from "react-redux";
 import { addToBasket } from "../../../statemanagement/actions/basketAction";
@@ -68,10 +69,12 @@ function CalendarDisplay({
   return (
     <div>
       <>
-        <h1>Choose Rental Period Range</h1>
+        <h1 className="bg-gray-400 text-center p-5 text-2xl text-customOrange-lighter font-bold tracking-wide">
+          Choose Rental Period Range
+        </h1>
         <Calendar selectRange onChange={handleRangeChange} value={value} />
         <div>
-          <p>Total Cost for Rented Period of: £{total}</p>
+          <p className="p-5">Total Cost for Rented Period of: £{total}</p>
           <button
             onClick={togglePriceBreakdown}
             className="bg-orange-300 text-white font-semibold py-2 px-4 rounded-md shadow-md transition duration-300 transform hover:scale-105 hover:bg-orange-400 hover:shadow-lg focus:outline-none focus:ring focus:ring-orange-400 focus:ring-opacity-50"
@@ -89,13 +92,16 @@ function CalendarDisplay({
           )}
         </div>
         {isDateSelected && (
-          <AddToBasketButton
-            addToBasket={addToBasket} // Pass addToBasket here
-            carMakes={carMakes}
-            selectedManufacturer={selectedManufacturer}
-            selectedModel={selectedModel}
-            value={value}
-          />
+          <div className="flex flex-row items-center justify-center">
+            <AddToBasketButton
+              addToBasket={addToBasket}
+              carMakes={carMakes}
+              selectedManufacturer={selectedManufacturer}
+              selectedModel={selectedModel}
+              value={value}
+            />
+            <ShowBasketButton />
+          </div>
         )}
       </>
     </div>
