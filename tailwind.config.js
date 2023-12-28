@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      height: {
+        medium: "75vh",
+      },
       colors: {
         customOrange: {
           DEFAULT: "rgb(249, 115, 22)",

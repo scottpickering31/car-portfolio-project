@@ -16,9 +16,9 @@ function NavBar() {
   };
 
   return (
-    <div className="fixed flex flex-row border w-full bg-white justify-end z-10">
+    <div className="fixed flex flex-row w-full justify-end z-10">
       <BasketIcon />
-      <div
+      {/* <div
         className="relative"
         onMouseEnter={handleHover}
         onMouseLeave={handleLeave}
@@ -39,7 +39,7 @@ function NavBar() {
             ))}
           </div>
         )}
-      </div>
+      </div> */}
     </div>
   );
 }

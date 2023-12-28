@@ -3,6 +3,7 @@ import BasketItems from "../Basket/BasketItems";
 import ResetBasketAmountButton from "../Buttons/ResetBasketAmountButton";
 import { useBasket } from "../../../statemanagement/context/BasketContext";
 import CheckoutButton from "../Buttons/CheckoutButton";
+// import SeeCostBreakDown from "../Buttons/SeeCostBreakDown";
 
 function Basket() {
   const { toggleBasketShow } = useBasket();
@@ -40,6 +41,19 @@ function Basket() {
             <ResetBasketAmountButton />
             <p>Basket Total: </p>
             <CheckoutButton />
+            {/* <SeeCostBreakDown /> */}
+            <div>
+              {/* {hidden && (
+                <>
+                  {prices.map((dayPrice) => (
+                    <p key={dayPrice.date.toString()}>
+                      {dayPrice.date.toDateString()} - £
+                      {Math.round(dayPrice.price)}
+                    </p>
+                  ))}
+                </>
+              )} */}
+            </div>
           </div>
         </div>
       </div>

@@ -17,11 +17,6 @@ function CalendarDisplay({
   const [prices, setPrices] = useState([]);
   const [total, setTotal] = useState(0);
   const [isDateSelected, setIsDateSelected] = useState(false);
-  const [hidden, setHidden] = useState(false);
-
-  function togglePriceBreakdown() {
-    setHidden(!hidden);
-  }
 
   const carDetails = carMakes[selectedManufacturer].cars[selectedModel];
 
@@ -67,43 +62,31 @@ function CalendarDisplay({
   };
 
   return (
-    <div>
-      <>
-        <h1 className="bg-gray-400 text-center p-5 text-2xl text-customOrange-lighter font-bold tracking-wide">
+    <div className="bg-gray-200 rounded-r-lg px-5 pt-5 h-screen">
+      <div className="w-full flex flex-col justify-center items-center gap-5">
+        <h1 className="bg-customOrange-darker text-center p-5 text-2xl text-white font-bold tracking-wide">
           Choose Rental Period Range
         </h1>
         <Calendar selectRange onChange={handleRangeChange} value={value} />
-        <div>
-          {hidden && (
-            <>
-              {prices.map((dayPrice) => (
-                <p key={dayPrice.date.toString()}>
-                  {dayPrice.date.toDateString()} - £{Math.round(dayPrice.price)}
-                </p>
-              ))}
-            </>
-          )}
-        </div>
         {isDateSelected && (
-          <div className="flex flex-row items-center justify-center">
-            <p className="p-5">Total Cost for Rented Period of: £{total}</p>
-            <button
-              onClick={togglePriceBreakdown}
-              className="bg-orange-300 text-white font-semibold py-2 px-4 rounded-md shadow-md transition duration-300 transform hover:scale-105 hover:bg-orange-400 hover:shadow-lg focus:outline-none focus:ring focus:ring-orange-400 focus:ring-opacity-50"
-            >
-              See Detailed Cost Breakdown
-            </button>
-            <AddToBasketButton
-              addToBasket={addToBasket}
-              carMakes={carMakes}
-              selectedManufacturer={selectedManufacturer}
-              selectedModel={selectedModel}
-              value={value}
-            />
-            <ShowBasketButton />
+          <div className="flex flex-col items-center">
+            <p className="p-5 bg-customOrange-lighter text-white font-bold tracking-wide rounded-lg w-full text-lg mt-10">
+              Total Cost for Rented Period: £{total}
+            </p>
+            <img className="h-60 w-96" src={carDetails.image} />
+            <div className="flex flex-row items-center justify-end">
+              <AddToBasketButton
+                addToBasket={addToBasket}
+                carMakes={carMakes}
+                selectedManufacturer={selectedManufacturer}
+                selectedModel={selectedModel}
+                value={value}
+              />
+              <ShowBasketButton />
+            </div>
           </div>
         )}
-      </>
+      </div>
     </div>
   );
 }
