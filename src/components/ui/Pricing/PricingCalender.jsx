@@ -65,7 +65,7 @@ function CalendarDisplay({
     <div className="bg-gray-200 rounded-r-lg px-5 pt-5 h-screen">
       <div className="w-full flex flex-col justify-center items-center gap-5">
         <h1 className="bg-customOrange-darker text-center p-5 text-2xl text-white font-bold tracking-wide rounded-full">
-          Step 2 - Choose Rental Period Range
+          Step 2 - Choose Rental Period
         </h1>
         <Calendar selectRange onChange={handleRangeChange} value={value} />
         {isDateSelected && (

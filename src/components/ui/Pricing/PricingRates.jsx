@@ -11,6 +11,7 @@ function PricingRates({
   selectedManufacturer,
   pricing,
 }) {
+  // const [comment, showComment] = useState(false);
   const carDetails = carMakes[selectedManufacturer].cars[selectedModel];
   const logo = carMakes[selectedManufacturer].logo;
 
