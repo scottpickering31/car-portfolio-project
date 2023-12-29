@@ -42,7 +42,7 @@ function Basket() {
             <p>Basket Total: </p>
             <CheckoutButton />
             {/* <SeeCostBreakDown /> */}
-            <div>
+            {/* <div>
               {/* {hidden && (
                 <>
                   {prices.map((dayPrice) => (
@@ -53,7 +53,7 @@ function Basket() {
                   ))}
                 </>
               )} */}
-            </div>
+            {/* </div> */}
           </div>
         </div>
       </div>
