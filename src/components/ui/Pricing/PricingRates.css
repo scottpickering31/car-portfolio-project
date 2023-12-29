@@ -1,9 +1,13 @@
-.bg-silver p {
-  background-color: white;
-}
-
-.bg-bronze p {
-}
-
+.bg-gray-150 p,
+.bg-silver p,
+.bg-bronze p,
 .bg-gold p {
+  background-color: white;
+  border-radius: 0.25rem;
+  font-weight: bold;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }

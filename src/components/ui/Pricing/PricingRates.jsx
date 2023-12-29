@@ -1,6 +1,9 @@
 import { connect } from "react-redux";
 import CalendarDisplay from "./PricingCalender";
 import "./PricingRates.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck } from "@fortawesome/free-solid-svg-icons";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
 
 function PricingRates({
   selectedModel,
@@ -22,8 +25,8 @@ function PricingRates({
         </h1>
         <div className="flex flex-row">
           <div className="flex h-screen bg-gray-200 border border-r-black rounded-l-lg text-center p-6 gap-5 text-black flex-row justify-between ">
-            <div className="text-xs leading-tight bg-gray-100 w-1/4 justify-between flex flex-col rounded-lg shadow-2xl">
-              <p className="font-bold bg-gray-100 p-5 h-28 flex items-center justify-center">
+            <div className="text-xs leading-tight bg-gray-150 w-1/4 justify-between flex flex-col rounded-lg shadow-2xl">
+              <p className="font-bold bg-gray-100 p-5 !h-28 flex items-center justify-center">
                 Tariff Details
               </p>
               <p>Insurance Package</p>
@@ -36,12 +39,12 @@ function PricingRates({
               <p>Car Swap +</p>
               <p>Future Discount</p>
               <p>Additional Perks</p>
-              <p>Price Breakdown (Daily)</p>
+              <p>Pricing</p>
               <br />
               <br />
             </div>
-            <div className="text-xs leading-tight w-1/3 bg-bronze justify-between flex flex-col rounded-lg shadow-2xl ">
-              <p className="font-bold bg-gray-100 p-5 h-28 flex items-center justify-center">
+            <div className="text-sm leading-tight w-1/3 bg-bronze justify-between flex flex-col rounded-lg shadow-2xl ">
+              <p className="font-bold bg-gray-100 p-5 !h-28 flex items-center justify-center">
                 Day Rental
               </p>
               <p>Basic</p>
@@ -49,17 +52,29 @@ function PricingRates({
               <p>100 Miles</p>
               <p>Basic</p>
               <p>Standard</p>
-              <p>Cross</p>
-              <p>Cross</p>
-              <p>Cross</p>
-              <p>Cross</p>
-              <p>Cross</p>
-              <p>£{carDetails.dayRate} Per Day</p>
+              <p>
+                <FontAwesomeIcon icon={faXmark} />
+              </p>
+              <p>
+                <FontAwesomeIcon icon={faXmark} />
+              </p>
+              <p>
+                <FontAwesomeIcon icon={faXmark} />
+              </p>
+              <p>
+                <FontAwesomeIcon icon={faXmark} />
+              </p>
+              <p>
+                <FontAwesomeIcon icon={faXmark} />
+              </p>
+              <p className="text-lg flex justify-end !bg-blue-600 text-white">
+                £{carDetails.dayRate} Per Day
+              </p>
               <br />
               <br />
             </div>
-            <div className="text-xs leading-tight w-1/3 bg-silver justify-between flex flex-col rounded-lg shadow-2xl">
-              <p className="font-bold bg-gray-100 p-5 h-28 flex items-center">
+            <div className="text-sm leading-tight w-1/3 bg-silver justify-between flex flex-col rounded-lg shadow-2xl">
+              <p className="font-bold bg-gray-100 p-5 !h-28 flex items-center">
                 Weekly Rental (7+ days)
               </p>
               <p>Enhanced</p>
@@ -67,17 +82,30 @@ function PricingRates({
               <p>200 Miles</p>
               <p>Extended</p>
               <p>Flexi Plus(+)</p>
-              <p>Tick (within 150 miles)</p>
-              <p>Tick</p>
-              <p>Tick</p>
-              <p>Cross</p>
-              <p>Cross</p>
-              <p>£{Math.round(carDetails.weekRateBreakDown())} Per Day</p>
+              <p className="gap-2">
+                <FontAwesomeIcon icon={faCheck} />
+                (within 150 miles)
+              </p>
+              <p>
+                <FontAwesomeIcon icon={faCheck} />
+              </p>
+              <p>
+                <FontAwesomeIcon icon={faCheck} />
+              </p>
+              <p>
+                <FontAwesomeIcon icon={faXmark} />
+              </p>
+              <p>
+                <FontAwesomeIcon icon={faXmark} />
+              </p>
+              <p className="text-lg !bg-blue-600 text-white">
+                £{Math.round(carDetails.weekRateBreakDown())} Per Day
+              </p>
               <br />
               <br />
             </div>
-            <div className="text-xs leading-tight w-1/3 bg-gold justify-between flex flex-col rounded-lg shadow-2xl">
-              <p className="font-bold bg-gray-100 p-5 h-28 flex items-center">
+            <div className="text-sm leading-tight w-1/3 bg-gold justify-between flex flex-col rounded-lg shadow-2xl">
+              <p className="font-bold bg-gray-100 p-5 !h-28 flex items-center">
                 Monthly Rental (31+ days)
               </p>
               <p>Comprehensive</p>
@@ -85,12 +113,25 @@ function PricingRates({
               <p>400 Miles</p>
               <p>Full</p>
               <p>Flexi Pro(++)</p>
-              <p>Tick (within 400 miles)</p>
-              <p>Tick</p>
-              <p>Tick</p>
-              <p>Tick</p>
-              <p>Tick</p>
-              <p>£{Math.round(carDetails.monthRateBreakDown())} Per Day</p>
+              <p className="gap-2">
+                <FontAwesomeIcon icon={faCheck} />
+                (within 400 miles)
+              </p>
+              <p>
+                <FontAwesomeIcon icon={faCheck} />
+              </p>
+              <p>
+                <FontAwesomeIcon icon={faCheck} />
+              </p>
+              <p>
+                <FontAwesomeIcon icon={faCheck} />
+              </p>
+              <p>
+                <FontAwesomeIcon icon={faCheck} />
+              </p>
+              <p className="text-lg !bg-blue-600 text-white">
+                £{Math.round(carDetails.monthRateBreakDown())} Per Day
+              </p>
               <br />
               <br />
             </div>

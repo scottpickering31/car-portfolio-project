@@ -37,7 +37,7 @@ function Basket() {
           <div>
             <BasketItems />
           </div>
-          <div className="sticky bottom-0 w-full flex justify-around mt-4 border border-white bg-white rounded-lg p-5 items-center ">
+          <div className="sticky bottom-0 w-full flex justify-between mt-4 border border-white bg-white rounded-lg p-5 items-center">
             <ResetBasketAmountButton />
             <p>Basket Total: </p>
             <CheckoutButton />
