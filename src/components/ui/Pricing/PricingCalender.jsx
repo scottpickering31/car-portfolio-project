@@ -64,13 +64,13 @@ function CalendarDisplay({
   return (
     <div className="bg-gray-200 rounded-r-lg px-5 pt-5 h-screen">
       <div className="w-full flex flex-col justify-center items-center gap-5">
-        <h1 className="bg-customOrange-darker text-center p-5 text-2xl text-white font-bold tracking-wide">
-          Choose Rental Period Range
+        <h1 className="bg-customOrange-darker text-center p-5 text-2xl text-white font-bold tracking-wide rounded-full">
+          Step 3 - Choose Rental Period Range
         </h1>
         <Calendar selectRange onChange={handleRangeChange} value={value} />
         {isDateSelected && (
           <div className="flex flex-col items-center">
-            <p className="p-5 bg-customOrange-lighter text-white font-bold tracking-wide rounded-lg w-full text-lg mt-10">
+            <p className="p-5 bg-customOrange-lighter text-white font-bold tracking-wide rounded-lg w-full text-lg mt-3">
               Total Cost for Rented Period: £{total}
             </p>
             <img className="h-60 w-full" src={carDetails.image} />

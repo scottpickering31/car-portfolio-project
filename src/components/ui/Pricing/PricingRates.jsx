@@ -12,6 +12,7 @@ function PricingRates({
   pricing,
 }) {
   const carDetails = carMakes[selectedManufacturer].cars[selectedModel];
+  const logo = carMakes[selectedManufacturer].logo;
 
   if (!pricing) {
     return null;
@@ -20,9 +21,12 @@ function PricingRates({
   return (
     <div className="border mt-10 w-auto p-5 bg-white rounded-lg shadow-2xl">
       <div className="flex flex-col items-center text-center">
-        <h1 className="pb-5 text-3xl font-bold">
-          {selectedModel} - Cost Breakdown
-        </h1>
+        <div className="flex flex-row items-center gap-5">
+          <img src={logo} className="w-28" />
+          <h1 className="pb-5 text-3xl font-bold">
+            {selectedModel} - Cost Breakdown
+          </h1>
+        </div>
         <div className="flex flex-row">
           <div className="flex h-screen bg-gray-200 border border-r-black rounded-l-lg text-center p-6 gap-5 text-black flex-row justify-between ">
             <div className="text-xs leading-tight bg-gray-150 w-1/4 justify-between flex flex-col rounded-lg shadow-2xl">
