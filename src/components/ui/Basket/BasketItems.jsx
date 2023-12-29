@@ -17,7 +17,7 @@ function BasketItems({ basketItem, removeFromBasket }) {
       {basketItem.map((item, index) => (
         <div
           key={index}
-          className="flex flex-row border border-white m-5 bg-white p-6 w-full h-40 justify-around rounded-xl shadow-lg"
+          className="flex flex-row items-center border border-white m-5 bg-white p-6 w-full h-40 justify-around rounded-xl shadow-lg"
         >
           <div>
             <p>
@@ -40,11 +40,14 @@ function BasketItems({ basketItem, removeFromBasket }) {
               className="w-40 rounded-full "
             />
           </div>
+          <button className="bg-customOrange-lighter h-12 text-white font-semibold py-2 px-2 rounded-md shadow-md transition duration-300 transform hover:scale-105 hover:bg-customOrange-darker hover:shadow-lg focus:outline-none focus:ring focus:ring-red-400 focus:ring-opacity-50">
+            Price Breakdown
+          </button>
           <button
             onClick={() => removeItem(index)}
-            className="bg-red-500 h-30 text-white font-semibold py-2 px-4 rounded-md shadow-md transition duration-300 transform hover:scale-105 hover:red-500 hover:shadow-lg focus:outline-none focus:ring focus:ring-red-400 focus:ring-opacity-50"
+            className="bg-red-500 h-12 text-white font-semibold py-2 px-4 rounded-md shadow-md transition duration-300 transform hover:scale-105 hover:red-500 hover:shadow-lg focus:outline-none focus:ring focus:ring-red-400 focus:ring-opacity-50"
           >
-            Remove
+            Remove Car
           </button>
         </div>
       ))}

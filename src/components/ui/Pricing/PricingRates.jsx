@@ -28,7 +28,7 @@ function PricingRates({
           </h1>
         </div>
         <div className="flex flex-row">
-          <div className="flex h-screen bg-gray-200 border border-r-black rounded-l-lg text-center p-6 gap-5 text-black flex-row justify-between ">
+          <div className="flex h-screen bg-gray-200 border border-r-black rounded-l-lg text-center p-3 gap-5 text-black flex-row justify-between ">
             <div className="text-xs leading-tight bg-gray-150 w-1/4 justify-between flex flex-col rounded-lg shadow-2xl">
               <p className="font-bold bg-gray-100 p-5 !h-28 flex items-center justify-center">
                 Tariff Details
