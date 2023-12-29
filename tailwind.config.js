@@ -3,6 +3,10 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      backgroundSize: {
+        "50%": "50%",
+        16: "4rem",
+      },
       height: {
         medium: "75vh",
       },

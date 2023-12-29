@@ -73,8 +73,8 @@ function CalendarDisplay({
             <p className="p-5 bg-customOrange-lighter text-white font-bold tracking-wide rounded-lg w-full text-lg mt-10">
               Total Cost for Rented Period: £{total}
             </p>
-            <img className="h-60 w-96" src={carDetails.image} />
-            <div className="flex flex-row items-center justify-end">
+            <img className="h-60 w-full" src={carDetails.image} />
+            <div className="flex flex-row items-center justify-end gap-5">
               <AddToBasketButton
                 addToBasket={addToBasket}
                 carMakes={carMakes}

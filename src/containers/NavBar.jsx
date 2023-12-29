@@ -16,7 +16,7 @@ function NavBar() {
   };
 
   return (
-    <div className="fixed flex flex-row w-full justify-end z-10">
+    <div className="fixed">
       <BasketIcon />
       {/* <div
         className="relative"
