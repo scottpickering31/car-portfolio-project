@@ -4,7 +4,6 @@ import React from "react";
 function CarDetails({ selectedManufacturer, selectedModel, carMakes }) {
   const carDetails = carMakes[selectedManufacturer].cars[selectedModel];
 
-
   if (!carDetails) return null;
 
   const descriptionStyles = "flex justify-between p-1 border-b-2";
@@ -13,8 +12,15 @@ function CarDetails({ selectedManufacturer, selectedModel, carMakes }) {
   return (
     <div className="ml-8 w-2/3 flex items-center flex-col p-4 ">
       <div className="border-b-2 p-4 rounded-md flex items-center flex-col text-center">
-        <h2 className="text-xl font-bold mb-2">{selectedModel}</h2>
-        <p>{carDetails.description}</p>
+        <div className="flex flex-row justify-center items-center">
+          <img
+            src={carMakes[selectedManufacturer].logo}
+            alt={carDetails.logo}
+            className="w-1/3"
+          />
+          <h2 className="text-2xl font-bold">{selectedModel}</h2>
+        </div>
+        <p className="mt-5 mb-5">{carDetails.description}</p>
       </div>
       <div className="flex flex-col w-full mt-3">
         <div className={descriptionStyles}>

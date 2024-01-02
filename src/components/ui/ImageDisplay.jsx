@@ -7,9 +7,9 @@ function ImageDisplay({ selectedManufacturer, selectedModel, carMakes }) {
   if (!carDetails) return null;
 
   return (
-    <div className="w-2/3 flex justify-center items-center">
+    <div className="flex justify-center items-center">
       <img
-        className=""
+        className="w-full"
         src={carDetails.image}
         alt={`${selectedManufacturer} ${selectedModel}`}
       />

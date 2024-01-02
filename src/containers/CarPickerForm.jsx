@@ -73,26 +73,28 @@ function CarPickerForm() {
         )}
         {selectedModel && (
           <div>
-            <div className="flex flex-row">
+            <div className="flex flex-row h-full">
               <CarDetails
                 selectedManufacturer={selectedManufacturer}
                 selectedModel={selectedModel}
                 carMakes={carMakes}
               />
-              <ImageDisplay
-                selectedManufacturer={selectedManufacturer}
-                selectedModel={selectedModel}
-                carMakes={carMakes}
-              />
-            </div>
-            <div className="flex justify-center items-center flex-col mb-5 gap-2 p-5">
-              <p>
-                <strong>Interested?</strong> Check out our
-              </p>
-              <PriceButton handlePricing={handlePricing} />
-              <p>
-                for the <strong>{selectedModel}</strong>
-              </p>
+              <div className="flex flex-col items-center justify-center w-1/2">
+                <ImageDisplay
+                  selectedManufacturer={selectedManufacturer}
+                  selectedModel={selectedModel}
+                  carMakes={carMakes}
+                />
+                <div className="flex justify-center items-center flex-col mb-5 gap-2 p-5">
+                  <p>
+                    <strong>Interested?</strong> Check out our
+                  </p>
+                  <PriceButton handlePricing={handlePricing} />
+                  <p>
+                    for the <strong>{selectedModel}</strong>
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         )}
