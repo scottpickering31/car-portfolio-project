@@ -5,7 +5,6 @@ import { useBasket } from "../../../statemanagement/context/BasketContext";
 import CheckoutButton from "../Buttons/CheckoutButton";
 import React from "react";
 import { connect } from "react-redux";
-import SeeCostBreakDown from "../Buttons/SeeCostBreakDown";
 
 function Basket({ basketItem }) {
   const { toggleBasketShow } = useBasket();
@@ -50,7 +49,6 @@ function Basket({ basketItem }) {
               Basket Total: £{totalBasketPrice}
             </p>
             <CheckoutButton />
-            <SeeCostBreakDown />
           </div>
         </div>
       </div>

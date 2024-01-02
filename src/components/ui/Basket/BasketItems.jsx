@@ -1,6 +1,7 @@
 // BasketItems.js
 import { connect } from "react-redux";
 import { removeFromBasket } from "../../../statemanagement/actions/basketAction";
+import SeeCostBreakDown from "../Buttons/SeeCostBreakDown";
 
 function BasketItems({ basketItem, removeFromBasket }) {
   if (!basketItem || basketItem.length === 0) {
@@ -43,9 +44,7 @@ function BasketItems({ basketItem, removeFromBasket }) {
               className="w-40 rounded-full "
             />
           </div>
-          <button className="bg-customOrange-lighter h-12 text-white font-semibold py-2 px-2 rounded-md shadow-md transition duration-300 transform hover:scale-105 hover:bg-customOrange-darker hover:shadow-lg focus:outline-none focus:ring focus:ring-red-400 focus:ring-opacity-50">
-            Price Breakdown
-          </button>
+          <SeeCostBreakDown />
           <button
             onClick={() => removeItem(index)}
             className="bg-red-500 h-12 text-white font-semibold py-2 px-4 rounded-md shadow-md transition duration-300 transform hover:scale-105 hover:red-500 hover:shadow-lg focus:outline-none focus:ring focus:ring-red-400 focus:ring-opacity-50"

@@ -67,7 +67,7 @@ function CalendarDisplay({
   };
 
   return (
-    <div className="bg-gray-200 rounded-r-lg px-5 pt-5 h-screen">
+    <div className="bg-gray-200 rounded-r-lg px-5 pt-5 h-large">
       <div className="w-full flex flex-col justify-center items-center gap-5">
         <h1 className="bg-customOrange-darker text-center p-5 text-2xl text-white font-bold tracking-wide rounded-full">
           Step 2 - Choose Rental Period
@@ -78,7 +78,7 @@ function CalendarDisplay({
             <p className="p-5 bg-customOrange-lighter text-white font-bold tracking-wide rounded-lg w-full text-lg mt-3">
               Cost for Rental Period: £{total}
             </p>
-            <img className="h-60 w-full" src={carDetails.image} />
+            <img className="h-60 w-full p-5" src={carDetails.image} />
             <div className="flex flex-row items-center justify-end gap-5">
               <AddToBasketButton
                 addToBasket={addToBasket}

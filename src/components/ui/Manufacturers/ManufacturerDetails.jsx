@@ -6,8 +6,8 @@ function ManufacturerDetails({ selectedManufacturer, carMakes }) {
 
   return (
     <div className="w-full flex justify-center items-center flex-col">
-      <img src={logo} className="h-96 w-96" />
-      <p className="text-center">{description}</p>
+      <img src={logo} className="h-96" />
+      <p className="text-center p-10 text-xl">{description}</p>
     </div>
   );
 }

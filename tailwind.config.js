@@ -8,7 +8,9 @@ export default {
         16: "4rem",
       },
       height: {
-        medium: "75vh",
+        medium: "80vh",
+        large: "110vh",
+        xl: "125vh",
       },
       colors: {
         customOrange: {

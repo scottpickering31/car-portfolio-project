@@ -30,11 +30,11 @@ function CarPickerForm() {
   };
 
   return (
-    <div className="flex justify-center flex-col items-center mt-40 h-2/3 mb-40 bg-white">
+    <div className="flex justify-center flex-col items-center mt-40 h-2/3 mb-40">
       <h1 className="bg-customOrange-darker mb-5 text-center p-5 text-2xl text-white font-bold tracking-wide rounded-full">
         Step 1 - Select your Supercar!
       </h1>
-      <div className="flex border border-gray-400 w-11/12 rounded-lg shadow-2xl h-medium">
+      <div className="flex border border-gray-400 w-11/12 rounded-lg shadow-2xl h-screen bg-white">
         <div className="border-r-2 flex flex-col justify-center p-5 w-2/6">
           <ManufacturerSelect
             carManufacturer={carManufacturer}
@@ -64,16 +64,16 @@ function CarPickerForm() {
         )}
         {!selectedManufacturer && (
           <div className="flex flex-col justify-center text-center w-3/4">
-            <h1>Elite Drives</h1>
+            <h1 className="font-whisper text-9xl">Elite Drives</h1>
             <img
               src="src/assets/Elite-Drives-Car-Fleet.png"
-              className="h-5/6 p-6 w-full"
+              className=" p-6 w-full"
             />
           </div>
         )}
         {selectedModel && (
-          <div>
-            <div className="flex flex-row h-full">
+          <div className="flex items-center">
+            <div className="flex flex-row h-medium">
               <CarDetails
                 selectedManufacturer={selectedManufacturer}
                 selectedModel={selectedModel}
