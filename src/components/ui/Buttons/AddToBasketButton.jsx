@@ -1,9 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
-import { addToBasket } from "../../../statemanagement/actions/basketAction"; // Import your action creator
+import { addToBasket } from "../../../statemanagement/actions/basketAction";
 
 function AddToBasketButton({
-  addToBasket, // This is the action creator
+  addToBasket,
   selectedModel,
   selectedManufacturer,
   carMakes,
@@ -15,7 +15,6 @@ function AddToBasketButton({
     const durationInDays = Math.round(
       (value[1] - value[0]) / (1000 * 60 * 60 * 24),
     );
-    console.log(durationInDays);
 
     let totalPrice = 0;
 
@@ -27,7 +26,6 @@ function AddToBasketButton({
       totalPrice = carDetails.dayRate * durationInDays;
     }
 
-    // Dispatch the action to add to the basket
     addToBasket({
       manufacturer: selectedManufacturer,
       model: selectedModel,

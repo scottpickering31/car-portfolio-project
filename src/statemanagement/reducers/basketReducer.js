@@ -14,13 +14,25 @@ const basketReducer = (state = initialState, action) => {
 
     case "REMOVE_BASKET_ITEM":
       const updatedBasket = state.basketItem.filter(
-        (_, index) => index !== action.payload
+        (_, index) => index !== action.payload,
       );
 
       return {
         ...state,
         basketCount: state.basketCount - 1,
         basketItem: updatedBasket,
+      };
+    case "UPDATE_DAILY_PRICE_BREAKDOWN":
+      return {
+        ...state,
+        basketItem: state.basketItem.map((item, index) =>
+          index === action.payload.index
+            ? {
+                ...item,
+                dailyPriceBreakdown: action.payload.dailyPriceBreakdown,
+              }
+            : item,
+        ),
       };
 
     case "RESET_BASKET":

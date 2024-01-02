@@ -4,6 +4,7 @@ import ShowBasketButton from "../Buttons/ShowBasketButton";
 import AddToBasketButton from "../Buttons/AddToBasketButton";
 import { connect } from "react-redux";
 import { addToBasket } from "../../../statemanagement/actions/basketAction";
+import { updateDailyPriceBreakdown } from "../../../statemanagement/actions/basketAction";
 import "react-calendar/dist/Calendar.css";
 import "./Calendar.css";
 
@@ -12,46 +13,49 @@ function CalendarDisplay({
   selectedManufacturer,
   selectedModel,
   addToBasket,
+  updateDailyPriceBreakdown,
 }) {
   const [value, onChange] = useState([new Date(), new Date()]);
-  const [prices, setPrices] = useState([]);
   const [total, setTotal] = useState(0);
   const [isDateSelected, setIsDateSelected] = useState(false);
 
+  // Get the car details for the selected car
   const carDetails = carMakes[selectedManufacturer].cars[selectedModel];
 
+  // Calculate the price per day
   const pricePerDay = carDetails.dayRate;
 
+  //   Calculate the total price based on the selected dates
   const calculatePrices = (startDate, endDate) => {
     const oneDay = 24 * 60 * 60 * 1000;
     const days = Math.round(Math.abs((startDate - endDate) / oneDay));
 
     let newPrices = [];
-
+    //     Calculate the price for each month
     if (days >= 31) {
       newPrices = Array.from({ length: days }, (_, index) => ({
         date: new Date(startDate.getTime() + index * oneDay),
         price: carDetails.monthRateBreakDown() * (index + 1),
       }));
+      // Calculate the price for each week
     } else if (days >= 7) {
       newPrices = Array.from({ length: days }, (_, index) => ({
         date: new Date(startDate.getTime() + index * oneDay),
         price: carDetails.weekRateBreakDown() * (index + 1),
       }));
+      // Calculate the price for each day
     } else {
       newPrices = Array.from({ length: days }, (_, index) => ({
         date: new Date(startDate.getTime() + index * oneDay),
         price: pricePerDay * (index + 1),
       }));
     }
-
-    setPrices(newPrices);
-
+    //     Calculate the total price
     const totalPrice =
       newPrices.length > 0
         ? Math.round(newPrices[newPrices.length - 1].price)
         : 0;
-
+    //     Update the total price
     setTotal(totalPrice);
     setIsDateSelected(true);
   };
@@ -59,6 +63,7 @@ function CalendarDisplay({
   const handleRangeChange = (newValue) => {
     onChange(newValue);
     calculatePrices(newValue[0], newValue[1]);
+    updateDailyPriceBreakdown(calculatePrices(newValue[0], newValue[1]));
   };
 
   return (
@@ -71,7 +76,7 @@ function CalendarDisplay({
         {isDateSelected && (
           <div className="flex flex-col items-center">
             <p className="p-5 bg-customOrange-lighter text-white font-bold tracking-wide rounded-lg w-full text-lg mt-3">
-              Total Cost for Rented Period: £{total}
+              Cost for Rental Period: £{total}
             </p>
             <img className="h-60 w-full" src={carDetails.image} />
             <div className="flex flex-row items-center justify-end gap-5">
@@ -92,6 +97,7 @@ function CalendarDisplay({
 }
 const mapDispatchToProps = {
   addToBasket,
+  updateDailyPriceBreakdown,
 };
 
 export default connect(null, mapDispatchToProps)(CalendarDisplay);

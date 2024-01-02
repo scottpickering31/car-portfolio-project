@@ -5,7 +5,7 @@ import { useBasket } from "../../../statemanagement/context/BasketContext";
 import CheckoutButton from "../Buttons/CheckoutButton";
 import React from "react";
 import { connect } from "react-redux";
-// import SeeCostBreakDown from "../Buttons/SeeCostBreakDown";
+import SeeCostBreakDown from "../Buttons/SeeCostBreakDown";
 
 function Basket({ basketItem }) {
   const { toggleBasketShow } = useBasket();
@@ -50,25 +50,14 @@ function Basket({ basketItem }) {
               Basket Total: £{totalBasketPrice}
             </p>
             <CheckoutButton />
-            {/* <SeeCostBreakDown /> */}
-            {/* <div>
-              {/* {hidden && (
-                <>
-                  {prices.map((dayPrice) => (
-                    <p key={dayPrice.date.toString()}>
-                      {dayPrice.date.toDateString()} - £
-                      {Math.round(dayPrice.price)}
-                    </p>
-                  ))}
-                </>
-              )} */}
-            {/* </div> */}
+            <SeeCostBreakDown />
           </div>
         </div>
       </div>
     </div>
   );
 }
+
 const mapStateToProps = (state) => ({
   basketItem: state.basket.basketItem,
 });
