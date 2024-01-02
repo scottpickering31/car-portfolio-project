@@ -1,5 +1,9 @@
+import React from "react";
+import { connect } from "react-redux";
+import { addToBasket } from "../../../statemanagement/actions/basketAction"; // Import your action creator
+
 function AddToBasketButton({
-  addToBasket,
+  addToBasket, // This is the action creator
   selectedModel,
   selectedManufacturer,
   carMakes,
@@ -23,11 +27,12 @@ function AddToBasketButton({
       totalPrice = carDetails.dayRate * durationInDays;
     }
 
+    // Dispatch the action to add to the basket
     addToBasket({
       manufacturer: selectedManufacturer,
       model: selectedModel,
       image: carDetails.image,
-      price: "£" + Math.round(totalPrice),
+      price: Math.round(totalPrice),
       duration: durationInDays,
     });
   };
@@ -44,4 +49,5 @@ function AddToBasketButton({
   );
 }
 
-export default AddToBasketButton;
+// Connect the component to Redux
+export default connect(null, { addToBasket })(AddToBasketButton);

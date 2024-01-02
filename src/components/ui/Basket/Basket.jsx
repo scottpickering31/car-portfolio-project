@@ -3,9 +3,11 @@ import BasketItems from "../Basket/BasketItems";
 import ResetBasketAmountButton from "../Buttons/ResetBasketAmountButton";
 import { useBasket } from "../../../statemanagement/context/BasketContext";
 import CheckoutButton from "../Buttons/CheckoutButton";
+import React from "react";
+import { connect } from "react-redux";
 // import SeeCostBreakDown from "../Buttons/SeeCostBreakDown";
 
-function Basket() {
+function Basket({ basketItem }) {
   const { toggleBasketShow } = useBasket();
   const { toggleShowBasket } = useBasket();
   const [isVisible, setIsVisible] = useState(false);
@@ -13,6 +15,11 @@ function Basket() {
   useEffect(() => {
     setIsVisible(toggleBasketShow);
   }, [toggleBasketShow]);
+
+  const totalBasketPrice =
+    basketItem && basketItem.length > 0
+      ? basketItem.reduce((total, item) => total + item.price, 0)
+      : 0;
 
   return (
     <div className="relative z-20">
@@ -39,7 +46,9 @@ function Basket() {
           </div>
           <div className="sticky bottom-0 w-full flex justify-between mt-4 border border-white bg-white rounded-lg p-5 items-center">
             <ResetBasketAmountButton />
-            <p>Basket Total: </p>
+            <p className="text-xl font-bold underline underline-offset-4 tracking-wider">
+              Basket Total: £{totalBasketPrice}
+            </p>
             <CheckoutButton />
             {/* <SeeCostBreakDown /> */}
             {/* <div>
@@ -60,5 +69,8 @@ function Basket() {
     </div>
   );
 }
+const mapStateToProps = (state) => ({
+  basketItem: state.basket.basketItem,
+});
 
-export default Basket;
+export default connect(mapStateToProps)(Basket);
