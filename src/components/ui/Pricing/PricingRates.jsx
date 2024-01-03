@@ -4,6 +4,8 @@ import "./PricingRates.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { toolTipObj } from "./PricingToolTipData";
+import { useState } from "react";
 
 function PricingRates({
   selectedModel,
@@ -11,7 +13,8 @@ function PricingRates({
   selectedManufacturer,
   pricing,
 }) {
-  // const [comment, showComment] = useState(false);
+  const [tooltip, setTooltip] = useState("");
+
   const carDetails = carMakes[selectedManufacturer].cars[selectedModel];
   const logo = carMakes[selectedManufacturer].logo;
 
@@ -23,34 +26,34 @@ function PricingRates({
     <div className="border mt-10 w-auto p-5 bg-white rounded-lg shadow-2xl">
       <div className="flex flex-col items-center text-center">
         <div className="flex flex-row items-center gap-5">
-          <img src={logo} className="w-28 mb-5" />
+          <img src={logo} className="w-28 mb-5" alt="Car Logo" />
           <h1 className="pb-5 text-3xl font-bold">
             {selectedModel} - Cost Breakdown
           </h1>
         </div>
         <div className="flex flex-row">
-          <div className="flex h-large bg-gray-200 border border-r-black rounded-l-lg text-center p-3 gap-5 text-black flex-row justify-between ">
+          <div className="flex h-large bg-gray-200 border border-r-black rounded-l-lg text-center p-3 gap-5 text-black flex-row justify-between">
             <div className="text-xs leading-tight bg-gray-150 w-1/4 justify-between flex flex-col rounded-lg shadow-2xl">
               <p className="font-bold bg-gray-100 p-5 !h-28 flex items-center justify-center">
                 Tariff Details
               </p>
-              <p>Insurance Package</p>
-              <p>Customer Support</p>
-              <p>Allocated Fuel</p>
-              <p>Roadside Assistance</p>
-              <p>Cancellation</p>
-              <p>Pickup/Delivery</p>
-              <p>Concierge</p>
-              <p>Car Swap +</p>
-              <p>Future Discount</p>
-              <p>Additional Perks</p>
-              <p>Pricing</p>
+              {Object.entries(toolTipObj).map(([key, value]) => (
+                <div
+                  key={key}
+                  className="tooltip-wrapper"
+                  onMouseEnter={() => setTooltip(value)}
+                  onMouseLeave={() => setTooltip("")}
+                >
+                  <p className="key w-full">{key}</p>
+                  {tooltip === value && <p className="tooltip">{value}</p>}
+                </div>
+              ))}
               <br />
               <br />
             </div>
             <div className="text-md leading-tight w-1/3 bg-bronze justify-between flex flex-col rounded-lg shadow-2xl ">
               <p className="font-bold bg-gray-100 p-5 !h-28 flex items-center justify-center">
-                Day Rental
+                Bronze <br /> (Day Rental)
               </p>
               <p>Basic</p>
               <p>Basic</p>
@@ -80,7 +83,7 @@ function PricingRates({
             </div>
             <div className="text-md leading-tight w-1/3 bg-silver justify-between flex flex-col rounded-lg shadow-2xl">
               <p className="font-bold bg-gray-100 p-5 !h-28 flex items-center">
-                Weekly Rental (7+ days)
+                Silver <br /> (Weekly Rental (7+ days))
               </p>
               <p>Enhanced</p>
               <p>Priority</p>
@@ -114,7 +117,8 @@ function PricingRates({
             </div>
             <div className="text-md leading-tight w-1/3 bg-gold justify-between flex flex-col rounded-lg shadow-2xl">
               <p className="font-bold bg-gray-100 p-5 !h-28 flex items-center">
-                Monthly Rental (31+ days)
+                Gold <br />
+                (Monthly Rental (31+ days))
               </p>
               <p>Comprehensive</p>
               <p>Dedicated Agent</p>
@@ -156,6 +160,11 @@ function PricingRates({
           </div>
         </div>
       </div>
+      {tooltip && (
+        <div className="relative">
+          <p className="tooltip">{tooltip}</p>
+        </div>
+      )}
     </div>
   );
 }
