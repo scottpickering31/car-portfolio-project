@@ -25,7 +25,7 @@ export default {
           DEFAULT: "#C0C0C0",
         },
         gold: {
-          DEFAULT: "#FFD700",
+          DEFAULT: "#D4AF37",
         },
       },
       fontFamily: {

@@ -11,4 +11,7 @@ export const toolTipObj = {
   "Future Discount": "Future Discount",
   "Additional Perks": "Additional Perks",
   Pricing: "Pricing",
+  Gold: "Gold",
+  Silver: "Silver",
+  Bronze: "Bronze",
 };

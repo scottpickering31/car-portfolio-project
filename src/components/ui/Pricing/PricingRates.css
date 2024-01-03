@@ -23,6 +23,7 @@
   border-radius: 5px;
   height: 28px;
   font-weight: bold;
+  cursor: pointer;
 }
 
 .tooltip {
@@ -43,8 +44,4 @@
   align-items: center;
   line-height: 3;
   padding: 3px;
-}
-
-.key {
-  cursor: pointer;
 }
