@@ -1,7 +1,6 @@
 .bg-silver p,
 .bg-bronze p,
-.bg-gold p,
-.bg-gray-150 p {
+.bg-gold p {
   background-color: white;
   border-radius: 0.25rem;
   font-weight: bold;
@@ -43,6 +42,6 @@
   width: 150px;
   justify-content: center;
   align-items: center;
-  line-height: 2;
+  line-height: 3;
   padding: 3px;
 }
