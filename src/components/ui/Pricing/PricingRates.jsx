@@ -4,6 +4,7 @@ import "./PricingRates.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 import { toolTipObj } from "./PricingToolTipData";
 import { useState } from "react";
 
@@ -14,6 +15,10 @@ function PricingRates({
   pricing,
 }) {
   const [tooltip, setTooltip] = useState("");
+
+  const toolTipIcon = (
+    <FontAwesomeIcon icon={faCircleExclamation} className="flex items-end" />
+  );
 
   const carDetails = carMakes[selectedManufacturer].cars[selectedModel];
   const logo = carMakes[selectedManufacturer].logo;
@@ -37,17 +42,17 @@ function PricingRates({
               <p className="font-bold bg-gray-100 p-5 !h-28 flex items-center justify-center">
                 Tariff Details
               </p>
-              {Object.entries(toolTipObj).map(([key, value]) => (
-                <div
-                  key={key}
-                  className="tooltip-wrapper"
-                  onMouseEnter={() => setTooltip(value)}
-                  onMouseLeave={() => setTooltip("")}
-                >
-                  <p className="key w-full">{key}</p>
-                  {tooltip === value && <p className="tooltip">{value}</p>}
-                </div>
-              ))}
+              <p>Insurance Package</p>
+              <p>Customer Support</p>
+              <p>Allocated Fuel</p>
+              <p>Roadside Assistance</p>
+              <p>Cancellation</p>
+              <p>Pickup/Delivery</p>
+              <p>Concierge</p>
+              <p>Car Swap</p>
+              <p>Future Discount</p>
+              <p>Additional Perks</p>
+              <p>Pricing</p>
               <br />
               <br />
             </div>
@@ -81,15 +86,27 @@ function PricingRates({
               <br />
               <br />
             </div>
+
+            {/* {Object.entries(toolTipObj.Bronze).map(([key, value]) => (
+                <div
+                  key={key}
+                  className="tooltip-wrapper"
+                  onMouseEnter={() => setTooltip(value)}
+                  onMouseLeave={() => setTooltip("")}
+                >
+                  <p className="key w-full">{key}</p>
+                  {tooltip === value && <p className="tooltip">{value}</p>}
+                </div>
+              ))} */}
             <div className="text-md leading-tight w-1/3 bg-silver justify-between flex flex-col rounded-lg shadow-2xl">
               <p className="font-bold bg-gray-100 p-5 !h-28 flex items-center">
                 Silver <br /> (Weekly Rental (7+ days))
               </p>
-              <p>Enhanced</p>
-              <p>Priority</p>
-              <p>200 Miles</p>
-              <p>Extended</p>
-              <p>Flexi Plus(+)</p>
+              <p>Enhanced {toolTipIcon}</p>
+              <p>Priority {toolTipIcon}</p>
+              <p>200 Miles {toolTipIcon}</p>
+              <p>Extended {toolTipIcon}</p>
+              <p>Flexi Plus(+) {toolTipIcon}</p>
               <p>
                 <FontAwesomeIcon
                   icon={faCheck}
@@ -160,11 +177,11 @@ function PricingRates({
           </div>
         </div>
       </div>
-      {tooltip && (
+      {/* {tooltip && (
         <div className="relative">
           <p className="tooltip">{tooltip}</p>
         </div>
-      )}
+      )} */}
     </div>
   );
 }
