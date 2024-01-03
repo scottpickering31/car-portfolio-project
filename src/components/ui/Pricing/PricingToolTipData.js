@@ -1,5 +1,6 @@
 export const toolTipObj = {
-  "Insurance Package": "Insurance Package",
+  "Insurance Package":
+    "Bronze gives you this, Silver gives you that, Gold gives you everything Bronze gives you this, Silver gives you that, Gold gives you everything Bronze gives you this, Silver gives you that, Gold gives you everything Bronze gives you this, Silver gives you that, Gold gives you everything",
   "Customer Support": "Customer Support",
   "Allocated Fuel": "Allocated Fuel",
   "Roadside Assistance": "Roadside Assistance",
