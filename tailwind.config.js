@@ -11,6 +11,7 @@ export default {
         medium: "80vh",
         large: "110vh",
         xl: "125vh",
+        tariff: "6.5rem",
       },
       colors: {
         customOrange: {

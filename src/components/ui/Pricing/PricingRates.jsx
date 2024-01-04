@@ -36,25 +36,25 @@ function PricingRates({
         </div>
         <div className="flex flex-row">
           <div className="flex h-large bg-gray-200 border border-r-black rounded-l-lg text-center p-3 gap-5 text-black flex-row justify-between">
-            <div className="text-xs leading-tight bg-gray-150 w-1/4 justify-between flex flex-col rounded-lg shadow-2xl">
+            <div className="text-l leading-tight bg-gray-150 w-1/4 justify-between flex flex-col rounded-lg shadow-2xl">
               <p className="font-bold bg-gray-100 p-5 !h-28 flex items-center justify-center shadow-2xl">
                 Tariff Details
               </p>
-              {Object.entries(toolTipObj.Tarriff).map(([key, value]) => (
-                <div
-                  key={key}
-                  className="tooltip-wrapper "
-                  onMouseEnter={() => setTooltip(value)}
-                  onMouseLeave={() => setTooltip("")}
-                >
-                  <p className="key w-full">{key}</p>
-                  {tooltip === value && <p className="tooltip">{value}</p>}
-                </div>
-              ))}
+              <p>Insurance Package</p>
+              <p>Customer Support</p>
+              <p>Mileage Allowance</p>
+              <p>Roadside Assist</p>
+              <p>Cancellation</p>
+              <p>Pickup/Delivery</p>
+              <p>Concierge</p>
+              <p>Car Swap</p>
+              <p>Future Discount</p>
+              <p>Additional Perks</p>
+              <p>Pricing</p>
               <br />
               <br />
             </div>
-            <div className="text-md leading-tight w-1/3 bg-bronze justify-between flex flex-col rounded-lg shadow-2xl ">
+            <div className="text-md leading-tight w-1/4 bg-bronze justify-between flex flex-col rounded-lg shadow-2xl ">
               <p className="font-bold !bg-gray-600 p-5 !h-28 flex items-center text-white shadow-2xl">
                 Bronze <br /> (Day Rental)
               </p>
@@ -96,7 +96,7 @@ function PricingRates({
               <br />
               <br />
             </div>
-            <div className="text-md leading-tight w-1/3 bg-silver justify-between flex flex-col rounded-lg shadow-2xl">
+            <div className="text-md leading-tight w-1/4 bg-silver justify-between flex flex-col rounded-lg shadow-2xl">
               <p className="font-bold !bg-gray-600 p-5 !h-28 flex items-center text-white shadow-2xl">
                 Silver <br /> (Weekly Rental (7+ days))
               </p>
@@ -135,7 +135,7 @@ function PricingRates({
               <br />
               <br />
             </div>
-            <div className="text-md leading-tight w-1/3 bg-gold justify-between flex flex-col rounded-lg shadow-2xl">
+            <div className="text-md leading-tight w-1/4 bg-gold justify-between flex flex-col rounded-lg shadow-2xl">
               <p className="font-bold !bg-gray-600 p-5 !h-28 flex items-center text-white shadow-2xl">
                 Gold <br />
                 (Monthly Rental (31+ days))
