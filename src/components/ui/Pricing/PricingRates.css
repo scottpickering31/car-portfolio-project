@@ -31,7 +31,6 @@
   left: 100%;
   transform: translateX(10px);
   color: white;
-  display: none;
 }
 
 .tooltip-wrapper:hover .tooltip {

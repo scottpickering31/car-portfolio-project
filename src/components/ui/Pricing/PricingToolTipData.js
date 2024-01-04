@@ -33,6 +33,6 @@ export const toolTipObj = {
     "400 Miles": "",
     Full: "",
     "Flexi Pro(++)": "",
-    "Within 400 miles": "15",
+    "Within 400 miles": "wooo",
   },
 };

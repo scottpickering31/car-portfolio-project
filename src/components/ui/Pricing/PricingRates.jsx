@@ -2,11 +2,13 @@ import { connect } from "react-redux";
 import CalendarDisplay from "./PricingCalender";
 import "./PricingRates.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck } from "@fortawesome/free-solid-svg-icons";
-import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCheck,
+  faCircleExclamation,
+  faXmark,
+} from "@fortawesome/free-solid-svg-icons";
 import { toolTipObj } from "./PricingToolTipData";
 import { useState } from "react";
-import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 
 function PricingRates({
   selectedModel,
@@ -35,13 +37,13 @@ function PricingRates({
         <div className="flex flex-row">
           <div className="flex h-large bg-gray-200 border border-r-black rounded-l-lg text-center p-3 gap-5 text-black flex-row justify-between">
             <div className="text-xs leading-tight bg-gray-150 w-1/4 justify-between flex flex-col rounded-lg shadow-2xl">
-              <p className="font-bold bg-gray-100 p-5 !h-28 flex items-center justify-center">
+              <p className="font-bold bg-gray-100 p-5 !h-28 flex items-center justify-center shadow-2xl">
                 Tariff Details
               </p>
               {Object.entries(toolTipObj.Tarriff).map(([key, value]) => (
                 <div
                   key={key}
-                  className="tooltip-wrapper"
+                  className="tooltip-wrapper "
                   onMouseEnter={() => setTooltip(value)}
                   onMouseLeave={() => setTooltip("")}
                 >
@@ -53,18 +55,22 @@ function PricingRates({
               <br />
             </div>
             <div className="text-md leading-tight w-1/3 bg-bronze justify-between flex flex-col rounded-lg shadow-2xl ">
-              <p className="font-bold bg-gray-100 p-5 !h-28 flex items-center justify-center">
+              <p className="font-bold !bg-gray-600 p-5 !h-28 flex items-center text-white shadow-2xl">
                 Bronze <br /> (Day Rental)
               </p>
               {Object.entries(toolTipObj.Bronze).map(([key, value]) => (
                 <div
                   key={key}
-                  className="tooltip-wrapper"
+                  className="tooltip-wrapper "
                   onMouseEnter={() => setTooltip(value)}
                   onMouseLeave={() => setTooltip("")}
                 >
-                  <p className="key w-full flex justify-between">
-                    {key} <FontAwesomeIcon icon={faCircleExclamation} />
+                  <p className="key w-full gap-3">
+                    {key}{" "}
+                    <FontAwesomeIcon
+                      icon={faCircleExclamation}
+                      className="text-sm"
+                    />
                   </p>
                   {tooltip === value && <p className="tooltip">{value}</p>}
                 </div>
@@ -91,7 +97,7 @@ function PricingRates({
               <br />
             </div>
             <div className="text-md leading-tight w-1/3 bg-silver justify-between flex flex-col rounded-lg shadow-2xl">
-              <p className="font-bold bg-gray-100 p-5 !h-28 flex items-center">
+              <p className="font-bold !bg-gray-600 p-5 !h-28 flex items-center text-white shadow-2xl">
                 Silver <br /> (Weekly Rental (7+ days))
               </p>
               {Object.entries(toolTipObj.Silver).map(([key, value]) => (
@@ -101,8 +107,12 @@ function PricingRates({
                   onMouseEnter={() => setTooltip(value)}
                   onMouseLeave={() => setTooltip("")}
                 >
-                  <p className="key w-full flex justify-between">
-                    {key} <FontAwesomeIcon icon={faCircleExclamation} />
+                  <p className="key w-full gap-3">
+                    {key}{" "}
+                    <FontAwesomeIcon
+                      icon={faCircleExclamation}
+                      className="text-sm"
+                    />
                   </p>
                   {tooltip === value && <p className="tooltip">{value}</p>}
                 </div>
@@ -126,7 +136,7 @@ function PricingRates({
               <br />
             </div>
             <div className="text-md leading-tight w-1/3 bg-gold justify-between flex flex-col rounded-lg shadow-2xl">
-              <p className="font-bold bg-gray-100 p-5 !h-28 flex items-center">
+              <p className="font-bold !bg-gray-600 p-5 !h-28 flex items-center text-white shadow-2xl">
                 Gold <br />
                 (Monthly Rental (31+ days))
               </p>
@@ -137,12 +147,14 @@ function PricingRates({
                   onMouseEnter={() => setTooltip(value)}
                   onMouseLeave={() => setTooltip("")}
                 >
-                  <p className="key w-full">
-                    {key} <FontAwesomeIcon icon={faCircleExclamation} />
+                  <p className="key w-full gap-3">
+                    {key}{" "}
+                    <FontAwesomeIcon
+                      icon={faCircleExclamation}
+                      className="text-sm"
+                    />
                   </p>
-                  {tooltip === value && (
-                    <p className="tooltip flex justify-between">{value}</p>
-                  )}
+                  {tooltip === value && <p className="tooltip">{value}</p>}
                 </div>
               ))}
               <p className="text-green-400 text-3xl">
