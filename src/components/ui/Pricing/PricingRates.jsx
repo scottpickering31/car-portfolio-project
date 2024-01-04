@@ -6,6 +6,7 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { toolTipObj } from "./PricingToolTipData";
 import { useState } from "react";
+import { faCircleExclamation } from "@fortawesome/free-solid-svg-icons";
 
 function PricingRates({
   selectedModel,
@@ -37,7 +38,7 @@ function PricingRates({
               <p className="font-bold bg-gray-100 p-5 !h-28 flex items-center justify-center">
                 Tariff Details
               </p>
-              {Object.entries(toolTipObj).map(([key, value]) => (
+              {Object.entries(toolTipObj.Tarriff).map(([key, value]) => (
                 <div
                   key={key}
                   className="tooltip-wrapper"
@@ -55,11 +56,19 @@ function PricingRates({
               <p className="font-bold bg-gray-100 p-5 !h-28 flex items-center justify-center">
                 Bronze <br /> (Day Rental)
               </p>
-              <p>Basic</p>
-              <p>Basic</p>
-              <p>100 Miles</p>
-              <p>Basic</p>
-              <p>Standard</p>
+              {Object.entries(toolTipObj.Bronze).map(([key, value]) => (
+                <div
+                  key={key}
+                  className="tooltip-wrapper"
+                  onMouseEnter={() => setTooltip(value)}
+                  onMouseLeave={() => setTooltip("")}
+                >
+                  <p className="key w-full flex justify-between">
+                    {key} <FontAwesomeIcon icon={faCircleExclamation} />
+                  </p>
+                  {tooltip === value && <p className="tooltip">{value}</p>}
+                </div>
+              ))}
               <p className="text-red-400 text-3xl">
                 <FontAwesomeIcon icon={faXmark} />
               </p>
@@ -85,18 +94,19 @@ function PricingRates({
               <p className="font-bold bg-gray-100 p-5 !h-28 flex items-center">
                 Silver <br /> (Weekly Rental (7+ days))
               </p>
-              <p>Enhanced</p>
-              <p>Priority</p>
-              <p>200 Miles</p>
-              <p>Extended</p>
-              <p>Flexi Plus(+)</p>
-              <p>
-                <FontAwesomeIcon
-                  icon={faCheck}
-                  className="gap-2 text-green-400 text-3xl"
-                />
-                (within 150 miles)
-              </p>
+              {Object.entries(toolTipObj.Silver).map(([key, value]) => (
+                <div
+                  key={key}
+                  className="tooltip-wrapper"
+                  onMouseEnter={() => setTooltip(value)}
+                  onMouseLeave={() => setTooltip("")}
+                >
+                  <p className="key w-full flex justify-between">
+                    {key} <FontAwesomeIcon icon={faCircleExclamation} />
+                  </p>
+                  {tooltip === value && <p className="tooltip">{value}</p>}
+                </div>
+              ))}
               <p className="text-green-400 text-3xl">
                 <FontAwesomeIcon icon={faCheck} />
               </p>
@@ -120,18 +130,21 @@ function PricingRates({
                 Gold <br />
                 (Monthly Rental (31+ days))
               </p>
-              <p>Comprehensive</p>
-              <p>Dedicated Agent</p>
-              <p>400 Miles</p>
-              <p>Full</p>
-              <p>Flexi Pro(++)</p>
-              <p>
-                <FontAwesomeIcon
-                  icon={faCheck}
-                  className="gap-2 text-green-400 text-3xl"
-                />
-                (within 400 miles)
-              </p>
+              {Object.entries(toolTipObj.Gold).map(([key, value]) => (
+                <div
+                  key={key}
+                  className="tooltip-wrapper"
+                  onMouseEnter={() => setTooltip(value)}
+                  onMouseLeave={() => setTooltip("")}
+                >
+                  <p className="key w-full">
+                    {key} <FontAwesomeIcon icon={faCircleExclamation} />
+                  </p>
+                  {tooltip === value && (
+                    <p className="tooltip flex justify-between">{value}</p>
+                  )}
+                </div>
+              ))}
               <p className="text-green-400 text-3xl">
                 <FontAwesomeIcon icon={faCheck} />
               </p>
