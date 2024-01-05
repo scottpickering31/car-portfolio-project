@@ -55,7 +55,7 @@ function PricingRates({
               <br />
             </div>
             <div className="text-md leading-tight w-1/4 bg-bronze justify-between flex flex-col rounded-lg shadow-2xl ">
-              <p className="font-bold !bg-gray-600 p-5 !h-28 flex items-center text-white shadow-2xl">
+              <p className="font-bold !bg-customBlue p-5 !h-28 flex items-center text-white shadow-2xl">
                 Bronze <br /> (Day Rental)
               </p>
               {Object.entries(toolTipObj.Bronze).map(([key, value]) => (
@@ -90,14 +90,14 @@ function PricingRates({
               <p className="text-red-400 text-3xl">
                 <FontAwesomeIcon icon={faXmark} />
               </p>
-              <p className="text-lg flex justify-end !bg-blue-600 text-white">
+              <p className="text-lg flex justify-end !bg-customOrange-lighter text-white">
                 £{carDetails.dayRate} Per Day
               </p>
               <br />
               <br />
             </div>
             <div className="text-md leading-tight w-1/4 bg-silver justify-between flex flex-col rounded-lg shadow-2xl">
-              <p className="font-bold !bg-gray-600 p-5 !h-28 flex items-center text-white shadow-2xl">
+              <p className="font-bold !bg-customBlue p-5 !h-28 flex items-center text-white shadow-2xl">
                 Silver <br /> (Weekly Rental (7+ days))
               </p>
               {Object.entries(toolTipObj.Silver).map(([key, value]) => (
@@ -129,14 +129,14 @@ function PricingRates({
               <p className="text-red-400 text-3xl">
                 <FontAwesomeIcon icon={faXmark} />
               </p>
-              <p className="text-lg !bg-blue-600 text-white">
+              <p className="text-lg !bg-customOrange-lighter text-white">
                 £{Math.round(carDetails.weekRateBreakDown())} Per Day
               </p>
               <br />
               <br />
             </div>
             <div className="text-md leading-tight w-1/4 bg-gold justify-between flex flex-col rounded-lg shadow-2xl">
-              <p className="font-bold !bg-gray-600 p-5 !h-28 flex items-center text-white shadow-2xl">
+              <p className="font-bold !bg-customBlue p-5 !h-28 flex items-center text-white shadow-2xl">
                 Gold <br />
                 (Monthly Rental (31+ days))
               </p>
@@ -169,7 +169,7 @@ function PricingRates({
               <p className="text-green-400 text-3xl">
                 <FontAwesomeIcon icon={faCheck} />
               </p>
-              <p className="text-lg !bg-blue-600 text-white">
+              <p className="text-lg !bg-customOrange-lighter text-white">
                 £{Math.round(carDetails.monthRateBreakDown())} Per Day
               </p>
               <br />

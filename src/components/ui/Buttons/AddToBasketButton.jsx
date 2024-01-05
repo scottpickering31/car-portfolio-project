@@ -39,7 +39,7 @@ function AddToBasketButton({
     <div>
       <button
         onClick={handleAddToBasket}
-        className="tracking-wider bg-green-300 text-white font-semibold py-2 px-4 rounded-md shadow-md transition duration-300 transform hover:scale-105 hover:bg-green-400 hover:shadow-lg focus:outline-none focus:ring focus:ring-green-400 focus:ring-opacity-50"
+        className="tracking-wider text-xl  h-20 w-40 bg-green-400 text-white font-bold py-2 px-4 rounded-md shadow-md transition duration-300 transform hover:scale-105 hover:bg-green-400 hover:shadow-lg focus:outline-none focus:ring focus:ring-green-400 focus:ring-opacity-50"
       >
         Add To Basket
       </button>

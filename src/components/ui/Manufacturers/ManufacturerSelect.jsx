@@ -8,7 +8,7 @@ function ManufacturerSelect({
 }) {
   return (
     <div className="mb-4">
-      <label htmlFor="manufacturerSelect" className="block mb-2">
+      <label htmlFor="manufacturerSelect" className="block mb-2 text-white">
         Select Manufacturer:
       </label>
       <select

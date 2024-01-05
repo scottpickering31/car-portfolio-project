@@ -9,7 +9,7 @@ function BgVideo() {
           autoPlay
           loop
           muted
-          className="w-full h-screen object-cover"
+          className="w-full object-cover"
         />
       </div>
     </div>

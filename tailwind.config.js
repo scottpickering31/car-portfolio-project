@@ -19,6 +19,10 @@ export default {
           darker: "rgb(200, 90, 10)",
           lighter: "rgb(255, 140, 40)",
         },
+        customBlue: {
+          DEFAULT: "#224159",
+          lighter: "#A1C2E6",
+        },
         bronze: {
           DEFAULT: "#CD7F32",
         },
@@ -28,6 +32,9 @@ export default {
         gold: {
           DEFAULT: "#D4AF37",
         },
+      },
+      scale: {
+        imageScale: "1.20",
       },
       fontFamily: {
         whisper: ["Whisper"],

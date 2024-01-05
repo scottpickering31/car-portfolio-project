@@ -8,7 +8,7 @@ function ModelSelect({
 }) {
   return (
     <div>
-      <label htmlFor="modelSelect" className="block mb-2">
+      <label htmlFor="modelSelect" className="block mb-2 text-white">
         Select Car Model:
       </label>
       <select

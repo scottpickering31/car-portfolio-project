@@ -30,12 +30,12 @@ function CarPickerForm() {
   };
 
   return (
-    <div className="flex justify-center flex-col items-center mt-40 h-2/3 mb-40">
-      <h1 className="bg-customOrange-darker mb-5 text-center p-5 text-2xl text-white font-bold tracking-wide rounded-full">
+    <div className="flex justify-center flex-col items-center mt-5 h-2/3 mb-40">
+      <h1 className="bg-customBlue mb-5 text-center p-5 text-2xl text-white font-semibold tracking-wide rounded-2xl ">
         Step 1 - Select your Supercar!
       </h1>
-      <div className="flex border border-gray-400 w-11/12 rounded-lg shadow-2xl h-screen bg-white">
-        <div className="border-r-2 flex flex-col justify-center p-5 w-2/6">
+      <div className="flex border border-gray-400 w-11/12 rounded-lg shadow-2xl h-medium  ">
+        <div className="border-r-2 flex flex-col justify-center p-5 w-2/6 bg-customBlue">
           <ManufacturerSelect
             carManufacturer={carManufacturer}
             selectedManufacturer={selectedManufacturer}
@@ -65,10 +65,6 @@ function CarPickerForm() {
         {!selectedManufacturer && (
           <div className="flex flex-col justify-center text-center w-3/4">
             <h1 className="font-whisper text-9xl">Elite Drives</h1>
-            <img
-              src="src/assets/Elite-Drives-Car-Fleet.png"
-              className=" p-6 w-full"
-            />
           </div>
         )}
         {selectedModel && (
@@ -85,6 +81,10 @@ function CarPickerForm() {
                   selectedModel={selectedModel}
                   carMakes={carMakes}
                 />
+                <p className="text-3xl">
+                  From £
+                  {carMakes[selectedManufacturer].cars[selectedModel].dayRate}
+                </p>
                 <div className="flex justify-center items-center flex-col mb-5 gap-2 p-5">
                   <p>
                     <strong>Interested?</strong> Check out our

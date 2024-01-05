@@ -1,7 +1,7 @@
 import Basket from "./components/ui/Basket/Basket.jsx";
 import CarPickerForm from "./containers/CarPickerForm.jsx";
 import Header from "./containers/Header.jsx";
-import HowItWorksSection from "./containers/HowItWorks.jsx";
+import HowItWorks from "./containers/HowItWorks.jsx";
 import { Provider } from "react-redux";
 import { BasketProvider } from "./statemanagement/context/BasketContext";
 import store from "./statemanagement/store/store.js";
@@ -12,7 +12,7 @@ export default function App() {
       <div>
         <BasketProvider>
           <Header />
-          <HowItWorksSection />
+          <HowItWorks />
           <CarPickerForm />
           <Basket />
         </BasketProvider>

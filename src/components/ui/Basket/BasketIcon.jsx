@@ -5,10 +5,10 @@ import { useBasket } from "../../../statemanagement/context/BasketContext";
 function BasketIcon({ basketCount }) {
   const { toggleShowBasket } = useBasket();
   return (
-    <div className="flex flex-start flex-col items-center text-2xl p-3">
+    <div className="flex flex-start flex-col items-center text-2xl p-5">
       <i
         onClick={toggleShowBasket}
-        className="fa fa-shopping-basket cursor-pointer"
+        className="fa fa-shopping-basket cursor-pointer hover:scale-150 duration-100 "
         style={{ color: "rgb(255, 140, 40" }}
       ></i>
       <p className="text-center">{basketCount}</p>
