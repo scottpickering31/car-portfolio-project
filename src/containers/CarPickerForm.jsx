@@ -7,6 +7,7 @@ import ImageDisplay from "../components/ui/ImageDisplay";
 import ManufacturerDetails from "../components/ui/Manufacturers/ManufacturerDetails";
 import PricingStructure from "../components/ui/Pricing/PricingStructure";
 import PriceButton from "../components/ui/Buttons/PriceButton";
+import ManufacturerList from "../components/ui/Manufacturers/ManufacturerList";
 
 function CarPickerForm() {
   const [selectedManufacturer, setSelectedManufacturer] = useState("");
@@ -34,8 +35,8 @@ function CarPickerForm() {
       <h1 className="bg-customBlue mb-5 text-center p-5 text-2xl text-white font-semibold tracking-wide rounded-2xl ">
         Step 1 - Select your Supercar!
       </h1>
-      <div className="flex border border-gray-400 w-11/12 rounded-lg shadow-2xl h-medium  ">
-        <div className="border-r-2 flex flex-col justify-center p-5 w-2/6 bg-customBlue">
+      <div className="flex border border-gray-400 w-11/12 rounded-lg shadow-2xl h-medium bg-gray-100">
+        <div className="border-r-2 flex flex-col justify-center p-5 w-2/6 bg-customBlue rounded-l-md">
           <ManufacturerSelect
             carManufacturer={carManufacturer}
             selectedManufacturer={selectedManufacturer}
@@ -63,9 +64,7 @@ function CarPickerForm() {
           </>
         )}
         {!selectedManufacturer && (
-          <div className="flex flex-col justify-center text-center w-3/4">
-            <h1 className="font-whisper text-9xl">Elite Drives</h1>
-          </div>
+          <ManufacturerList setSelectedManufacturer={setSelectedManufacturer} />
         )}
         {selectedModel && (
           <div className="flex items-center">
