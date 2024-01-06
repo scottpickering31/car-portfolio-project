@@ -8,6 +8,7 @@ import ManufacturerDetails from "../components/ui/Manufacturers/ManufacturerDeta
 import PricingStructure from "../components/ui/Pricing/PricingStructure";
 import PriceButton from "../components/ui/Buttons/PriceButton";
 import ManufacturerList from "../components/ui/Manufacturers/ManufacturerList";
+import AvailableModels from "../components/ui/AvailableModels";
 
 function CarPickerForm() {
   const [selectedManufacturer, setSelectedManufacturer] = useState("");
@@ -31,7 +32,7 @@ function CarPickerForm() {
   };
 
   return (
-    <div className="flex justify-center flex-col items-center mt-5 h-2/3 mb-40">
+    <div className="flex justify-center flex-col items-center mt-5 h-screen mb-20 bg-gray-400">
       <h1 className="bg-customBlue mb-5 text-center p-5 text-2xl text-white font-semibold tracking-wide rounded-2xl ">
         Step 1 - Select your Supercar!
       </h1>
@@ -61,6 +62,7 @@ function CarPickerForm() {
               selectedManufacturer={selectedManufacturer}
               manufacturerDetails={manufacturerDetails}
             />
+            <AvailableModels />
           </>
         )}
         {!selectedManufacturer && (
