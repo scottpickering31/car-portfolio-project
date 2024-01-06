@@ -9,6 +9,7 @@ import PricingStructure from "../components/ui/Pricing/PricingStructure";
 import PriceButton from "../components/ui/Buttons/PriceButton";
 import ManufacturerList from "../components/ui/Manufacturers/ManufacturerList";
 import AvailableModels from "../components/ui/AvailableModels";
+import CarouselImages from "../components/ui/AvailableModels";
 
 function CarPickerForm() {
   const [selectedManufacturer, setSelectedManufacturer] = useState("");
@@ -55,15 +56,18 @@ function CarPickerForm() {
           )}
         </div>
         {selectedManufacturer && !selectedModel && (
-          <>
+          <div className="flex flex-row w-full">
             <ManufacturerDetails
               carMakes={carMakes}
               carManufacturer={carManufacturer}
               selectedManufacturer={selectedManufacturer}
               manufacturerDetails={manufacturerDetails}
             />
-            <AvailableModels />
-          </>
+            <CarouselImages
+              carMakes={carMakes}
+              selectedManufacturer={selectedManufacturer}
+            />
+          </div>
         )}
         {!selectedManufacturer && (
           <ManufacturerList setSelectedManufacturer={setSelectedManufacturer} />

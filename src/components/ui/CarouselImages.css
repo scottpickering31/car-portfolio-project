@@ -1,0 +1,36 @@
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 25px;
+  height: 100%;
+}
+
+.carousel-item {
+  display: none;
+  cursor: pointer;
+}
+
+.carousel-item:first-child {
+  display: block;
+}
+
+.carousel-slider {
+  overflow: hidden;
+}
+
+.carousel-slider .slide {
+  display: flex;
+}
+
+.carousel-slider .control-arrow {
+  display: none;
+  background-color: black;
+}
+
+.carousel-slider .control-next.control-arrow,
+.carousel-slider .control-prev.control-arrow {
+  display: block;
+}
