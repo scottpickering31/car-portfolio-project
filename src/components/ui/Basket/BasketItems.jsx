@@ -31,7 +31,7 @@ function BasketItems({ basketItem, removeFromBasket }) {
               <strong>Model:</strong> {item.model}
             </p>
             <p>
-              <strong>Total Price:</strong> £{item.price}
+              <strong>Rental Total:</strong> £{item.price.toLocaleString()}
             </p>
             <p>
               <strong>Rental Duration:</strong> {item.duration} days

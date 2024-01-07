@@ -51,9 +51,9 @@ function CalendarDisplay({
       }));
     }
     //     Calculate the total price
-    const totalPrice =
+    let totalPrice =
       newPrices.length > 0
-        ? Math.round(newPrices[newPrices.length - 1].price)
+        ? Math.round(newPrices[newPrices.length - 1].price).toLocaleString()
         : 0;
     //     Update the total price
     setTotal(totalPrice);

@@ -91,7 +91,9 @@ function CarPickerForm() {
                 />
                 <p className="text-3xl">
                   From £
-                  {carMakes[selectedManufacturer].cars[selectedModel].dayRate}{" "}
+                  {carMakes[selectedManufacturer].cars[
+                    selectedModel
+                  ].dayRate.toLocaleString()}{" "}
                   per day *
                 </p>
                 <div className="flex justify-center items-center flex-col mb-5 gap-2 p-5">
