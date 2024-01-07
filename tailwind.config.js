@@ -21,6 +21,7 @@ export default {
         },
         customBlue: {
           DEFAULT: "#224159",
+          darker: "#152937",
           lighter: "#A1C2E6",
         },
         bronze: {

@@ -41,16 +41,18 @@ function BasketItems({ basketItem, removeFromBasket }) {
             <img
               src={item.image}
               alt={`${item.manufacturer} ${item.model}`}
-              className="w-40 rounded-full"
+              className="w-72 rounded-full"
             />
           </div>
-          <SeeCostBreakDown />
-          <button
-            onClick={() => removeItem(index)}
-            className="bg-red-500 h-12 text-white font-semibold py-2 px-4 rounded-md shadow-md transition duration-300 transform hover:scale-105 hover:red-500 hover:shadow-lg focus:outline-none focus:ring focus:ring-red-400 focus:ring-opacity-50"
-          >
-            Remove Car
-          </button>
+          <div className="flex flex-col gap-5">
+            <SeeCostBreakDown />
+            <button
+              onClick={() => removeItem(index)}
+              className="bg-red-500 h-12 text-white font-semibold py-2 px-2 rounded-md shadow-md transition duration-300 transform hover:scale-105 hover:bg-red- hover:shadow-lg focus:outline-none focus:ring focus:ring-red-400 focus:ring-opacity-50"
+            >
+              Remove Car
+            </button>
+          </div>
         </div>
       ))}
     </div>

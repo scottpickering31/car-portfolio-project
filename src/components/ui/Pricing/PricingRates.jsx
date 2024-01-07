@@ -72,6 +72,7 @@ function PricingRates({
                       className="text-sm"
                     />
                   </p>
+                  {tooltip === value && <p className="tooltip">{value}</p>}
                 </div>
               ))}
               <p className="text-red-400 text-3xl">
