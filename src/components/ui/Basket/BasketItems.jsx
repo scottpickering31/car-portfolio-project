@@ -14,7 +14,7 @@ function BasketItems({ basketItem, removeFromBasket }) {
 
   return (
     <div className="flex flex-col justify-between w-full p-5 ">
-      <h1 className="bg-customBlue mb-5 text-white text-center p-5 text-2xl text-white font-bold tracking-wide rounded-full">
+      <h1 className="bg-customBlue mb-5 text-white text-center p-5 text-2xl font-bold tracking-wide rounded-full">
         Step 3 - Review your Choice(s) and Checkout!
       </h1>
       <h1 className="text-center">Your Basket</h1>
@@ -41,7 +41,7 @@ function BasketItems({ basketItem, removeFromBasket }) {
             <img
               src={item.image}
               alt={`${item.manufacturer} ${item.model}`}
-              className="w-40 rounded-full "
+              className="w-40 rounded-full"
             />
           </div>
           <SeeCostBreakDown />
