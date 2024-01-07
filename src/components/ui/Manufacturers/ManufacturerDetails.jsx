@@ -5,10 +5,14 @@ function ManufacturerDetails({ selectedManufacturer, carMakes }) {
   const description = carMakes[selectedManufacturer].description;
 
   return (
-    <div className="w-1/2 flex justify-center items-center flex-col">
-      <h1 className="text-3xl underline">{selectedManufacturer}</h1>
-      <img src={logo} className="h-60" />
-      <p className="text-center p-5 text-xl">{description}</p>
+    <div className="w-full flex justify-center items-center flex-row bg-gray-200 p-5">
+      <img src={logo} className="h-48" />
+      <div className="flex flex-col items-center">
+        <h1 className="text-3xl underline text-white bg-customBlue p-5 border rounded-lg">
+          {selectedManufacturer}
+        </h1>
+        <p className="text-center p-5 text-xl">{description}</p>
+      </div>
     </div>
   );
 }

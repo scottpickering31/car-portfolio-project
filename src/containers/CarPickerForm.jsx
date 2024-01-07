@@ -33,11 +33,11 @@ function CarPickerForm() {
   };
 
   return (
-    <div className="flex justify-center flex-col items-center mt-5 h-screen mb-20 bg-gray-400">
+    <div className="flex justify-center flex-col items-center mt-5 h-screen mb-20 bg-gray-400 p-5">
       <h1 className="bg-customBlue mb-5 text-center p-5 text-2xl text-white font-semibold tracking-wide rounded-2xl ">
         Step 1 - Select your Supercar!
       </h1>
-      <div className="flex border border-gray-400 w-11/12 rounded-lg shadow-2xl h-medium bg-gray-100">
+      <div className="flex border border-gray-400 w-11/12 rounded-lg shadow-2xl h-large bg-gray-100">
         <div className="border-r-2 flex flex-col justify-center p-5 w-2/6 bg-customBlue rounded-l-md">
           <ManufacturerSelect
             carManufacturer={carManufacturer}
@@ -56,25 +56,29 @@ function CarPickerForm() {
           )}
         </div>
         {selectedManufacturer && !selectedModel && (
-          <div className="flex flex-row w-full">
-            <ManufacturerDetails
-              carMakes={carMakes}
-              carManufacturer={carManufacturer}
-              selectedManufacturer={selectedManufacturer}
-              manufacturerDetails={manufacturerDetails}
-            />
-            <CarouselImages
-              carMakes={carMakes}
-              selectedManufacturer={selectedManufacturer}
-            />
+          <div className="flex flex-col">
+            <div className="flex flex-row w-full">
+              <ManufacturerDetails
+                carMakes={carMakes}
+                carManufacturer={carManufacturer}
+                selectedManufacturer={selectedManufacturer}
+                manufacturerDetails={manufacturerDetails}
+              />
+            </div>
+            <div>
+              <CarouselImages
+                carMakes={carMakes}
+                selectedManufacturer={selectedManufacturer}
+              />
+            </div>
           </div>
         )}
         {!selectedManufacturer && (
           <ManufacturerList setSelectedManufacturer={setSelectedManufacturer} />
         )}
         {selectedModel && (
-          <div className="flex items-center">
-            <div className="flex flex-row h-medium">
+          <div className="flex items-center ">
+            <div className="flex flex-row">
               <CarDetails
                 selectedManufacturer={selectedManufacturer}
                 selectedModel={selectedModel}
@@ -88,7 +92,8 @@ function CarPickerForm() {
                 />
                 <p className="text-3xl">
                   From £
-                  {carMakes[selectedManufacturer].cars[selectedModel].dayRate}
+                  {carMakes[selectedManufacturer].cars[selectedModel].dayRate}{" "}
+                  per day *
                 </p>
                 <div className="flex justify-center items-center flex-col mb-5 gap-2 p-5">
                   <p>

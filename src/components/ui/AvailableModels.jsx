@@ -53,7 +53,7 @@ function CarouselImages({ carMakes, selectedManufacturer }) {
         ariaLabel={undefined}
         renderIndicator={renderCustomIndicator}
         width="100%"
-        className="carousel-container"
+        className="carousel-container w-1/2"
       >
         {Object.keys(carDetails).map((modelName, index) => {
           const car = carDetails[modelName];
@@ -66,7 +66,7 @@ function CarouselImages({ carMakes, selectedManufacturer }) {
             >
               <img src={car.image} alt={modelName} className="h-60 relative" />
               {toolTip === index && (
-                <div className="absolute top-0 left-0 right-0 bg-black bg-opacity-80 text-white p-2 rounded z-10 transform -translate-y-1/2 -translate-x-1/2">
+                <div className="absolute top-0 left-0 bg-black bg-opacity-80 text-white p-2 rounded z-10 transform -translate-y-1/2 -translate-x-1/2">
                   <p>Hello!</p>
                 </div>
               )}
