@@ -61,18 +61,17 @@ function PricingRates({
               {Object.entries(toolTipObj.Bronze).map(([key, value]) => (
                 <div
                   key={key}
-                  className="tooltip-wrapper "
+                  className="tooltip-wrapper"
                   onMouseEnter={() => setTooltip(value)}
                   onMouseLeave={() => setTooltip("")}
                 >
                   <p className="key w-full gap-3">
-                    {key}{" "}
+                    {key}
                     <FontAwesomeIcon
                       icon={faCircleExclamation}
                       className="text-sm"
                     />
                   </p>
-                  {tooltip === value && <p className="tooltip">{value}</p>}
                 </div>
               ))}
               <p className="text-red-400 text-3xl">
@@ -185,11 +184,6 @@ function PricingRates({
           </div>
         </div>
       </div>
-      {tooltip && (
-        <div className="relative">
-          <p className="tooltip">{tooltip}</p>
-        </div>
-      )}
     </div>
   );
 }

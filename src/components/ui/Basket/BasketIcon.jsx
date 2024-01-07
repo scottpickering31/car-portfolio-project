@@ -6,7 +6,7 @@ function BasketIcon({ basketCount, pricing }) {
   const { toggleShowBasket } = useBasket();
 
   if (!pricing) {
-    return null; // Return nothing if pricing is false
+    return null;
   }
 
   return (
