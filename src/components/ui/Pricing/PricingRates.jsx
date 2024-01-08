@@ -26,7 +26,7 @@ function PricingRates({
   }
 
   return (
-    <div className="border mt-10 w-auto p-5 bg-white shadow-2xl h-full">
+    <div className="border mt-10 w-full p-5 bg-white shadow-2xl h-full">
       <div className="flex flex-col items-center text-center">
         <div className="flex flex-row items-center gap-5">
           <img src={logo} className="w-28 mb-5" alt="Car Logo" />

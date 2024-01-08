@@ -37,7 +37,7 @@ function CarPickerForm() {
         Step 1 - Select your Supercar!
       </h1>
       <div className="flex border border-gray-400 w-full shadow-2xl h-medium bg-gray-100">
-        <div className="border-r-2 flex flex-col justify-center p-5 w-2/6 bg-customBlue">
+        <div className="border-r-2 flex flex-col justify-center p-5 w-1/5 bg-customBlue">
           <ManufacturerSelect
             carManufacturer={carManufacturer}
             selectedManufacturer={selectedManufacturer}
@@ -55,7 +55,7 @@ function CarPickerForm() {
           )}
         </div>
         {selectedManufacturer && !selectedModel && (
-          <div className="flex flex-col h-full justify-center items-center">
+          <div className="flex flex-col h-full justify-center items-center w-4/5">
             <div className="flex flex-row w-full">
               <ManufacturerDetails
                 carMakes={carMakes}
@@ -76,7 +76,7 @@ function CarPickerForm() {
           <ManufacturerList setSelectedManufacturer={setSelectedManufacturer} />
         )}
         {selectedModel && (
-          <div className="flex items-center ">
+          <div className="flex items-center w-4/5 ">
             <div className="flex flex-row">
               <CarDetails
                 selectedManufacturer={selectedManufacturer}
@@ -111,7 +111,7 @@ function CarPickerForm() {
         )}
       </div>
       {selectedModel && (
-        <div>
+        <div className="w-full">
           <PricingStructure
             selectedModel={selectedModel}
             selectedManufacturer={selectedManufacturer}
