@@ -7,9 +7,9 @@ function ImageDisplay({ selectedManufacturer, selectedModel, carMakes }) {
   if (!carDetails) return null;
 
   return (
-    <div className="flex justify-center items-center transition duration-300 transform hover:scale-105">
+    <div className="flex flex-col justify-center items-center">
       <img
-        className="w-full"
+        className="w-full transition duration-300 transform hover:scale-105"
         src={carDetails.image}
         alt={`${selectedManufacturer} ${selectedModel}`}
       />

@@ -81,7 +81,7 @@ function CarPickerForm() {
         )}
         {selectedModel && (
           <div className="flex items-center w-4/5 ">
-            <div className="flex flex-row">
+            <div className="flex flex-row h-full">
               <CarDetails
                 selectedManufacturer={selectedManufacturer}
                 selectedModel={selectedModel}
