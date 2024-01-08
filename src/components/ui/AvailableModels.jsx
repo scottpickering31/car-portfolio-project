@@ -1,10 +1,9 @@
-import { React, useState } from "react";
+import { React } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./CarouselImages.css";
 
 function CarouselImages({ carMakes, selectedManufacturer }) {
-  const [toolTip, setToolTip] = useState(false);
   const carDetails = carMakes[selectedManufacturer].cars;
 
   const renderCustomIndicator = (clickHandler, isSelected, index, label) => {
@@ -34,7 +33,7 @@ function CarouselImages({ carMakes, selectedManufacturer }) {
   };
 
   return (
-    <>
+    <div className="flex flex-row justify-center items-center text-center h-full">
       <Carousel
         showArrows={true}
         showStatus={false}
@@ -42,7 +41,7 @@ function CarouselImages({ carMakes, selectedManufacturer }) {
         infiniteLoop={true}
         showThumbs={false}
         useKeyboardArrows={true}
-        autoPlay={false}
+        autoPlay={true}
         stopOnHover={true}
         swipeable={true}
         dynamicHeight={true}
@@ -54,7 +53,7 @@ function CarouselImages({ carMakes, selectedManufacturer }) {
         ariaLabel={undefined}
         renderIndicator={renderCustomIndicator}
         width="100%"
-        className="carousel-container w-3/4"
+        className="carousel-container w-2/3"
       >
         {Object.keys(carDetails).map((modelName, index) => {
           const car = carDetails[modelName];
@@ -66,16 +65,27 @@ function CarouselImages({ carMakes, selectedManufacturer }) {
               onMouseOut={() => setToolTip(null)}
             >
               <img src={car.image} alt={modelName} className="h-72 relative" />
-              {toolTip === index && (
-                <div className="absolute top-0 left-0 bg-black bg-opacity-80 text-white p-2 rounded z-10 transform -translate-y-1/2 -translate-x-1/2">
-                  <p>Hello!</p>
-                </div>
-              )}
             </div>
           );
         })}
       </Carousel>
-    </>
+
+      <div className="flex flex-col gap-2 w-1/3 items-center justify-around p-2 text-center h-full">
+        <h1 className="font-genos text-4xl font-bold text-wrap underline underline-offset-8">
+          Available Models for {selectedManufacturer}
+        </h1>
+        {Object.keys(carDetails).map((modelName, index) => {
+          return (
+            <p
+              key={index}
+              className="text-lg tracking-widest w-4/5 bg-customBlue text-white rounded-lg p-4 font-semibold cursor-pointer"
+            >
+              {modelName}
+            </p>
+          );
+        })}
+      </div>
+    </div>
   );
 }
 

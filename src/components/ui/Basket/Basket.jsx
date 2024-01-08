@@ -27,17 +27,12 @@ function Basket({ basketItem }) {
           isVisible ? "translate-x-0 " : "translate-x-full "
         }`}
       >
-        <div className="w-full bg-gray-200 opacity-95 relative p-5">
+        <div className="w-full bg-gray-200 opacity-95 relative p-5 ">
           <div className="sticky top-0 w-full p-2">
             <img
-              src="src/assets/IconScout/arrow-right.svg"
+              src="src/assets/cross.png"
               onClick={toggleShowBasket}
-              className="cursor-pointer w-10 h-10 ml-auto mr-4 float-left"
-              style={{
-                left: "50%",
-                transform: "translateX(-50%)",
-                zIndex: 999,
-              }}
+              className="cursor-pointer w-10 h-10 ml-auto mr-4 float-left hover:scale-150 transition duration-100"
             />
           </div>
           <div>
@@ -45,9 +40,14 @@ function Basket({ basketItem }) {
           </div>
           <div className="sticky bottom-0 w-full flex justify-around mt-4 border border-white bg-white rounded-lg p-5 items-center">
             <ResetBasketAmountButton />
-            <p className="text-xl font-bold underline underline-offset-4 tracking-wider">
-              Basket Total: £{totalBasketPrice.toLocaleString()}
-            </p>
+            <div className="flex flex-row items-center gap-3 text-5xl font-genos">
+              <p className="text-4xl font-bold tracking-widest">
+                Basket Total:
+              </p>
+              <p className="underline underline-offset-4 ">
+                £{totalBasketPrice.toLocaleString()}
+              </p>
+            </div>
             <CheckoutButton />
           </div>
         </div>

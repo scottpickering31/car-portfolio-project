@@ -87,19 +87,25 @@ function CarPickerForm() {
                 selectedModel={selectedModel}
                 carMakes={carMakes}
               />
-              <div className="flex flex-col items-center justify-center w-1/2">
+              <div className="flex flex-col items-center justify-evenly w-1/2 ">
                 <ImageDisplay
                   selectedManufacturer={selectedManufacturer}
                   selectedModel={selectedModel}
                   carMakes={carMakes}
                 />
-                <p className="text-3xl">
-                  From £
-                  {carMakes[selectedManufacturer].cars[
-                    selectedModel
-                  ].dayRate.toLocaleString()}{" "}
-                  per day *
-                </p>
+                <div className="flex flex-row  bg-white p-1 rounded-lg">
+                  <p className="text-4xl font-genos font-bold underline underline-offset-8">
+                    From £
+                    {Math.round(
+                      carMakes[selectedManufacturer].cars[
+                        selectedModel
+                      ].monthRateBreakDown()
+                    ).toLocaleString()}{" "}
+                    per day
+                  </p>
+
+                  <p className="text-lg">*</p>
+                </div>
                 <div className="flex justify-center items-center flex-col mb-5 gap-2 p-5">
                   <p>
                     <strong>Interested?</strong> Check out our

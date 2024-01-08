@@ -14,14 +14,14 @@ function CarDetails({ selectedManufacturer, selectedModel, carMakes }) {
 
   return (
     <div className="ml-8 w-2/3 flex items-center flex-col p-4 justify-around">
-      <div className="border-b-2 p-4 rounded-md flex items-center flex-col text-center">
+      <div className="font-genos text-xl border-b-2 rounded-md flex items-center flex-col text-center">
         <div className="flex flex-col justify-center items-center gap-5">
           <img
             src={carMakes[selectedManufacturer].logo}
             alt={carDetails.logo}
-            className="w-1/3 hover:scale-110 transition duration-300"
+            className="w-1/4 hover:scale-110 transition duration-300"
           />
-          <h2 className="text-4xl font-semibold underline ">{selectedModel}</h2>
+          <h2 className="text-5xl font-semibold underline ">{selectedModel}</h2>
         </div>
         <p className="mt-5 mb-5">{carDetails.description}</p>
       </div>

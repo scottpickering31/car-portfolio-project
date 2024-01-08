@@ -10,9 +10,11 @@ function BasketIcon({ basketCount, pricing }) {
   }
 
   return (
-    <div className="flex flex-start flex-row gap-2 items-center text-2xl p-3 rounded-full bg-white ">
+    <div
+      className="flex flex-start flex-row gap-2 items-center text-2xl p-3 rounded-full bg-white "
+      onClick={toggleShowBasket}
+    >
       <i
-        onClick={toggleShowBasket}
         className="fa fa-shopping-basket cursor-pointer hover:scale-150 duration-100 "
         style={{ color: "rgb(255, 140, 40)" }}
       ></i>

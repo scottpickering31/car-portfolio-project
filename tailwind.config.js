@@ -40,6 +40,7 @@ export default {
       },
       fontFamily: {
         whisper: ["Whisper"],
+        genos: ["Genos"],
       },
       animation: {
         flip: "flipAnimation 1s ease-out",
