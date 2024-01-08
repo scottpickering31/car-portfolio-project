@@ -45,9 +45,9 @@ function PricingRates({
           </h1>
         </div>
         <div className="flex flex-row">
-          <div className="flex h-large bg-gray-200 border border-r-black rounded-l-lg text-center p-3 gap-5 text-black flex-row justify-between">
+          <div className="flex h-large font-semibold bg-gray-200 border border-r-black rounded-l-lg text-center p-3 gap-5 text-black flex-row justify-between">
             <div className="text-l leading-tight bg-gray-150 w-1/4 justify-between flex flex-col rounded-lg shadow-2xl">
-              <p className="font-bold bg-gray-100 p-5 !h-28 flex items-center justify-center shadow-2xl">
+              <p className=" bg-gray-100 p-5 !h-28 flex items-center justify-center shadow-2xl">
                 Tariff Details
               </p>
               <p>Insurance Package</p>
@@ -68,7 +68,7 @@ function PricingRates({
               ref={pricingRef}
               className="text-md leading-tight w-1/4 bg-bronze justify-between flex flex-col rounded-lg shadow-2xl "
             >
-              <p className="font-bold !bg-customBlue p-5 !h-28 flex items-center text-white shadow-2xl">
+              <p className=" !bg-customBlue p-5 !h-28 flex items-center text-white shadow-2xl">
                 Bronze <br /> (Day Rental)
               </p>
               {Object.entries(toolTipObj.Bronze).map(([key, value]) => (
@@ -103,7 +103,7 @@ function PricingRates({
               <p className="text-red-400 text-3xl">
                 <FontAwesomeIcon icon={faXmark} />
               </p>
-              <p className="text-xl flex justify-end !bg-customOrange-lighter text-white">
+              <p className="text-xl font-bold flex justify-end !bg-customOrange-lighter text-white">
                 £{carDetails.dayRate.toLocaleString()} Per Day
               </p>
               <br />
@@ -142,7 +142,7 @@ function PricingRates({
               <p className="text-red-400 text-3xl">
                 <FontAwesomeIcon icon={faXmark} />
               </p>
-              <p className="text-xl !bg-customOrange-lighter text-white">
+              <p className="text-xl font-bold !bg-customOrange-lighter text-white">
                 £{Math.round(carDetails.weekRateBreakDown()).toLocaleString()}{" "}
                 Per Day
               </p>
@@ -183,7 +183,7 @@ function PricingRates({
               <p className="text-green-400 text-3xl">
                 <FontAwesomeIcon icon={faCheck} />
               </p>
-              <p className="text-xl !bg-customOrange-lighter text-white">
+              <p className="text-xl font-bold !bg-customOrange-lighter text-white">
                 £{Math.round(carDetails.monthRateBreakDown()).toLocaleString()}{" "}
                 Per Day
               </p>
