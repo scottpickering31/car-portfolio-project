@@ -5,10 +5,12 @@ import ModelSelect from "../components/ui/ModelSelect";
 import CarDetails from "../components/ui/CarDetails";
 import ImageDisplay from "../components/ui/ImageDisplay";
 import ManufacturerDetails from "../components/ui/Manufacturers/ManufacturerDetails";
-import PricingStructure from "../components/ui/Pricing/PricingStructure";
+import PricingRates from "../components/ui/Pricing/PricingRates";
 import PriceButton from "../components/ui/Buttons/PriceButton";
 import ManufacturerList from "../components/ui/Manufacturers/ManufacturerList";
 import CarouselImages from "../components/ui/AvailableModels";
+import { useDispatch } from "react-redux";
+import { scrollToPricing } from "../../src/statemanagement/actions/pricingAction";
 
 function CarPickerForm() {
   const [selectedManufacturer, setSelectedManufacturer] = useState("");
@@ -16,8 +18,10 @@ function CarPickerForm() {
   const [manufacturerDetails, setManufacturerDetails] = useState("");
   const carManufacturer = Object.keys(carMakes).sort();
   const [pricing, setPricing] = useState(false);
+  const dispatch = useDispatch();
 
   const handlePricing = () => {
+    dispatch(scrollToPricing());
     setPricing(!pricing);
   };
 
@@ -112,7 +116,7 @@ function CarPickerForm() {
       </div>
       {selectedModel && (
         <div className="w-full">
-          <PricingStructure
+          <PricingRates
             selectedModel={selectedModel}
             selectedManufacturer={selectedManufacturer}
             carMakes={carMakes}

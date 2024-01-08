@@ -8,18 +8,28 @@ import {
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 import { toolTipObj } from "./PricingToolTipData";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 function PricingRates({
   selectedModel,
   carMakes,
   selectedManufacturer,
   pricing,
+  scrollToPricing,
 }) {
+  const pricingRef = useRef(null);
   const [tooltip, setTooltip] = useState("");
-
   const carDetails = carMakes[selectedManufacturer].cars[selectedModel];
   const logo = carMakes[selectedManufacturer].logo;
+
+  useEffect(() => {
+    if (scrollToPricing) {
+      pricingRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
+  }, [scrollToPricing]);
 
   if (!pricing) {
     return null;
@@ -54,7 +64,10 @@ function PricingRates({
               <br />
               <br />
             </div>
-            <div className="text-md leading-tight w-1/4 bg-bronze justify-between flex flex-col rounded-lg shadow-2xl ">
+            <div
+              ref={pricingRef}
+              className="text-md leading-tight w-1/4 bg-bronze justify-between flex flex-col rounded-lg shadow-2xl "
+            >
               <p className="font-bold !bg-customBlue p-5 !h-28 flex items-center text-white shadow-2xl">
                 Bronze <br /> (Day Rental)
               </p>
@@ -193,6 +206,7 @@ function PricingRates({
 
 const mapStateToProps = (state) => ({
   pricing: state.price.pricing,
+  scrollToPricing: state.price.scrollToPricing,
 });
 
 export default connect(mapStateToProps)(PricingRates);
