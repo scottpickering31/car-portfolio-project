@@ -34,19 +34,25 @@ function CalendarDisplay({
     //     Calculate the price for each month
     if (days >= 31) {
       newPrices = Array.from({ length: days }, (_, index) => ({
-        date: new Date(startDate.getTime() + index * oneDay),
+        date: new Date(startDate.getTime() + index * oneDay)
+          .toISOString()
+          .split("T")[0],
         price: carDetails.monthRateBreakDown() * (index + 1),
       }));
       // Calculate the price for each week
     } else if (days >= 7) {
       newPrices = Array.from({ length: days }, (_, index) => ({
-        date: new Date(startDate.getTime() + index * oneDay),
+        date: new Date(startDate.getTime() + index * oneDay)
+          .toISOString()
+          .split("T")[0],
         price: carDetails.weekRateBreakDown() * (index + 1),
       }));
       // Calculate the price for each day
     } else {
       newPrices = Array.from({ length: days }, (_, index) => ({
-        date: new Date(startDate.getTime() + index * oneDay),
+        date: new Date(startDate.getTime() + index * oneDay)
+          .toISOString()
+          .split("T")[0],
         price: pricePerDay * (index + 1),
       }));
     }
@@ -58,12 +64,13 @@ function CalendarDisplay({
     //     Update the total price
     setTotal(totalPrice);
     setIsDateSelected(true);
+    updateDailyPriceBreakdown(newPrices);
+    console.log(newPrices);
   };
 
   const handleRangeChange = (newValue) => {
     onChange(newValue);
     calculatePrices(newValue[0], newValue[1]);
-    updateDailyPriceBreakdown(calculatePrices(newValue[0], newValue[1]));
   };
 
   return (
@@ -99,9 +106,11 @@ function CalendarDisplay({
     </div>
   );
 }
-const mapDispatchToProps = {
+
+const mapDispatchToProps = (dispatch) => ({
   addToBasket,
-  updateDailyPriceBreakdown,
-};
+  updateDailyPriceBreakdown: (dailyPriceBreakdown) =>
+    dispatch(updateDailyPriceBreakdown(dailyPriceBreakdown)),
+});
 
 export default connect(null, mapDispatchToProps)(CalendarDisplay);

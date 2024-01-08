@@ -19,7 +19,7 @@ function CarDetails({ selectedManufacturer, selectedModel, carMakes }) {
           <img
             src={carMakes[selectedManufacturer].logo}
             alt={carDetails.logo}
-            className="w-1/3 hover:scale-110 transition duration-300 cursor-pointer"
+            className="w-1/3 hover:scale-110 transition duration-300"
           />
           <h2 className="text-2xl font-bold">{selectedModel}</h2>
         </div>

@@ -10,11 +10,12 @@ function CarouselImages({ carMakes, selectedManufacturer }) {
   const renderCustomIndicator = (clickHandler, isSelected, index, label) => {
     const indicatorStyles = {
       background: isSelected ? "#000" : "#fff",
-      width: 8,
-      height: 8,
+      width: 16,
+      height: 16,
       display: "inline-block",
-      margin: "0 8px",
+      margin: "0px 8px",
       cursor: "pointer",
+      borderRadius: "50%",
     };
 
     return (

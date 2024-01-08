@@ -32,12 +32,12 @@ function CarPickerForm() {
   };
 
   return (
-    <div className="flex justify-center flex-col items-center mt-5 h-full mb-20 bg-gray-400 p-5">
+    <div className="flex justify-center flex-col items-center h-full mb-20 bg-gray-400 pt-5">
       <h1 className="bg-customBlue mb-5 text-center p-5 text-2xl text-white font-semibold tracking-wide rounded-2xl ">
         Step 1 - Select your Supercar!
       </h1>
-      <div className="flex border border-gray-400 w-11/12 rounded-lg shadow-2xl h-screen bg-gray-100">
-        <div className="border-r-2 flex flex-col justify-center p-5 w-2/6 bg-customBlue rounded-l-md">
+      <div className="flex border border-gray-400 w-full shadow-2xl h-medium bg-gray-100">
+        <div className="border-r-2 flex flex-col justify-center p-5 w-2/6 bg-customBlue">
           <ManufacturerSelect
             carManufacturer={carManufacturer}
             selectedManufacturer={selectedManufacturer}

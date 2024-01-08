@@ -26,7 +26,7 @@ function PricingRates({
   }
 
   return (
-    <div className="border mt-10 w-auto p-5 bg-white rounded-lg shadow-2xl h-full">
+    <div className="border mt-10 w-auto p-5 bg-white shadow-2xl h-full">
       <div className="flex flex-col items-center text-center">
         <div className="flex flex-row items-center gap-5">
           <img src={logo} className="w-28 mb-5" alt="Car Logo" />
@@ -90,7 +90,7 @@ function PricingRates({
               <p className="text-red-400 text-3xl">
                 <FontAwesomeIcon icon={faXmark} />
               </p>
-              <p className="text-2xl flex justify-end !bg-customOrange-lighter text-white">
+              <p className="text-xl flex justify-end !bg-customOrange-lighter text-white">
                 £{carDetails.dayRate.toLocaleString()} Per Day
               </p>
               <br />
@@ -129,7 +129,7 @@ function PricingRates({
               <p className="text-red-400 text-3xl">
                 <FontAwesomeIcon icon={faXmark} />
               </p>
-              <p className="text-2xl !bg-customOrange-lighter text-white">
+              <p className="text-xl !bg-customOrange-lighter text-white">
                 £{Math.round(carDetails.weekRateBreakDown()).toLocaleString()}{" "}
                 Per Day
               </p>
@@ -170,7 +170,7 @@ function PricingRates({
               <p className="text-green-400 text-3xl">
                 <FontAwesomeIcon icon={faCheck} />
               </p>
-              <p className="text-2xl !bg-customOrange-lighter text-white">
+              <p className="text-xl !bg-customOrange-lighter text-white">
                 £{Math.round(carDetails.monthRateBreakDown()).toLocaleString()}{" "}
                 Per Day
               </p>

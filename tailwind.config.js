@@ -8,7 +8,8 @@ export default {
         16: "4rem",
       },
       height: {
-        medium: "80vh",
+        small: "70vh",
+        medium: "90vh",
         large: "110vh",
         xl: "125vh",
         tariff: "6.5rem",

@@ -12,7 +12,7 @@ export const resetBasket = () => ({
   type: "RESET_BASKET",
 });
 
-export const updateDailyPriceBreakdown = (index, dailyPriceBreakdown) => ({
+export const updateDailyPriceBreakdown = ({ index, dailyPriceBreakdown }) => ({
   type: "UPDATE_DAILY_PRICE_BREAKDOWN",
   payload: { index, dailyPriceBreakdown },
 });

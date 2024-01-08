@@ -23,16 +23,15 @@ const basketReducer = (state = initialState, action) => {
         basketItem: updatedBasket,
       };
     case "UPDATE_DAILY_PRICE_BREAKDOWN":
+      const updatedBasketItem = state.basketItem.map((item, index) =>
+        index === action.payload.index
+          ? { ...item, dailyPriceBreakdown: action.payload.dailyPriceBreakdown }
+          : item,
+      );
+      console.log("Updated basket items:", updatedBasketItem);
       return {
         ...state,
-        basketItem: state.basketItem.map((item, index) =>
-          index === action.payload.index
-            ? {
-                ...item,
-                dailyPriceBreakdown: action.payload.dailyPriceBreakdown,
-              }
-            : item,
-        ),
+        basketItem: updatedBasketItem,
       };
 
     case "RESET_BASKET":

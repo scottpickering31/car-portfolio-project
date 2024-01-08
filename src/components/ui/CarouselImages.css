@@ -23,6 +23,10 @@
   display: flex;
 }
 
+.carousel-slider .control-dots {
+  margin-top: 50px;
+}
+
 .carousel-slider .control-arrow {
   display: none;
   background-color: black;

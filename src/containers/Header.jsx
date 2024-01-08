@@ -6,7 +6,7 @@ function Header() {
       <div className="flex justify-end bg-white">
         <NavBar />
       </div>
-      <div className="w-full h-screen mb-10">
+      <div className="w-full shadow-2xl">
         <div>
           <video
             src="src/assets/BackgroundVideo/BgVideos.mp4"
