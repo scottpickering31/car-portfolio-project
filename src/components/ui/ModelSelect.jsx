@@ -17,7 +17,7 @@ function ModelSelect({
         onChange={handleModelChange}
         className="block w-full rounded-md border border-gray-400 p-2 focus:outline-none focus:border-blue-500"
       >
-        <option value="">Select a Car Model</option>
+        <option value="">Select Model</option>
         {Object.keys(carMakes[selectedManufacturer].cars).map((model, idx) => (
           <option key={idx} value={model} className="text-black">
             {model}
