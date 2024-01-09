@@ -53,7 +53,7 @@ function CarouselImages({ carMakes, selectedManufacturer }) {
         ariaLabel={undefined}
         renderIndicator={renderCustomIndicator}
         width="100%"
-        className="carousel-container w-2/3"
+        className="carousel-container w-1/2"
       >
         {Object.keys(carDetails).map((modelName, index) => {
           const car = carDetails[modelName];
@@ -70,7 +70,7 @@ function CarouselImages({ carMakes, selectedManufacturer }) {
         })}
       </Carousel>
 
-      <div className="flex flex-col gap-2 w-1/3 items-center justify-around p-2 text-center h-full">
+      <div className="flex flex-col gap-2 w-1/2 items-center justify-around p-2 text-center h-full">
         <h1 className="font-genos text-4xl font-bold text-wrap underline underline-offset-8">
           Available Models for {selectedManufacturer}
         </h1>
