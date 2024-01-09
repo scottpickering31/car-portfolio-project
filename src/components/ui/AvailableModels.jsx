@@ -3,7 +3,11 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./CarouselImages.css";
 
-function CarouselImages({ carMakes, selectedManufacturer }) {
+function CarouselImages({
+  carMakes,
+  selectedManufacturer,
+  handleCarouselModelChange,
+}) {
   const carDetails = carMakes[selectedManufacturer].cars;
 
   const renderCustomIndicator = (clickHandler, isSelected, index, label) => {
@@ -58,12 +62,7 @@ function CarouselImages({ carMakes, selectedManufacturer }) {
         {Object.keys(carDetails).map((modelName, index) => {
           const car = carDetails[modelName];
           return (
-            <div
-              key={index}
-              className="carousel-item relative"
-              onMouseOver={() => setToolTip(index)}
-              onMouseOut={() => setToolTip(null)}
-            >
+            <div key={index} className="carousel-item relative">
               <img src={car.image} alt={modelName} className="h-72 relative" />
             </div>
           );
@@ -78,7 +77,9 @@ function CarouselImages({ carMakes, selectedManufacturer }) {
           return (
             <p
               key={index}
+              value={modelName}
               className="text-lg tracking-widest w-4/5 bg-customBlue text-white rounded-lg p-4 font-semibold cursor-pointer"
+              onClick={() => handleCarouselModelChange(modelName)}
             >
               {modelName}
             </p>

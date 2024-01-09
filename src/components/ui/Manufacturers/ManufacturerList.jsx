@@ -10,19 +10,19 @@ function ManufacturerList({ setSelectedManufacturer }) {
 
   return (
     <div className="flex flex-col justify-around items-center w-4/5">
-      <h1 className="font-whisper text-6xl">Elite Drives</h1>
-      <div className="grid grid-cols-6 gap-4 p-5">
+      <h1 className="font-whisper text-7xl">Elite Drives</h1>
+      <div className="grid grid-cols-6 gap-4">
         {manufacturerLogos.map(([manufacturer, details], key) => {
           return (
             <div
-              className="shadow-md rounded-lg cursor-pointer hover:scale-110 transition duration-100 w-36"
+              className="shadow-md rounded-lg cursor-pointer hover:scale-110 transition duration-100 w-36 h-36"
               key={key}
             >
               <img
                 src={details.logo}
                 value={manufacturer}
                 alt={key + 1}
-                className="border mr-5 p-2 h-full w-full rounded-lg "
+                className="border p-2 h-full w-full rounded-lg"
                 onClick={(e) =>
                   chooseManufacturerLogo(e.target.getAttribute("value"))
                 }

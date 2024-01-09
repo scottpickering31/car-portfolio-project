@@ -20,6 +20,10 @@ function CarPickerForm() {
   const [pricing, setPricing] = useState(false);
   const dispatch = useDispatch();
 
+  function handleCarouselModelChange(modelName) {
+    setSelectedModel(modelName);
+  }
+
   const handlePricing = () => {
     dispatch(scrollToPricing());
     setPricing(!pricing);
@@ -37,7 +41,7 @@ function CarPickerForm() {
 
   return (
     <div className="flex justify-center flex-col items-center h-full mb-20 bg-gray-400 pt-5">
-      <h1 className="bg-customBlue mb-5 text-center p-5 text-2xl text-white font-semibold tracking-wide rounded-2xl ">
+      <h1 className="bg-customBlue mb-5 font-roboto text-center p-5 text-2xl text-white font-semibold tracking-wide rounded-2xl ">
         Step 1 - Select your Supercar!
       </h1>
       <div className="flex border border-gray-400 w-full shadow-2xl h-medium bg-gray-100">
@@ -72,6 +76,7 @@ function CarPickerForm() {
               <CarouselImages
                 carMakes={carMakes}
                 selectedManufacturer={selectedManufacturer}
+                handleCarouselModelChange={handleCarouselModelChange}
               />
             </div>
           </div>

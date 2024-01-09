@@ -25,6 +25,9 @@ export default {
           darker: "#152937",
           lighter: "#A1C2E6",
         },
+        customBrown: {
+          DEFAULT: "#3b3a3a",
+        },
         bronze: {
           DEFAULT: "#CD7F32",
         },
@@ -41,6 +44,7 @@ export default {
       fontFamily: {
         whisper: ["Whisper"],
         genos: ["Genos"],
+        roboto: ["Roboto"],
       },
       animation: {
         flip: "flipAnimation 1s ease-out",
