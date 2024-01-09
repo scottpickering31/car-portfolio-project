@@ -9,7 +9,7 @@ function ManufacturerList({ setSelectedManufacturer }) {
   };
 
   return (
-    <div className="flex flex-col justify-around items-center w-4/5">
+    <div className="flex flex-col justify-evenly items-center w-4/5">
       <h1 className="font-whisper text-7xl">Elite Drives</h1>
       <div className="grid grid-cols-6 gap-4">
         {manufacturerLogos.map(([manufacturer, details], key) => {

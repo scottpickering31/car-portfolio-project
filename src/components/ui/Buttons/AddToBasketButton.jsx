@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import { connect } from "react-redux";
 import { addToBasket } from "../../../statemanagement/actions/basketAction";
 
@@ -9,11 +9,12 @@ function AddToBasketButton({
   carMakes,
   value,
 }) {
+  const [notification, setNotification] = useState("");
   const carDetails = carMakes[selectedManufacturer].cars[selectedModel];
 
   const handleAddToBasket = () => {
     const durationInDays = Math.round(
-      (value[1] - value[0]) / (1000 * 60 * 60 * 24),
+      (value[1] - value[0]) / (1000 * 60 * 60 * 24)
     );
 
     let totalPrice = 0;
@@ -33,19 +34,32 @@ function AddToBasketButton({
       price: Math.round(totalPrice),
       duration: durationInDays,
     });
+
+    setNotification(`Added ${selectedModel} to basket`);
+    setTimeout(() => {
+      setNotification("");
+    }, 2000);
   };
 
   return (
-    <div>
+    <div className="relative">
       <button
         onClick={handleAddToBasket}
-        className="tracking-wider text-xl  h-20 w-40 bg-green-400 text-white font-bold py-2 px-4 rounded-md shadow-md transition duration-300 transform hover:scale-105 hover:bg-green-400 hover:shadow-lg focus:outline-none focus:ring focus:ring-green-400 focus:ring-opacity-50"
+        className="relative tracking-wider text-xl h-20 w-40 bg-green-400 text-white font-bold py-2 px-4 rounded-md shadow-md transition duration-300 transform hover:scale-105 hover:bg-green-500 hover:shadow-lg focus:outline-none focus:ring focus:ring-green-400 focus:ring-opacity-50 active:bg-green-900"
       >
         Add To Basket
       </button>
+
+      {notification && (
+        <div
+          className="bg-green-400 text-white p-2 rounded-md absolute -top-full transform translate-x-12 mb-4"
+          style={{ minWidth: "200px" }}
+        >
+          {notification}
+        </div>
+      )}
     </div>
   );
 }
 
-// Connect the component to Redux
 export default connect(null, { addToBasket })(AddToBasketButton);

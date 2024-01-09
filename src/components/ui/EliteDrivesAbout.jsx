@@ -2,7 +2,7 @@ function EliteDrivesAbout() {
   return (
     <div className="h-small flex justify-center flex-col text-center items-center font-genos p-10">
       <h1 className="text-6xl wrap w-2/3 p-10 ">
-        Elite Drives - The UK's Best Supercar Rental Service
+        Elite Drives - Europe's Best Supercar Rental Service
       </h1>
       <p className="text-2xl w-3/4 text-gray-500 font-bold tracking-wider">
         Welcome to EliteDrives, where luxury meets the road As the premier

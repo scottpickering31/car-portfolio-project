@@ -6,8 +6,8 @@ const MapAPI = ({ text }) => <div>{text}</div>;
 function GoogleMapsApi() {
   const defaultProps = {
     center: {
-      lat: 51.9020837031582,
-      lng: -0.19525324292467375,
+      lat: 51.50385857303638,
+      lng: -0.12563124312495927,
     },
     zoom: 10,
   };
@@ -19,7 +19,7 @@ function GoogleMapsApi() {
         defaultCenter={defaultProps.center}
         defaultZoom={defaultProps.zoom}
       >
-        <MapAPI lat={51.9020837031582} lng={-0.19525324292467375} />
+        <MapAPI lat={51.50385857303638} lng={-0.12563124312495927} />
       </GoogleMapReact>
     </div>
   );

@@ -8,6 +8,9 @@ import Footer from "./containers/Footer.jsx";
 import SuperCarFleet from "./components/ui/SuperCarFleet.jsx";
 import EliteDrivesAbout from "./components/ui/EliteDrivesAbout.jsx";
 import DistanceInfo from "./components/ui/DistanceInfo.jsx";
+import Modal from "react-modal";
+
+Modal.setAppElement("#root");
 
 export default function App() {
   return (

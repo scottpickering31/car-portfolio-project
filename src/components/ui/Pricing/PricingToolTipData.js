@@ -1,7 +1,7 @@
 export const toolTipObj = {
   Bronze: {
     Basic: "Basic coverage tailored to the vehicle's standard",
-    "Basic ": "Standard customer service during business hours",
+    "Standard ": "Standard customer service during business hours",
     "100 Miles": "100 Miles fuel allowance at time of Pickup/Delivery to you",
     "Basic  ":
       "Standard assistance in case of breakdowns within a limited range (within 150 miles of dealership)",

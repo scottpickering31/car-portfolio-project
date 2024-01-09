@@ -1,21 +1,36 @@
-// BasketItems.js
+import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import { removeFromBasket } from "../../../statemanagement/actions/basketAction";
-import SeeCostBreakDown from "../Buttons/SeeCostBreakDown";
 
 function BasketItems({ basketItem, removeFromBasket }) {
+  const [notification, setNotification] = useState("");
+
+  function removeItem(index) {
+    const removedItem = basketItem[index];
+    removeFromBasket(index);
+    setNotification(`${removedItem.manufacturer} ${removedItem.model} removed`);
+  }
+
+  useEffect(() => {
+    if (basketItem.length === 0) {
+      setNotification("");
+    }
+  }, [basketItem]);
+
   if (!basketItem || basketItem.length === 0) {
     return <p className="text-center">Your basket is empty.</p>;
   }
 
-  function removeItem(index) {
-    removeFromBasket(index);
-  }
-
   return (
     <div className="flex flex-col justify-between w-full p-5 ">
-      <h1 className="bg-customBlue mb-5 font-roboto text-white text-center p-5 text-2xl font-bold tracking-wide rounded-full">
-        Step 3 - Review your Choice(s) and Checkout!
+      {notification && (
+        <div className="bg-red-500 text-white text-center p-2 mb-4 rounded-md">
+          {notification}
+        </div>
+      )}
+
+      <h1 className="bg-customBlue mb-5 font-roboto text-white text-center p-5 text-2xl font-bold tracking-widest rounded-2xl">
+        STEP 3 - REVIEW YOUR CHOICE(S) AND CHECKOUT
       </h1>
       <h1 className="text-center">Your Basket</h1>
       {basketItem.map((item, index) => (
@@ -45,13 +60,16 @@ function BasketItems({ basketItem, removeFromBasket }) {
             />
           </div>
           <div className="flex flex-col gap-5">
-            <SeeCostBreakDown />
-            <button
+            <div
               onClick={() => removeItem(index)}
-              className="bg-red-500 h-12 text-white font-semibold py-2 px-2 rounded-md shadow-md transition duration-300 transform hover:scale-105 hover:bg-red- hover:shadow-lg focus:outline-none focus:ring focus:ring-red-400 focus:ring-opacity-50"
+              className="bg-red-500 cursor-pointer h-12 flex flex-row items-center gap-2 text-white font-semibold py-2 px-2 rounded-md shadow-md transition duration-300 transform hover:scale-105 hover:bg-red- hover:shadow-lg focus:outline-none focus:ring focus:ring-red-400 focus:ring-opacity-50"
             >
-              Remove Car
-            </button>
+              <img
+                src="src/assets/FontAwesome/trash-can-solid.svg"
+                className="h-5"
+              />
+              <button>Remove</button>
+            </div>
           </div>
         </div>
       ))}

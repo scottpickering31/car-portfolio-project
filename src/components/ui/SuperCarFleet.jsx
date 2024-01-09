@@ -4,7 +4,7 @@ function SuperCarFleet() {
       <img src="src/assets/SupercarFleet.jpg" alt="Supercar Fleet" />
       <div className="text-lg h-11/12 w-1/3 text-center opacity-90 absolute text-white flex flex-col items-center gap-5 bg-customBrown p-10 rounded-lg left-1/3 transform -translate-x-1/2">
         <p>
-          As the leading supercar destination in the UK, we proudly stand as the
+          As the leading supercar destination in Europe, we proudly stand as the
           only company in the region, if not the world, offering a 24/7 on-road
           concierge service with every rental. Setting ourselves apart with
           unparalleled dedication to your journey, we ensure a seamless driving
