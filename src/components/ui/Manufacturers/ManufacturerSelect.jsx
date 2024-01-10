@@ -18,7 +18,7 @@ function ManufacturerSelect({
         id="manufacturerSelect"
         value={selectedManufacturer}
         onChange={handleManufacturerChange}
-        className="block w-full rounded-md border border-gray-400 p-2 text-xl" 
+        className="block w-full rounded-md border border-gray-400 p-2 text-lg"
       >
         <option value="">-- Select Manufacturer --</option>
         {carManufacturer.map((manufacturer, index) => (

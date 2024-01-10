@@ -9,7 +9,7 @@ function GoogleMapsApi() {
       lat: 51.50385857303638,
       lng: -0.12563124312495927,
     },
-    zoom: 10,
+    zoom: 7,
   };
 
   return (

@@ -1,14 +1,11 @@
-import { useRef } from "react";
 
 function SuperCarFleet() {
-  const carPickerFormRef = useRef(null);
-
   const handleDiscoverClick = () => {
     const carPickerFormSection = document.getElementById(
       "carPickerFormSection"
     );
     if (carPickerFormSection) {
-      carPickerFormSection.scrollIntoView({ behavior: "auto" });
+      carPickerFormSection.scrollIntoView({ behavior: "smooth" });
     }
   };
 

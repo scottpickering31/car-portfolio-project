@@ -36,9 +36,9 @@ function DistanceInfo() {
     <div className="h-medium flex flex-row justify-center items-center gap-10 font-genos w-full p-5">
       <div className="w-4/6 h-5/6 relative">
         <p className="w-5/6 absolute top-0 left-1/2 text-xl transform -translate-x-1/2 z-10 bg-white p-5 text-center rounded-b-lg">
-          Free Supercar Pickup to locations within a 400 mile radius of Rental
-          locations such as <strong>London, Paris, Berlin</strong> and{" "}
-          <strong>Rome</strong>
+          Free Supercar pickup/delivery to locations within a 400 mile radius of
+          our European rental locations such as{" "}
+          <strong>London, Paris, Berlin</strong> and <strong>Rome</strong>
         </p>
         <GoogleMapsApi />
       </div>

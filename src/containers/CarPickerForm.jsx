@@ -42,9 +42,8 @@ function CarPickerForm() {
 
   return (
     <div
-      className="flex justify-center flex-col items-center h-full mb-20 pt-5"
-      ref={carPickerFormRef}
       id="carPickerFormSection"
+      className="flex justify-center flex-col items-center h-full mb-20 pt-5"
     >
       <div className="flex border border-gray-400 w-full shadow-2xl h-medium bg-gray-100">
         <div className="border-r-2 flex flex-col justify-center p-5 w-1/5 bg-customBlue">

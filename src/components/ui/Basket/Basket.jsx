@@ -21,7 +21,7 @@ function Basket({ basketItem }) {
       : 0;
 
   return (
-    <div className="relative z-20">
+    <div className="relative z-20 h-full">
       <div
         className={`fixed top-0 right-0 h-full w-5/6 flex justify-end overflow-auto items-start transition-transform duration-300 ease-in-out ${
           isVisible ? "translate-x-0 " : "translate-x-full "
