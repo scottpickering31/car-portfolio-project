@@ -9,6 +9,9 @@ function BasketItems({ basketItem, removeFromBasket }) {
     const removedItem = basketItem[index];
     removeFromBasket(index);
     setNotification(`${removedItem.manufacturer} ${removedItem.model} removed`);
+    setTimeout(() => {
+      setNotification("");
+    }, 2000);
   }
 
   useEffect(() => {
@@ -36,7 +39,7 @@ function BasketItems({ basketItem, removeFromBasket }) {
       {basketItem.map((item, index) => (
         <div
           key={index}
-          className="flex flex-row items-center border border-white m-5 bg-white p-6 w-full h-40 justify-around rounded-xl shadow-lg"
+          className="flex tracking-wide text-xl flex-row items-center border border-white m-5 bg-white p-6 w-full h-40 justify-around rounded-xl shadow-lg"
         >
           <div>
             <p>

@@ -14,7 +14,7 @@ function AddToBasketButton({
 
   const handleAddToBasket = () => {
     const durationInDays = Math.round(
-      (value[1] - value[0]) / (1000 * 60 * 60 * 24)
+      (value[1] - value[0]) / (1000 * 60 * 60 * 24),
     );
 
     let totalPrice = 0;
@@ -52,7 +52,7 @@ function AddToBasketButton({
 
       {notification && (
         <div
-          className="bg-green-400 text-white p-2 rounded-md absolute -top-full transform translate-x-12 mb-4"
+          className="bg-customBeige text-black p-2 rounded-md absolute -top-full transform translate-x-12 mb-4"
           style={{ minWidth: "200px" }}
         >
           {notification}

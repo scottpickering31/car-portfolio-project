@@ -23,8 +23,8 @@ export default function App() {
           <DistanceInfo />
           <CarPickerForm />
           <Basket />
+          <Footer />
         </BasketProvider>
-        <Footer />
       </div>
     </Provider>
   );

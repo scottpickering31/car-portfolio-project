@@ -46,21 +46,27 @@ function CarPickerForm() {
       </h1>
       <div className="flex border border-gray-400 w-full shadow-2xl h-medium bg-gray-100">
         <div className="border-r-2 flex flex-col justify-center p-5 w-1/5 bg-customBlue">
-          <ManufacturerSelect
-            carManufacturer={carManufacturer}
-            selectedManufacturer={selectedManufacturer}
-            handleManufacturerChange={handleManufacturerChange}
-          />
-          {selectedManufacturer && (
-            <>
-              <ModelSelect
-                selectedManufacturer={selectedManufacturer}
-                selectedModel={selectedModel}
-                handleModelChange={handleModelChange}
-                carMakes={carMakes}
-              />
-            </>
-          )}
+          <div className="flex flex-col h-full justify-start font-whisper items-center text-6xl font-bold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+            <img src="src/assets/Diamond.png" className="h-1/6 w-1/4" />
+            <h1>Elite Drives</h1>
+          </div>
+          <div className="flex flex-col h-full">
+            <ManufacturerSelect
+              carManufacturer={carManufacturer}
+              selectedManufacturer={selectedManufacturer}
+              handleManufacturerChange={handleManufacturerChange}
+            />
+            {selectedManufacturer && (
+              <>
+                <ModelSelect
+                  selectedManufacturer={selectedManufacturer}
+                  selectedModel={selectedModel}
+                  handleModelChange={handleModelChange}
+                  carMakes={carMakes}
+                />
+              </>
+            )}
+          </div>
         </div>
         {selectedManufacturer && !selectedModel && (
           <div className="flex flex-col h-full justify-center items-center w-4/5">
@@ -104,7 +110,7 @@ function CarPickerForm() {
                     {Math.round(
                       carMakes[selectedManufacturer].cars[
                         selectedModel
-                      ].monthRateBreakDown()
+                      ].monthRateBreakDown(),
                     ).toLocaleString()}{" "}
                     per day
                   </p>

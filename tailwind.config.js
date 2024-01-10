@@ -8,6 +8,7 @@ export default {
         16: "4rem",
       },
       height: {
+        tiny: "30vh",
         small: "70vh",
         medium: "90vh",
         large: "110vh",
@@ -19,6 +20,9 @@ export default {
           DEFAULT: "rgb(249, 115, 22)",
           darker: "rgb(200, 90, 10)",
           lighter: "rgb(255, 140, 40)",
+        },
+        customBeige: {
+          DEFAULT: "#F5F5DC",
         },
         customBlue: {
           DEFAULT: "#224159",
