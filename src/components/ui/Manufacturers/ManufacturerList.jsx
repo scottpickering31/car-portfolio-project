@@ -13,11 +13,11 @@ function ManufacturerList({ setSelectedManufacturer }) {
       <h1 className="bg-customBlue shadow-2xl mb-5 font-roboto text-center p-5 text-2xl text-white font-semibold tracking-widest w-1/2 rounded-2xl ">
         STEP 1: SELECT YOUR SUPERCAR
       </h1>
-      <div className="grid grid-cols-6 gap-4">
+      <div className="grid grid-cols-6 gap-4 p-5">
         {manufacturerLogos.map(([manufacturer, details], key) => {
           return (
             <div
-              className="shadow-md rounded-lg cursor-pointer hover:scale-110 transition duration-100 w-36 h-36"
+              className="shadow-md rounded-lg cursor-pointer hover:scale-110 transition duration-100 max-w-36 max-h-36"
               key={key}
             >
               <img
