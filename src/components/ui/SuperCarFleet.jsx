@@ -1,4 +1,17 @@
+import { useRef } from "react";
+
 function SuperCarFleet() {
+  const carPickerFormRef = useRef(null);
+
+  const handleDiscoverClick = () => {
+    const carPickerFormSection = document.getElementById(
+      "carPickerFormSection"
+    );
+    if (carPickerFormSection) {
+      carPickerFormSection.scrollIntoView({ behavior: "auto" });
+    }
+  };
+
   return (
     <div className="z-10 flex justify-start items-center relative font-genos">
       <img src="src/assets/SupercarFleet.jpg" alt="Supercar Fleet" />
@@ -16,7 +29,10 @@ function SuperCarFleet() {
           pinnacle of luxury and reliability with us, making your supercar
           rental an unforgettable, worry-free adventure.
         </p>
-        <button className="border-2 border-bronze text-bronze p-3 rounded-full font-bold font-roboto tracking-wider hover:bg-customOrange-lighter hover:text-white ">
+        <button
+          className="border-2 border-bronze text-bronze p-3 rounded-full font-bold font-roboto tracking-wider hover:bg-customOrange-lighter hover:text-white"
+          onClick={handleDiscoverClick}
+        >
           DISCOVER
         </button>
       </div>

@@ -2,6 +2,8 @@ import { React } from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./CarouselImages.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleRight } from "@fortawesome/free-regular-svg-icons";
 
 function CarouselImages({
   carMakes,
@@ -37,7 +39,7 @@ function CarouselImages({
   };
 
   return (
-    <div className="flex flex-row justify-center items-center text-center h-full">
+    <div className="flex flex-row justify-center items-center text-center h-1/2">
       <Carousel
         showArrows={true}
         showStatus={false}
@@ -46,13 +48,13 @@ function CarouselImages({
         showThumbs={false}
         useKeyboardArrows={true}
         autoPlay={true}
-        stopOnHover={true}
+        stopOnHover={false}
         swipeable={true}
         dynamicHeight={true}
         emulateTouch={true}
         selectedItem={0}
         interval={2000}
-        transitionTime={500}
+        transitionTime={300}
         swipeScrollTolerance={5}
         ariaLabel={undefined}
         renderIndicator={renderCustomIndicator}
@@ -69,20 +71,22 @@ function CarouselImages({
         })}
       </Carousel>
 
-      <div className="flex flex-col gap-2 w-1/2 items-center justify-around p-2 text-center h-full">
+      <div className="flex flex-col gap-2 w-1/2 items-center justify-around p-3 text-center h-full">
         <h1 className="font-genos text-4xl font-bold text-wrap underline underline-offset-8">
           Available Models for {selectedManufacturer}
         </h1>
         {Object.keys(carDetails).map((modelName, index) => {
           return (
-            <p
+            <div
+              className="flex justify-between items-center text-lg tracking-wide w-full bg-customBlue uppercase text-white rounded-lg p-4 font-semibold cursor-pointer transition duration-300 transform hover:scale-105 hover:bg-green-500 hover:shadow-lg focus:outline-none focus:ring focus:ring-green-400 focus:ring-opacity-50 active:bg-green-900"
               key={index}
-              value={modelName}
-              className="text-lg tracking-widest w-4/5 bg-customBlue text-white rounded-lg p-4 font-semibold cursor-pointer"
               onClick={() => handleCarouselModelChange(modelName)}
             >
-              {modelName}
-            </p>
+              <p>{modelName}</p>
+              <div className="flex items-center">
+                <FontAwesomeIcon icon={faCircleRight} />
+              </div>
+            </div>
           );
         })}
       </div>

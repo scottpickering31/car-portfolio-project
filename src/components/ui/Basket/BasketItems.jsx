@@ -8,7 +8,7 @@ function BasketItems({ basketItem, removeFromBasket }) {
   function removeItem(index) {
     const removedItem = basketItem[index];
     removeFromBasket(index);
-    setNotification(`${removedItem.manufacturer} ${removedItem.model} removed`);
+    setNotification(`${removedItem.model} removed`);
     setTimeout(() => {
       setNotification("");
     }, 2000);
@@ -33,7 +33,7 @@ function BasketItems({ basketItem, removeFromBasket }) {
       )}
 
       <h1 className="bg-customBlue mb-5 font-roboto text-white text-center p-5 text-2xl font-bold tracking-widest rounded-2xl">
-        STEP 3 - REVIEW YOUR CHOICE(S) AND CHECKOUT
+        STEP 3: REVIEW YOUR CHOICE(S) AND CHECKOUT
       </h1>
       <h1 className="text-center">Your Basket</h1>
       {basketItem.map((item, index) => (

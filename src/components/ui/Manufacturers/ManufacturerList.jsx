@@ -10,8 +10,8 @@ function ManufacturerList({ setSelectedManufacturer }) {
 
   return (
     <div className="flex flex-col justify-evenly items-center w-4/5">
-      <h1 className="bg-customBlue mb-5 font-roboto text-center p-5 text-2xl text-white font-semibold tracking-widest w-1/2 rounded-2xl ">
-        STEP 1 - SELECT YOUR SUPERCAR
+      <h1 className="bg-customBlue shadow-2xl mb-5 font-roboto text-center p-5 text-2xl text-white font-semibold tracking-widest w-1/2 rounded-2xl ">
+        STEP 1: SELECT YOUR SUPERCAR
       </h1>
       <div className="grid grid-cols-6 gap-4">
         {manufacturerLogos.map(([manufacturer, details], key) => {

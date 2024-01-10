@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import carMakes from "../Data";
 import ManufacturerSelect from "../components/ui/Manufacturers/ManufacturerSelect";
 import ModelSelect from "../components/ui/ModelSelect";
@@ -13,6 +13,7 @@ import { useDispatch } from "react-redux";
 import { scrollToPricing } from "../../src/statemanagement/actions/pricingAction";
 
 function CarPickerForm() {
+  const carPickerFormRef = useRef(null);
   const [selectedManufacturer, setSelectedManufacturer] = useState("");
   const [selectedModel, setSelectedModel] = useState("");
   const [manufacturerDetails, setManufacturerDetails] = useState("");
@@ -40,14 +41,18 @@ function CarPickerForm() {
   };
 
   return (
-    <div className="flex justify-center flex-col items-center h-full mb-20 pt-5">
+    <div
+      className="flex justify-center flex-col items-center h-full mb-20 pt-5"
+      ref={carPickerFormRef}
+      id="carPickerFormSection"
+    >
       <div className="flex border border-gray-400 w-full shadow-2xl h-medium bg-gray-100">
         <div className="border-r-2 flex flex-col justify-center p-5 w-1/5 bg-customBlue">
-          <div className="flex flex-col h-full justify-start font-whisper items-center text-6xl font-bold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-            <img src="src/assets/Diamond.png" className="h-1/6 w-1/4" />
+          <div className="flex flex-col h-1/3 justify-start font-whisper items-center text-6xl font-bold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
+            <img src="src/assets/Diamond.png" className="h-1/4 w-1/4" />
             <h1>Elite Drives</h1>
           </div>
-          <div className="flex flex-col h-full">
+          <div className="flex flex-col h-2/3 gap-5">
             <ManufacturerSelect
               carManufacturer={carManufacturer}
               selectedManufacturer={selectedManufacturer}
@@ -66,22 +71,18 @@ function CarPickerForm() {
           </div>
         </div>
         {selectedManufacturer && !selectedModel && (
-          <div className="flex flex-col h-full justify-center items-center w-4/5">
-            <div className="flex flex-row w-full">
-              <ManufacturerDetails
-                carMakes={carMakes}
-                carManufacturer={carManufacturer}
-                selectedManufacturer={selectedManufacturer}
-                manufacturerDetails={manufacturerDetails}
-              />
-            </div>
-            <div>
-              <CarouselImages
-                carMakes={carMakes}
-                selectedManufacturer={selectedManufacturer}
-                handleCarouselModelChange={handleCarouselModelChange}
-              />
-            </div>
+          <div className="flex flex-col h-medium justify-center items-center w-4/5">
+            <ManufacturerDetails
+              carMakes={carMakes}
+              carManufacturer={carManufacturer}
+              selectedManufacturer={selectedManufacturer}
+              manufacturerDetails={manufacturerDetails}
+            />
+            <CarouselImages
+              carMakes={carMakes}
+              selectedManufacturer={selectedManufacturer}
+              handleCarouselModelChange={handleCarouselModelChange}
+            />
           </div>
         )}
         {!selectedManufacturer && (

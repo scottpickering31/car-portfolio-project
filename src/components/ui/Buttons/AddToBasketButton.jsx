@@ -14,7 +14,7 @@ function AddToBasketButton({
 
   const handleAddToBasket = () => {
     const durationInDays = Math.round(
-      (value[1] - value[0]) / (1000 * 60 * 60 * 24),
+      (value[1] - value[0]) / (1000 * 60 * 60 * 24)
     );
 
     let totalPrice = 0;
