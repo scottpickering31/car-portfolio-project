@@ -40,10 +40,7 @@ function CarPickerForm() {
   };
 
   return (
-    <div className="flex justify-center flex-col items-center h-full mb-20 bg-gray-400 pt-5">
-      <h1 className="bg-customBlue mb-5 font-roboto text-center p-5 text-2xl text-white font-semibold tracking-widest rounded-2xl ">
-        STEP 1 - SELECT YOUR SUPERCAR
-      </h1>
+    <div className="flex justify-center flex-col items-center h-full mb-20 pt-5">
       <div className="flex border border-gray-400 w-full shadow-2xl h-medium bg-gray-100">
         <div className="border-r-2 flex flex-col justify-center p-5 w-1/5 bg-customBlue">
           <div className="flex flex-col h-full justify-start font-whisper items-center text-6xl font-bold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
@@ -110,7 +107,7 @@ function CarPickerForm() {
                     {Math.round(
                       carMakes[selectedManufacturer].cars[
                         selectedModel
-                      ].monthRateBreakDown(),
+                      ].monthRateBreakDown()
                     ).toLocaleString()}{" "}
                     per day
                   </p>

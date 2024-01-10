@@ -10,10 +10,9 @@ function ManufacturerList({ setSelectedManufacturer }) {
 
   return (
     <div className="flex flex-col justify-evenly items-center w-4/5">
-      <div className="flex flex-col font-whisper items-center text-9xl font-bold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-        <img src="src/assets/Diamond.png" className="h-1/3 w-1/6" />
-        <h1>Elite Drives</h1>
-      </div>
+      <h1 className="bg-customBlue mb-5 font-roboto text-center p-5 text-2xl text-white font-semibold tracking-widest w-1/2 rounded-2xl ">
+        STEP 1 - SELECT YOUR SUPERCAR
+      </h1>
       <div className="grid grid-cols-6 gap-4">
         {manufacturerLogos.map(([manufacturer, details], key) => {
           return (
