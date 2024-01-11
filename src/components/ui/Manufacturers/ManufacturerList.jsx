@@ -10,14 +10,14 @@ function ManufacturerList({ setSelectedManufacturer }) {
 
   return (
     <div className="flex flex-col justify-evenly items-center w-4/5">
-      <h1 className="bg-customBlue shadow-2xl mb-5 font-roboto text-center p-5 text-2xl text-white font-semibold tracking-widest w-1/2 rounded-2xl ">
+      <h1 className="bg-customBlue shadow-2xl font-roboto text-center text-white font-semibold tracking-widest rounded-2xl mobile:text-sm mobile:w-11/12 mobile:mb-0 mobile:p-2 desktop:text-2xl desktop:w-1/2 desktop:p-5 desktop:mb-5">
         STEP 1: SELECT YOUR SUPERCAR
       </h1>
-      <div className="grid grid-cols-6 gap-4 p-5">
+      <div className="grid grid-cols-6 gap-4 p-5 mobile:grid-cols-3 laptop:grid-cols-6 desktop:grid-cols-6">
         {manufacturerLogos.map(([manufacturer, details], key) => {
           return (
             <div
-              className="shadow-md rounded-lg cursor-pointer hover:scale-110 transition duration-100 w-36 h-36"
+              className="shadow-md rounded-lg cursor-pointer hover:scale-110 transition duration-100 mobile:h-18 mobile:w-18 mobilelg:h-24 mobilelg:w-26 tablet:h-24 tablet:w-32 laptop:h-32 laptop:w-32 desktop:w-36 desktop:h-36"
               key={key}
             >
               <img

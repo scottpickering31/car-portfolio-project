@@ -33,17 +33,17 @@ function DistanceInfo() {
   };
 
   return (
-    <div className="h-medium flex flex-row justify-center items-center gap-10 font-genos w-full p-5">
+    <div className="h-medium flex flex-row justify-center items-center gap-10 font-genos w-full p-5 mobile:flex-col laptop:flex-row desktop:flex-row">
       <div className="w-4/6 h-5/6 relative">
-        <p className="w-5/6 absolute top-0 left-1/2 text-xl transform -translate-x-1/2 z-10 bg-white p-5 text-center rounded-b-lg">
+        <p className="w-5/6 absolute top-0 left-1/2 transform -translate-x-1/2 z-10 bg-white p-5 text-center rounded-b-lg mobile:text-sm desktop:text-xl">
           Free Supercar pickup/delivery to locations within a 400 mile radius of
           our European rental locations such as{" "}
           <strong>London, Paris, Berlin</strong> and <strong>Rome</strong>
         </p>
         <GoogleMapsApi />
       </div>
-      <div className="w-4/6 h-5/6">
-        <ol className="h-full flex flex-col justify-around w-full text-3xl bg-gray-50">
+      <div className="h-5/6 mobile:w-full desktop:w-4/6 laptop:w-4/6">
+        <ol className="h-full flex flex-col justify-around w-full bg-gray-50 mobile:text-base desktop:text-3xl laptop:text-2xl tablet:text-2xl mobilelg:text-2xl">
           {Object.keys(benefitsDetails).map((key) => {
             const { item, logo } = benefitsDetails[key];
             return (
@@ -57,7 +57,11 @@ function DistanceInfo() {
                   e.currentTarget.querySelector("li").style.color = "black";
                 }}
               >
-                <img src={logo} alt={item} className="h-8 w-8 mr-2" />
+                <img
+                  src={logo}
+                  alt={item}
+                  className="mr-2 mobile:h-5 mobile:w-5 mobilelg:h-6 mobilelg:w-6 tablet:h-8 tablet:w-8 laptop:h-10 laptop:w-10 desktop:h-12 desktop:w-12"
+                />
                 <li className="w-full text-center">{item}</li>
               </div>
             );
