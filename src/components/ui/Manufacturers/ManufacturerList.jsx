@@ -17,7 +17,7 @@ function ManufacturerList({ setSelectedManufacturer }) {
         {manufacturerLogos.map(([manufacturer, details], key) => {
           return (
             <div
-              className="shadow-md rounded-lg cursor-pointer hover:scale-110 transition duration-100 max-w-36 max-h-36"
+              className="shadow-md rounded-lg cursor-pointer hover:scale-110 transition duration-100 w-36 h-36"
               key={key}
             >
               <img

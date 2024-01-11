@@ -8,6 +8,7 @@ export default {
       tablet: "768px",
       laptop: "1024px",
       desktop: "1280px",
+      widescreen: "1920px",
     },
     extend: {
       backgroundSize: {
