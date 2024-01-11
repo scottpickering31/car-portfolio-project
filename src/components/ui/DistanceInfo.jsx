@@ -33,9 +33,9 @@ function DistanceInfo() {
   };
 
   return (
-    <div className="h-medium flex flex-row justify-center items-center gap-10 font-genos w-full p-5 mobile:flex-col laptop:flex-row desktop:flex-row">
-      <div className="w-4/6 h-5/6 relative">
-        <p className="w-5/6 absolute top-0 left-1/2 transform -translate-x-1/2 z-10 bg-white p-5 text-center rounded-b-lg mobile:text-sm desktop:text-xl">
+    <div className="h-medium flex flex-row justify-center items-center gap-10 font-genos w-full mobile:flex-col p-5 laptop:flex-row desktop:flex-row">
+      <div className="w-4/6 h-5/6 relative mobile:w-full">
+        <p className="desktop:w-5/6 laptop:w-5/6 mobile:w-3/5 absolute top-0 desktop:left-1/2 laptop:left-1/3 mobile:left-1/3 transform desktop:-translate-x-1/2 mobile:-translate-x-1/3 z-10 bg-white p-5 text-center rounded-b-lg mobile:text-xs mobile:p-2 desktop:p-5 mobilelg:text-base tablet:text-lg laptop:text-xl desktop:text-xl">
           Free Supercar pickup/delivery to locations within a 400 mile radius of
           our European rental locations such as{" "}
           <strong>London, Paris, Berlin</strong> and <strong>Rome</strong>
@@ -43,13 +43,13 @@ function DistanceInfo() {
         <GoogleMapsApi />
       </div>
       <div className="h-5/6 mobile:w-full desktop:w-4/6 laptop:w-4/6">
-        <ol className="h-full flex flex-col justify-around w-full bg-gray-50 mobile:text-base desktop:text-3xl laptop:text-2xl tablet:text-2xl mobilelg:text-2xl">
+        <ol className="h-full flex flex-col justify-around w-full bg-gray-50 mobile:text-base desktop:text-3xl laptop:text-2xl tablet:text-4xl mobilelg:text-2xl">
           {Object.keys(benefitsDetails).map((key) => {
             const { item, logo } = benefitsDetails[key];
             return (
               <div
                 key={key}
-                className="flex flex-row h-1/3 justify-center pl-20 items-center cursor-pointer hover:bg-gray-500"
+                className="flex flex-row h-1/3 justify-center desktop:pl-20 laptop:pl-20tablet:pl-40 mobile:pl-5 items-center cursor-pointer hover:bg-gray-500"
                 onMouseEnter={(e) => {
                   e.currentTarget.querySelector("li").style.color = "white";
                 }}
