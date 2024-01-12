@@ -44,13 +44,16 @@ function CarPickerForm() {
       id="carPickerFormSection"
       className="flex justify-center flex-col w-full items-center h-full mb-20 pt-5"
     >
-      <div className="flex border border-gray-400 w-full shadow-2xl h-medium bg-gray-100">
-        <div className="border-r-2 flex flex-col justify-center p-5 w-1/5 bg-customBlue">
-          <div className="flex flex-col h-1/3 justify-start font-whisper items-center text-5xl font-bold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
-            <img src="src/assets/Diamond.png" className="h-1/4 w-1/4" />
+      <div className="flex border items-center border-gray-400 w-full shadow-2xl h-medium bg-gray-100 mobile:h-full mobilelg:h-full tablet:h-full laptop:h-medium desktop:h-medium mobile:flex-col mobilelg:flex-col tablet:flex-col laptop:flex-row desktop:flex-row">
+        <div className="border-r-2 flex flex-col h-full justify-center p-5 w-1/5 bg-customBlue mobile:w-full mobilelg:w-full tablet:w-full laptop:w-1/5 desktop:w-1/5">
+          <div className="flex flex-col h-1/3 justify-start font-whisper items-center font-bold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] mobile:text-3xl mobilelg:text-4xl tablet:text-5xl laptop:text-3xl desktop:text-4xl">
+            <img
+              src="src/assets/Diamond.png"
+              className="mobile:h-1/6 mobile:w-1/6 mobilelg:h-1/6 mobilelg:w-1/12 tablet:h-1/6 tablet:w-1/12 laptop:w-1/3 desktop:w-1/4"
+            />
             <h1>Elite Drives</h1>
           </div>
-          <div className="flex flex-col h-2/3 gap-5">
+          <div className="flex h-2/3 gap-5 mobile:flex-row mobilelg:flex-row tablet:flex-row mobile:justify-center mobilelg:justify-center tablet:justify-center laptop:justify-normal desktop:justify-normal laptop:flex-col desktop:flex-col">
             <ManufacturerSelect
               carManufacturer={carManufacturer}
               selectedManufacturer={selectedManufacturer}

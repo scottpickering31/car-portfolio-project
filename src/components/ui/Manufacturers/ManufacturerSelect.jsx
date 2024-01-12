@@ -7,10 +7,10 @@ function ManufacturerSelect({
   handleManufacturerChange,
 }) {
   return (
-    <div className="mb-4">
+    <div className="mb-4 flex flex-col justify-center items-center mobile:text-sm mobilelg:text-sm tablet:text-xl laptop:text-xl desktop:text-xl">
       <label
         htmlFor="manufacturerSelect"
-        className="block mb-2 text-white shadow-2xl text-2xl"
+        className="block mb-2 text-white shadow-2xl mobile:text-xs mobilelg:text-base tablet:text-xl laptop:text-xl desktop:text-xl"
       >
         Select Manufacturer:
       </label>
@@ -18,11 +18,20 @@ function ManufacturerSelect({
         id="manufacturerSelect"
         value={selectedManufacturer}
         onChange={handleManufacturerChange}
-        className="block w-full rounded-md border border-gray-400 p-2 text-lg"
+        className="text-center block w-full rounded-md pt-2 pb-2 border border-gray-400 text-lg mobile:text-xl mobilelg:text-xl tablet:text-xl laptop:text-xl desktop:text-xl"
       >
-        <option value="">-- Select Manufacturer --</option>
+        <option
+          value=""
+          className="mobile:text-base mobilelg:text-base tablet:text-2xl laptop:text-2xl desktop:text-2xl "
+        >
+          -- Select Manufacturer --
+        </option>
         {carManufacturer.map((manufacturer, index) => (
-          <option key={index} value={manufacturer}>
+          <option
+            key={index}
+            value={manufacturer}
+            className=" mobile:text-2xl mobilelg:text-2xl mobilelg:overflow-auto mobilelg:h-1/2 tablet:text-2xl laptop:text-2xl desktop:text-2xl"
+          >
             {manufacturer}
           </option>
         ))}
