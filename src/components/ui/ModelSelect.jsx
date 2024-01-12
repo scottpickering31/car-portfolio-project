@@ -24,7 +24,7 @@ function ModelSelect({
           value=""
           className="mobile:text-base mobilelg:text-base tablet:text-2xl laptop:text-2xl desktop:text-2xl "
         >
-          -- Select Model --
+          -- Model --
         </option>
         {Object.keys(carMakes[selectedManufacturer].cars).map((model, idx) => (
           <option

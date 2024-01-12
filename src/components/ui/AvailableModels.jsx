@@ -39,7 +39,7 @@ function CarouselImages({
   };
 
   return (
-    <div className="flex flex-row justify-center items-center text-center h-1/2">
+    <div className="flex flex-row justify-center items-center text-center h-1/2 ">
       <Carousel
         showArrows={true}
         showStatus={false}
@@ -59,7 +59,7 @@ function CarouselImages({
         ariaLabel={undefined}
         renderIndicator={renderCustomIndicator}
         width="100%"
-        className="carousel-container w-1/2"
+        className="carousel-container w-1/2 mobile:hidden mobilelg: hidden tablet:block laptop:block desktop:block"
       >
         {Object.keys(carDetails).map((modelName, index) => {
           const car = carDetails[modelName];
@@ -71,8 +71,8 @@ function CarouselImages({
         })}
       </Carousel>
 
-      <div className="flex flex-col gap-2 w-1/2 items-center justify-around p-3 text-center h-full">
-        <h1 className="font-genos text-4xl font-bold text-wrap underline underline-offset-8">
+      <div className="flex flex-col gap-2 items-center justify-around p-3 text-center h-full mobile:w-full mobilelg:w-full tablet:w-1/2 laptop:w-1/2 desktop:w-1/2">
+        <h1 className="font-genos text-4xl pb-2 font-bold text-wrap underline underline-offset-8 mobile:p-5 mobilelg:p-5 tablet:p-0 laptop:p-0 desktop:p-0">
           Available Models for {selectedManufacturer}
         </h1>
         {Object.keys(carDetails).map((modelName, index) => {

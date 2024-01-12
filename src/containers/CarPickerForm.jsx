@@ -45,8 +45,8 @@ function CarPickerForm() {
       className="flex justify-center flex-col w-full items-center h-full mb-20 pt-5"
     >
       <div className="flex border items-center border-gray-400 w-full shadow-2xl h-medium bg-gray-100 mobile:h-full mobilelg:h-full tablet:h-full laptop:h-medium desktop:h-medium mobile:flex-col mobilelg:flex-col tablet:flex-col laptop:flex-row desktop:flex-row">
-        <div className="border-r-2 flex flex-col h-full justify-center p-5 w-1/5 bg-customBlue mobile:w-full mobilelg:w-full tablet:w-full laptop:w-1/5 desktop:w-1/5">
-          <div className="flex flex-col h-1/3 justify-start font-whisper items-center font-bold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] mobile:text-3xl mobilelg:text-4xl tablet:text-5xl laptop:text-3xl desktop:text-4xl">
+        <div className="border-r-2 flex flex-col h-full justify-center w-1/5 bg-customBlue mobile:w-full mobile:p-2 mobilelg:w-full mobilelg:p-2 tablet:w-full tablet:p-5 laptop:w-1/5 laptop:p-5 desktop:w-1/5 desktop:p-5">
+          <div className="flex flex-col h-1/3 justify-start font-whisper items-center font-bold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] mobile:text-3xl mobilelg:text-4xl mobile:mb-5 mobilelg:mb-5 tablet:mb-5 tablet:text-5xl laptop:mb-0 laptop:text-3xl desktop:text-4xl desktop:mb-0">
             <img
               src="src/assets/Diamond.png"
               className="mobile:h-1/6 mobile:w-1/6 mobilelg:h-1/6 mobilelg:w-1/12 tablet:h-1/6 tablet:w-1/12 laptop:w-1/3 desktop:w-1/4"
@@ -72,7 +72,7 @@ function CarPickerForm() {
           </div>
         </div>
         {selectedManufacturer && !selectedModel && (
-          <div className="flex flex-col justify-center items-center w-4/5 mobile:h-fullmobilelg:h-full tablet:h-medium laptop:h-medium desktop:h-medium">
+          <div className="flex flex-col justify-center items-center mobile:h-full mobile:w-full mobilelg:h-full mobilelg:w-full tablet:h-medium tablet:w-full laptop:h-medium laptop:w-4/5 desktop:h-medium desktop:w-4/5">
             <ManufacturerDetails
               carMakes={carMakes}
               carManufacturer={carManufacturer}
@@ -90,31 +90,29 @@ function CarPickerForm() {
           <ManufacturerList setSelectedManufacturer={setSelectedManufacturer} />
         )}
         {selectedModel && (
-          <div className="flex items-center w-4/5 ">
-            <div className="flex flex-row h-full">
+          <div className="flex items-center mobile:flex-col mobile:w-full mobilelg:flex-col mobilelg:w-full tablet:flex-none tablet:w-full laptop:flex-none laptop:w-4/5 desktop:flex-none desktop:w-4/5">
+            <div className="flex h-full mobile:flex-col mobile:items-center mobilelg:flex-col mobilelg:items-center tablet:flex-row laptop:flex-row desktop:flex-row">
               <CarDetails
                 selectedManufacturer={selectedManufacturer}
                 selectedModel={selectedModel}
                 carMakes={carMakes}
               />
-              <div className="flex flex-col items-center justify-evenly w-1/2 ">
+              <div className="flex flex-col items-center justify-evenly mobile:w-full mobilelg:w-full tablet:w-1/2 laptop:w-1/2 desktop:w-1/2">
                 <ImageDisplay
                   selectedManufacturer={selectedManufacturer}
                   selectedModel={selectedModel}
                   carMakes={carMakes}
                 />
-                <div className="flex flex-row  bg-white p-1 rounded-lg">
+                <div className="flex bg-white p-1 rounded-lg mobile:flex-col mobilelg:flex-row tablet:flex-row laptop:flex-row desktop:flex-row">
                   <p className="text-4xl font-genos font-bold underline underline-offset-8">
                     From £
                     {Math.round(
                       carMakes[selectedManufacturer].cars[
                         selectedModel
-                      ].monthRateBreakDown(),
+                      ].monthRateBreakDown()
                     ).toLocaleString()}{" "}
                     per day
                   </p>
-
-                  <p className="text-lg">*</p>
                 </div>
                 <div className="flex justify-center items-center flex-col mb-5 gap-2 p-5">
                   <p>

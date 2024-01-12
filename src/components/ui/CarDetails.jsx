@@ -13,7 +13,7 @@ function CarDetails({ selectedManufacturer, selectedModel, carMakes }) {
   const rightText = "text-right";
 
   return (
-    <div className="ml-8 w-2/3 flex items-center flex-col p-4 justify-around">
+    <div className="flex items-center flex-col p-4 justify-around mobile:w-full mobile:ml-0 mobilelg:w-full mobilelg:ml-0 tablet:w-2/3 tablet:ml-8 laptop:w-2/3 laptop:ml-8 desktop:w-2/3 desktop:ml-8">
       <div className="font-genos text-xl border-b-2 rounded-md flex items-center flex-col text-center">
         <div className="flex flex-col justify-center items-center gap-5">
           <img
@@ -21,7 +21,9 @@ function CarDetails({ selectedManufacturer, selectedModel, carMakes }) {
             alt={carDetails.logo}
             className="w-1/4 hover:scale-110 transition duration-300"
           />
-          <h2 className="text-5xl font-semibold underline ">{selectedModel}</h2>
+          <h2 className="text-5xl font-semibold underline mobile:text-3xl mobilelg:text-3xl tablet:text-5xl laptop:text-5xl desktop:text-5xl">
+            {selectedModel}
+          </h2>
         </div>
         <p className="mt-5 mb-5">{carDetails.description}</p>
       </div>

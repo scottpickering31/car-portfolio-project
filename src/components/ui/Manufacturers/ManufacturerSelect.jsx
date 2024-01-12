@@ -24,7 +24,7 @@ function ManufacturerSelect({
           value=""
           className="mobile:text-base mobilelg:text-base tablet:text-2xl laptop:text-2xl desktop:text-2xl "
         >
-          -- Select Manufacturer --
+          -- Manufacturer --
         </option>
         {carManufacturer.map((manufacturer, index) => (
           <option
