@@ -11,7 +11,7 @@ function ManufacturerList({ setSelectedManufacturer }) {
   return (
     <div className="flex flex-col justify-evenly items-center mobile:mt-5 mobilelg:mt-5 tablet:mt-5 laptop:mt-0 desktop:mt-0 mobile:w-full mobilelg:w-full tablet:w-full laptop:w-full desktop:w-full">
       <h1 className="bg-customBlue shadow-2xl font-roboto text-center text-white font-semibold tracking-widest rounded-2xl mobile:text-base mobile:w-11/12 mobile:mb-0 mobile:p-2 tablet:text-2xl laptop:text-2xl desktop:text-4xl desktop:w-1/2 desktop:p-5 desktop:mb-5">
-        STEP 1: SELECT YOUR SUPERCAR
+        STEP 1: SELECT YOUR SUPERCAR MANUFACTURER
       </h1>
       <div className="grid gap-4 p-3 mobile:grid-cols-3 mobilelg:grid-cols-3 tablet:grid-cols-6 laptop:grid-cols-6 desktop:grid-cols-6">
         {manufacturerLogos.map(([manufacturer, details], key) => {

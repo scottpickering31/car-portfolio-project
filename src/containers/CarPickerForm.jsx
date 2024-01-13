@@ -104,7 +104,7 @@ function CarPickerForm() {
                   carMakes={carMakes}
                 />
                 <div className="flex bg-white p-1 rounded-lg mobile:flex-col mobilelg:flex-row tablet:flex-row laptop:flex-row desktop:flex-row">
-                  <p className="text-4xl font-genos font-bold underline underline-offset-8">
+                  <p className="text-4xl font-genos font-bold underline underline-offset-8 text-center">
                     From £
                     {Math.round(
                       carMakes[selectedManufacturer].cars[
