@@ -10,7 +10,7 @@ function SuperCarFleet() {
 
   return (
     <div className="z-10 flex justify-start items-center relative font-genos">
-      <img src="src/assets/SupercarFleet.jpg" alt="Supercar Fleet" />
+      <img src="/images/SupercarFleet.jpg" alt="Supercar Fleet" />
       <div className="text-lg text-center text-white flex flex-col items-center gap-5 transform mobile:p-2 mobile:text-sm mobile:w-full mobile:h-full mobile:bg-customBrown/50 mobile:left-1/2 mobile:overflow-auto mobile:-translate-x-1/2 mobile:rounded-none desktop:left-1/3 desktop:text-xl desktop:overflow-hidden desktop:h-full desktop:w-1/3 desktop:-translate-x-1/2 desktop:p-10 desktop:rounded-lg desktop:bg-customBrown/90 absolute mobilelg:p-5 tablet:text-base laptop:text-base laptop:w-1/2 widescreen:text-3xl tablet:overflow-hidden laptop:overflow-hidden">
         <p>
           As the leading supercar destination in Europe, we proudly stand as the
