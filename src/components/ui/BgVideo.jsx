@@ -5,7 +5,7 @@ function BgVideo() {
     <div>
       <div>
         <video
-          src="src/assets/BackgroundVideo/BgVideos.mp4"
+          src="../../assets/BgVideo.mp4"
           autoPlay
           loop
           muted
