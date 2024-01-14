@@ -157,7 +157,7 @@ function PricingRates({
               {Object.entries(toolTipObj.Gold).map(([key, value]) => (
                 <div
                   key={key}
-                  className="tooltip-wrapper"
+                  className="tooltip-wrapper "
                   onMouseEnter={() => setTooltip(value)}
                   onMouseLeave={() => setTooltip("")}
                 >

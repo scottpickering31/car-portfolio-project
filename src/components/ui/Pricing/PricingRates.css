@@ -42,10 +42,10 @@
   color: white;
 }
 
-@media (min-width: 320px) and (min-width: 425px) {
+@media (min-width: 320px) {
   .tooltip-wrapper .tooltip {
-    left: 0%;
-    transform: translateX(0px);
+    left: 10%;
+    transform: translateX(50px);
     transform: translateY(-50px);
     height: auto;
     width: auto;

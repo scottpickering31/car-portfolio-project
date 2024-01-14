@@ -52,7 +52,7 @@ function AddToBasketButton({
 
       {notification && (
         <div
-          className="bg-customBeige text-black p-2 rounded-md absolute -top-full transform translate-x-12 mb-4"
+          className="bg-customBeige text-black p-2 rounded-md absolute -top-full transform translate-x-12 mb-4 z-10"
           style={{ minWidth: "200px" }}
         >
           {notification}
