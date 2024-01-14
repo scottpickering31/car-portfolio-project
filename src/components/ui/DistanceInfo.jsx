@@ -33,7 +33,7 @@ function DistanceInfo() {
   };
 
   return (
-    <div className="h-medium flex flex-row justify-center items-center gap-10 font-genos w-full mobile:flex-col p-5 laptop:flex-row desktop:flex-row">
+    <div className="h-medium flex flex-row p-5 justify-center items-center gap-10 font-genos w-full mobile:flex-col mobile:h-medium mobilelg:h-medium tablet:h-large laptop:h-medium laptop:flex-row desktop:h-medium desktop:flex-row">
       <div className="w-4/6 h-5/6 relative mobile:w-full">
         <p className="desktop:w-5/6 laptop:w-5/6 mobile:w-3/5 absolute top-0 desktop:left-1/2 laptop:left-1/3 mobile:left-1/3 transform desktop:-translate-x-1/2 mobile:-translate-x-1/3 z-10 bg-white p-5 text-center rounded-b-lg mobile:text-xs mobile:p-2 desktop:p-5 mobilelg:text-base tablet:text-lg laptop:text-xl desktop:text-xl">
           Free Supercar pickup/delivery to locations within a 400 mile radius of

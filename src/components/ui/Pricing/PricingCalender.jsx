@@ -65,7 +65,6 @@ function CalendarDisplay({
     setTotal(totalPrice);
     setIsDateSelected(true);
     updateDailyPriceBreakdown(newPrices);
-    console.log(newPrices);
   };
 
   const handleRangeChange = (newValue) => {
@@ -74,30 +73,30 @@ function CalendarDisplay({
   };
 
   return (
-    <div className="bg-gray-200 pt-5 mobile:px-0 mobile:rounded-none mobile:h-full mobilelg:px-0 mobilelg:h-full mobilelg:rounded-none tablet:px-0 tablet:h-full tablet:rounded-r-lg laptop:px-5 laptop:h-large laptop:rounded-r-lg desktop:px-5 desktop:h-large desktop:rounded-r-lg">
+    <div className="bg-gray-200 pt-5 mobile:px-0 mobile:rounded-none mobile:h-full mobilelg:px-0 mobilelg:h-full mobilelg:rounded-none tablet:px-0 tablet:h-full tablet:rounded-r-lg laptop:px-1 laptop:h-large laptop:rounded-r-lg desktop:px-5 desktop:h-large desktop:rounded-r-lg">
       <div className="w-full flex flex-col justify-center items-center gap-2">
-        <h1 className="bg-customBlue font-roboto text-center shadow-2xl p-5 text-2xl text-white font-semibold tracking-wide rounded-2xl">
+        <h1 className="bg-customBlue font-roboto text-center shadow-2xl p-5 text-white font-semibold tracking-wide rounded-2xl mobile:text-2xl mobile:p-5 tablet:text-2xl tablet:p-5 tablet:w-full laptop:text-sm laptop:p-3 laptop:w-full desktop:text-2xl desktop:p-5">
           STEP 2: CHOOSE RENTAL PERIOD
         </h1>
         <Calendar
           selectRange
           onChange={handleRangeChange}
           value={value}
-          className="w-11/12"
+          className="w-full"
         />
         {isDateSelected && (
           <div className="flex flex-col items-center w-full">
-            <div className="p-5 bg-customBlue text-white font-semibold tracking-widest rounded-lg w-11/12 text-lg shadow-2xl ">
+            <div className="p-5 bg-customBlue text-white font-semibold tracking-widest rounded-lg w-full shadow-2xl mobile:text-lg mobile:p-5 mobilelg:text-lg mobilelg:p-5 tablet:text-lg tablet:p-5 laptop:text-sm laptop:p-2 desktop:text-lg desktop:p-5">
               <p>Cost for chosen Rental Period:</p>
-              <p className="font-bold mobile:text-xl mobilelg:text-xl tablet:text-2xl laptop:text-3xl desktop:text-3xl">
+              <p className="font-bold mobile:text-xl mobilelg:text-xl tablet:text-2xl laptop:text-xl desktop:text-3xl">
                 £{total}
               </p>
             </div>
             <img
-              className="w-1/2 hover:scale-110 transition duration-300 cursor-pointer mobile:h-full mobile:p-5 mobile:w-3/4 mobilelg:h-full mobilelg:w-3/4 mobilelg:p-5 tablet:h-60 tablet:w-1/2 tablet:p-0 laptop:h-60 laptop:w-1/2 laptop:p-0 desktop:w-1/2 desktop:h-60 desktop:p-0"
+              className="hover:scale-110 transition duration-300 cursor-pointer w-2/3 mobile:h-full mobile:p-5 mobilelg:h-1/2 mobilelg:p-5 tablet:p-2 tablet:h-1/2 laptop:p-2 laptop:h-1/2 desktop:p-2 desktop:h-1/2 widescreen:w-1/4"
               src={carDetails.image}
             />
-            <div className="flex flex-row items-center mobile:w-full gap-10 mobile:justify-center mobile:p-5 mobilelg:w-full mobilelg:p-5 mobilelg:justify-center tablet:w-auto tablet:p-0 tablet:justify-end laptop:w-auto laptop:p-0 laptop:justify-end desktop:p-0 desktop:w-auto desktop:justify-end">
+            <div className="flex flex-row items-center mobile:w-full gap-10 mobile:justify-center mobile:p-5 mobilelg:w-full mobilelg:p-5 mobilelg:justify-center tablet:w-auto tablet:p-5 tablet:justify-end laptop:w-auto laptop:p-0 laptop:justify-end desktop:p-0 desktop:w-auto desktop:justify-end">
               <AddToBasketButton
                 addToBasket={addToBasket}
                 carMakes={carMakes}

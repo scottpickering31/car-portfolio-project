@@ -45,7 +45,7 @@ function AddToBasketButton({
     <div className="relative">
       <button
         onClick={handleAddToBasket}
-        className="relative tracking-wider bg-green-400 mobile:h-14 mobile:text-sm mobile:w-32 mobilelg:text-sm mobilelg:h-14 mobilelg:w-32 tablet:h-20 tablet:w-40 tablet:text-xl laptop:h-20 laptop:w-40 laptop:text-xl desktop:h-20 desktop:w-40 desktop:text-xl text-white font-bold p-2 rounded-md shadow-md transition duration-300 transform hover:scale-105 hover:bg-green-500 hover:shadow-lg focus:outline-none focus:ring focus:ring-green-400 focus:ring-opacity-50 active:bg-green-900"
+        className="relative bg-green-400 mobile:h-14 mobile:text-sm mobile:w-32 mobilelg:text-sm mobilelg:h-14 mobilelg:w-32 tablet:h-20 tablet:w-40 tablet:text-xl laptop:h-14 laptop:w-32 laptop:text-sm desktop:h-20 desktop:w-40 desktop:text-lg text-white font-bold p-2 rounded-md shadow-md transition duration-300 transform hover:scale-105 hover:bg-green-500 hover:shadow-lg focus:outline-none focus:ring focus:ring-green-400 focus:ring-opacity-50 active:bg-green-900"
       >
         Add To Basket
       </button>

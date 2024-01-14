@@ -850,7 +850,7 @@ const carMakes = {
         horsepower: "590 hp",
         engine: "Electric motors (all-wheel drive)",
         speed: 2.9,
-        image: "src/assets/Audi/HOR_XB1_Audi_RS_e-tron.webp",
+        image: "src/assets/Audi/Audi RS e-tron GT.png",
         dayRate: 480,
         weekRate: function () {
           const weekRates = this.dayRate * 6.5;
@@ -877,7 +877,7 @@ const carMakes = {
         horsepower: "591 hp",
         engine: "Twin-turbocharged V8",
         speed: 2.6,
-        image: "src/assets/Audi/FH5_Audi_RS_6_Avant_2021_Large.webp",
+        image: "src/assets/Audi/Audi-RS6-Avant.png",
         dayRate: 470,
         weekRate: function () {
           const weekRates = this.dayRate * 6.5;
@@ -1563,7 +1563,7 @@ const carMakes = {
         horsepower: "Over 1,224 hp",
         engine: "Electric motors",
         speed: 1.8,
-        image: "src/assets/Rimac/Rimac C_Two.png",
+        image: "src/assets/Rimac/Rimac-ConceptOne.png",
         dayRate: 470,
         weekRate: function () {
           const weekRates = this.dayRate * 6.5;

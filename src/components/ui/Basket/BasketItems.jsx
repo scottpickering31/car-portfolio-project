@@ -32,14 +32,14 @@ function BasketItems({ basketItem, removeFromBasket }) {
         </div>
       )}
 
-      <h1 className="bg-customBlue mb-5 font-roboto text-white text-center p-5 font-bold tracking-widest rounded-2xl mobile:text-lg mobilelg:text-lg tablet:text-xl laptop:text-2xl desktop:text-2xl">
+      <h1 className="bg-customBlue mb-5 font-roboto text-white text-center p-5 font-bold tracking-widest mobile:text-lg mobilelg:text-lg tablet:text-xl laptop:text-2xl desktop:text-2xl">
         STEP 3: REVIEW YOUR CHOICE(S) AND CHECKOUT
       </h1>
       <h1 className="text-center">Your Basket</h1>
       {basketItem.map((item, index) => (
         <div
           key={index}
-          className="flex tracking-wide items-center border border-white bg-white p-6 w-full justify-around rounded-xl shadow-lg mobile:text-sm mobile:mt-2 mobile:h-full mobile:flex-col mobilelg:h-full mobilelg:mt-2 mobilelg:text-sm mobilelg:flex-col tablet:text-lg tablet:m-5 tablet:p-5 tablet:h-40 tablet:flex-row laptop:text-xl laptop:m-5 laptop:p-5 laptop:h-40 laptop:flex-row dekstop:text-xl desktop:m-5 desktop:p-5 first-letter:desktop:h-40 desktop:flex-row"
+          className="flex tracking-wide items-center border border-white bg-white p-6 w-full justify-around shadow-lg mobile:text-sm mobile:mt-2 mobile:h-full mobile:flex-col mobilelg:h-full mobilelg:mt-2 mobilelg:text-sm mobilelg:flex-col tablet:text-lg tablet:m-5 tablet:p-5 tablet:h-40 tablet:flex-row laptop:text-xl laptop:m-5 laptop:p-5 laptop:h-40 laptop:flex-row dekstop:text-xl desktop:m-5 desktop:p-5 first-letter:desktop:h-40 desktop:flex-row"
         >
           <div>
             <p>
@@ -59,7 +59,7 @@ function BasketItems({ basketItem, removeFromBasket }) {
             <img
               src={item.image}
               alt={`${item.manufacturer} ${item.model}`}
-              className="w-72 rounded-full p-5"
+              className="w-72 p-5"
             />
           </div>
           <div className="flex flex-col gap-5">

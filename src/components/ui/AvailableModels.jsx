@@ -59,7 +59,7 @@ function CarouselImages({
         ariaLabel={undefined}
         renderIndicator={renderCustomIndicator}
         width="100%"
-        className="carousel-container w-1/2 mobile:hidden mobilelg: hidden tablet:block laptop:block desktop:block"
+        className="carousel-container w-full mobile:hidden mobilelg: hidden tablet:block laptop:block desktop:block"
       >
         {Object.keys(carDetails).map((modelName, index) => {
           const car = carDetails[modelName];
@@ -71,14 +71,14 @@ function CarouselImages({
         })}
       </Carousel>
 
-      <div className="flex flex-col gap-2 items-center justify-around p-3 text-center h-full mobile:w-full mobilelg:w-full tablet:w-1/2 laptop:w-1/2 desktop:w-1/2">
-        <h1 className="font-genos text-4xl pb-2 font-bold text-wrap underline underline-offset-8 mobile:p-5 mobilelg:p-5 tablet:p-0 laptop:p-0 desktop:p-0">
+      <div className="flex flex-col gap-2 items-center justify-around p-1 text-center h-full mobile:w-full mobilelg:w-full tablet:w-1/2 laptop:w-1/2 desktop:w-1/2">
+        <h1 className="font-genos pb-2 font-bold text-wrap underline underline-offset-8 mobile:text-xl mobile:p-5 mobilelg:p-5 mobilelg:text-xl tablet:p-0 tablet:text-2xl laptop:p-0 laptop:text-2xl desktop:p-0 desktop:text-2xl">
           Available Models for {selectedManufacturer}
         </h1>
         {Object.keys(carDetails).map((modelName, index) => {
           return (
             <div
-              className="flex justify-between items-center text-lg tracking-wide w-full bg-customBlue uppercase text-white rounded-lg p-4 font-semibold cursor-pointer transition duration-300 transform hover:scale-105 hover:bg-green-500 hover:shadow-lg focus:outline-none focus:ring focus:ring-green-400 focus:ring-opacity-50 active:bg-green-900"
+              className="flex justify-between items-center tracking-wide w-full bg-customBlue uppercase text-white rounded-lg p-4 font-semibold cursor-pointer transition duration-300 transform mobile:text-sm mobilelg:text-sm tablet:text-sm laptop:text-base desktop:text-lg hover:scale-105 hover:bg-green-500 hover:shadow-lg focus:outline-none focus:ring focus:ring-green-400 focus:ring-opacity-50 active:bg-green-900"
               key={index}
               onClick={() => handleCarouselModelChange(modelName)}
             >

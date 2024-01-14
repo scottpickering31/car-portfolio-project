@@ -16,7 +16,7 @@ function Header() {
             muted
             className="w-full object-cover"
           />
-          <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 -translate-y-3/4">
+          <div className="absolute left-1/2 transform -translate-x-1/2 -translate-y-3/4 mobile:top-14 mobilelg:top-20 tablet:top-1/5 laptop:top-1/4 desktop:top-1/4">
             <div className="flex flex-col font-whisper items-center font-bold text-white drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
               <img
                 src="src/assets/Diamond.png"
