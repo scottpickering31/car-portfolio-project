@@ -30,7 +30,7 @@ function Basket({ basketItem }) {
         <div className="w-full bg-gray-200 opacity-95 relative mobile:p-0 mobile:opacity-100 mobilelg:p-0 mobilelg:opacity-100 tablet:opacity-100 tablet:p-0 laptop:p-5 laptop:opacity-95 desktop:p-5 desktop:opacity-95">
           <div className="sticky top-0 w-full p-2">
             <img
-              src="/images/cross.png"
+              src="images/cross.png"
               onClick={toggleShowBasket}
               className="cursor-pointer w-10 h-10 ml-auto mr-4 float-left hover:scale-150 transition duration-100"
             />

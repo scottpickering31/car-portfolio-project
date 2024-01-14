@@ -68,7 +68,7 @@ function BasketItems({ basketItem, removeFromBasket }) {
               className="bg-red-500 cursor-pointer h-12 flex flex-row items-center gap-2 text-white font-semibold py-2 px-2 rounded-md shadow-md transition duration-300 transform hover:scale-105 hover:bg-red- hover:shadow-lg focus:outline-none focus:ring focus:ring-red-400 focus:ring-opacity-50"
             >
               <img
-                src="/images/FontAwesome/trash-can-solid.svg"
+                src="images/FontAwesome/trash-can-solid.svg"
                 className="h-5"
               />
               <button>Remove</button>

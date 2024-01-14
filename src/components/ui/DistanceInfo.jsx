@@ -4,31 +4,31 @@ function DistanceInfo() {
   const benefitsDetails = {
     worldwide: {
       item: "Europe-wide Shipping",
-      logo: "/images/FontAwesome/truck-fast-solid.svg",
+      logo: "images/FontAwesome/truck-fast-solid.svg",
     },
     mileage: {
       item: "Incredible Mileage Cover",
-      logo: "/images/FontAwesome/gas-pump-solid.svg",
+      logo: "images/FontAwesome/gas-pump-solid.svg",
     },
     pickup: {
       item: "Free Pickup up to 400 miles",
-      logo: "/images/FontAwesome/road-circle-check-solid.svg",
+      logo: "images/FontAwesome/road-circle-check-solid.svg",
     },
     concierge: {
       item: "Personal Concierge Service",
-      logo: "/images/FontAwesome/person-military-to-person-solid.svg",
+      logo: "images/FontAwesome/person-military-to-person-solid.svg",
     },
     insurance: {
       item: "Full Insurance Coverage",
-      logo: "/images/FontAwesome/car-burst-solid.svg",
+      logo: "images/FontAwesome/car-burst-solid.svg",
     },
     roadside: {
       item: "Complete Roadside Assistance",
-      logo: "/images/FontAwesome/handshake-angle-solid.svg",
+      logo: "images/FontAwesome/handshake-angle-solid.svg",
     },
     support: {
       item: "24/7 Customer Support",
-      logo: "/images/FontAwesome/headset-solid.svg",
+      logo: "images/FontAwesome/headset-solid.svg",
     },
   };
 
