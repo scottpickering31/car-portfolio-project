@@ -79,7 +79,7 @@ function PricingRates({
                     onMouseEnter={() => setTooltip(value)}
                     onMouseLeave={() => setTooltip("")}
                   >
-                    <p className="key w-full gap-3">
+                    <p className="key w-full gap-2">
                       {key}
                       <FontAwesomeIcon
                         icon={faCircleExclamation}
@@ -123,7 +123,7 @@ function PricingRates({
                     onMouseEnter={() => setTooltip(value)}
                     onMouseLeave={() => setTooltip("")}
                   >
-                    <p className="key w-full gap-3">
+                    <p className="key w-full gap-2">
                       {key}{" "}
                       <FontAwesomeIcon
                         icon={faCircleExclamation}
@@ -164,7 +164,7 @@ function PricingRates({
                     onMouseEnter={() => setTooltip(value)}
                     onMouseLeave={() => setTooltip("")}
                   >
-                    <p className="key w-full gap-3">
+                    <p className="key w-full gap-2">
                       {key}{" "}
                       <FontAwesomeIcon
                         icon={faCircleExclamation}

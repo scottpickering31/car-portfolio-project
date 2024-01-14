@@ -83,21 +83,21 @@ function CalendarDisplay({
           selectRange
           onChange={handleRangeChange}
           value={value}
-          className="w-full"
+          className="w-11/12"
         />
         {isDateSelected && (
           <div className="flex flex-col items-center w-full">
-            <div className="p-5 bg-customBlue text-white font-semibold tracking-widest rounded-lg w-full text-lg shadow-2xl ">
+            <div className="p-5 bg-customBlue text-white font-semibold tracking-widest rounded-lg w-11/12 text-lg shadow-2xl ">
               <p>Cost for chosen Rental Period:</p>
               <p className="font-bold mobile:text-xl mobilelg:text-xl tablet:text-2xl laptop:text-3xl desktop:text-3xl">
                 £{total}
               </p>
             </div>
             <img
-              className="w-3/4 p-5 hover:scale-110 transition duration-300 cursor-pointer mobile:h-full mobilelg:h-full tablet:h-60 laptop:h-60 desktop:h-60"
+              className="w-1/2 hover:scale-110 transition duration-300 cursor-pointer mobile:h-full mobile:p-5 mobile:w-3/4 mobilelg:h-full mobilelg:w-3/4 mobilelg:p-5 tablet:h-60 tablet:w-1/2 tablet:p-0 laptop:h-60 laptop:w-1/2 laptop:p-0 desktop:w-1/2 desktop:h-60 desktop:p-0"
               src={carDetails.image}
             />
-            <div className="flex flex-row items-center mobile:w-full gap-10 p-5 mobile:justify-center mobilelg:w-full mobilelg:justify-center tablet:w-auto tablet:justify-end laptop:w-auto laptop:justify-end desktop:w-auto desktop:justify-end">
+            <div className="flex flex-row items-center mobile:w-full gap-10 mobile:justify-center mobile:p-5 mobilelg:w-full mobilelg:p-5 mobilelg:justify-center tablet:w-auto tablet:p-0 tablet:justify-end laptop:w-auto laptop:p-0 laptop:justify-end desktop:p-0 desktop:w-auto desktop:justify-end">
               <AddToBasketButton
                 addToBasket={addToBasket}
                 carMakes={carMakes}
