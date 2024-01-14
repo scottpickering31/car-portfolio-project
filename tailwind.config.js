@@ -20,7 +20,7 @@ export default {
         small: "70vh",
         medium: "90vh",
         large: "110vh",
-        xxl: "125vh",
+        extral: "125vh",
         tariff: "6.5rem",
       },
       colors: {

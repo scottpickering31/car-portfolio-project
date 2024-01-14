@@ -40,10 +40,10 @@ function Basket({ basketItem }) {
           </div>
           <div className="sticky bottom-0 w-full flex flex-col justify-around mt-4 border border-white bg-white items-center mobile:p-0 mobile:rounded-none mobilelg:p-0 mobilelg:rounded-none tablet:p-5 tablet:rounded-lg laptop:p-5 laptop:rounded-lg desktop:p-5 desktop:rounded-lg">
             <div className="flex flex-row items-center gap-3 text-sm font-genos mobile:p-5 mobilelg:p-5 tablet:p-0 laptop:p-0 desktop:p-0">
-              <p className="font-bold tracking-widest mobile:text-xl mobilelg:text-xl tablet:text-2xl laptop:text-5xl desktop:text-5xl">
+              <p className="font-bold tracking-widest mobile:text-xl mobilelg:text-xl tablet:text-2xl laptop:text-2xl desktop:text-2xl">
                 Basket Total:
               </p>
-              <p className="underline text-5xl tracking-widest font-bold underline-offset-4 mobile:text-xl mobilelg:text-xl tablet:text-2xl laptop:text-5xl desktop:text-5xl ">
+              <p className="underline text-5xl tracking-widest font-bold underline-offset-4 mobile:text-xl mobilelg:text-xl tablet:text-2xl laptop:text-4xl desktop:text-4xl ">
                 £{totalBasketPrice.toLocaleString()}
               </p>
             </div>
