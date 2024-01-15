@@ -83,9 +83,9 @@ function CalendarDisplay({
   };
 
   return (
-    <div className="bg-gray-200 pt-5 mobile:px-0 mobile:rounded-none mobile:h-full mobilelg:px-0 mobilelg:h-full mobilelg:rounded-none tablet:px-0 tablet:h-full tablet:rounded-r-lg laptop:px-1 laptop:h-large laptop:rounded-r-lg desktop:px-5 desktop:h-large desktop:rounded-r-lg">
+    <div className="bg-gray-200 pt-5 mobile:px-0 mobile:rounded-none mobile:h-full mobilelg:px-0 mobilelg:h-full mobilelg:rounded-none tablet:px-0 tablet:h-full tablet:rounded-r-lg laptop:px-1 laptop:h-large laptop:rounded-r-lg desktop:px-5 desktop:h-full desktop:rounded-r-lg">
       <div className="w-full flex flex-col justify-center items-center gap-2">
-        <h1 className="bg-customBlue font-roboto text-center shadow-2xl p-5 text-white font-semibold tracking-wide rounded-2xl mobile:text-2xl mobile:p-5 tablet:text-2xl tablet:p-5 tablet:w-full laptop:text-sm laptop:p-3 laptop:w-full desktop:text-xl desktop:p-5">
+        <h1 className="bg-customBlue font-roboto text-center shadow-2xl p-5 text-white font-semibold tracking-wide rounded-2xl mobile:text-2xl mobile:p-5 tablet:text-2xl tablet:p-5 tablet:w-full laptop:text-sm laptop:p-3 laptop:w-full desktop:text-xl desktop:w-full desktop:p-5">
           STEP 2: CHOOSE RENTAL PERIOD
         </h1>
         <Calendar
@@ -111,7 +111,7 @@ function CalendarDisplay({
               </div>
             </div>
             <img
-              className="hover:scale-110 w-full transition duration-300 cursor-pointer mobile:h-full mobile:p-5 mobilelg:h-1/2 mobilelg:p-5 tablet:p-2 tablet:h-1/2 laptop:p-2 laptop:h-1/2 desktop:p-1 desktop:h-1/2 widescreen:w-3/4"
+              className="hover:scale-110 transition duration-300 cursor-pointer mobile:h-full mobile:w-full mobile:p-5 mobilelg:h-1/2 mobilelg:w-1/2 mobilelg:p-5 tablet:p-2 tablet:h-1/2 tablet:w-full laptop:p-0 laptop:h-1/2 laptop:w-11/12 desktop:p-1 desktop:w-full desktop:h-3/4 widescreen:h-1/2 widescreen:w-2/3"
               src={carDetails.image}
             />
             <div className="flex flex-row items-center mobile:w-full gap-10 mobile:justify-center mobile:p-5 mobilelg:w-full mobilelg:p-5 mobilelg:justify-center tablet:w-auto tablet:p-5 tablet:justify-end laptop:w-auto laptop:p-0 laptop:justify-end desktop:p-0 desktop:w-auto desktop:justify-end">

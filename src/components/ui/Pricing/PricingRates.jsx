@@ -39,13 +39,17 @@ function PricingRates({
     <div className="border mt-10 w-full bg-white shadow-2xl h-full mobile:p-0 mobilelg:p-0 tablet:p-0 laptop:p-5 desktop:p-5">
       <div className="flex flex-col items-center text-center">
         <div className="flex items-center mobile:flex-col mobile:gap-0 mobile:p-2 mobilelg:flex-col mobilelg:p-2 mobilelg:gap-0 tablet:flex-col tablet:p-0 tablet:gap-5 laptop:flex-row laptop:p-0 laptop:gap-5 desktop:flex-row desktop:gap-5 desktop:p-0">
-          <img src={logo} className="w-28 mb-5" alt="Car Logo" />
-          <h1 className="pb-5 underline underline-offset-4 font-bold font-genos mobile:text-2xl mobilelg:text-3xl tablet:text-4xl laptop:text-5xl desktop:text-5xl">
+          <img
+            src={logo}
+            className="w-28 mb-5 mobile:w-28 mobilelg:w-28 tablet:w-28 laptop:w-14 desktop:w-14"
+            alt="Car Logo"
+          />
+          <h1 className="pb-5 underline underline-offset-4 font-bold font-genos mobile:text-2xl mobilelg:text-3xl tablet:text-4xl laptop:text-xl desktop:text-xl">
             {selectedModel} - Cost Breakdown
           </h1>
         </div>
         <div className="w-full flex mobile:flex-col mobilelg:flex-col tablet:flex-col laptop:flex-row desktop:flex-row">
-          <div className="flex bg-gray-200 border text-center p-3 text-black justify-between flex-row mobile:overflow-auto mobile:gap-2 mobile:border-0 mobile:h-full mobile:rounded-none mobilelg:overflow-auto mobilelg:gap-2 mobilelg:border-0 mobilelg:h-full mobilelg:rounded-none tablet:overflow-auto tablet:gap-2 tablet:border-0 tablet:h-full tablet:rounded-l-lg laptop:flex-row laptop:gap-5 laptop:overflow-hidden laptop:rounded-l-lg laptop:border-r-black laptop:h-large desktop:overflow-hidden desktop:gap-5 desktop:flex-row desktop:border-r-black desktop:rounded-l-lg">
+          <div className="flex bg-gray-200 border text-center p-3 text-black justify-between flex-row mobile:overflow-scroll mobile:gap-2 mobile:border-0 mobile:h-full mobile:rounded-none mobilelg:overflow-auto mobilelg:gap-2 mobilelg:border-0 mobilelg:h-full mobilelg:rounded-none tablet:overflow-auto tablet:gap-2 tablet:border-0 tablet:h-full tablet:rounded-l-lg laptop:flex-row laptop:gap-5 laptop:overflow-hidden laptop:rounded-l-lg laptop:border-r-black laptop:h-large desktop:h-extral desktop:overflow-hidden desktop:gap-5 desktop:flex-row desktop:border-r-black desktop:rounded-l-lg">
             <div className="font-genos font-semibold leading-tight bg-gray-150 w-full justify-between flex flex-col shadow-2xl mobile:gap-2 mobile:rounded-none mobile:text-xs mobilelg:gap-2 mobilelg:rounded-none mobilelg:text-xs tablet:gap-2 tablet:rounded-lg tablet:text-base laptop:rounded-lg laptop:text-sm desktop:text-lg desktop:rounded-lg">
               <p className=" bg-gray-100 p-5 !h-28 flex items-center justify-center shadow-2xl font-bold mobile:text-sm mobile:p-5 mobilelg:text-sm mobilelg:p-5 tablet:text-xl tablet:p-5 laptop:text-base laptop:p-1 desktop:text-lg desktop:p-5">
                 Tariff Details

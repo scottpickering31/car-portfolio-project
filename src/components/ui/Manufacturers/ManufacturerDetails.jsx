@@ -14,7 +14,7 @@ function ManufacturerDetails({ selectedManufacturer, carMakes }) {
         <h1 className="underline flex justify-center items-center text-white bg-customBlue p-5 border w-1/2 shadow-2xl mobile:text-5xl mobile:w-full mobile-lg:text-5xl mobilelg:w-full tablet:text-3xl tablet:w-1/2 laptop:text-5xl laptop:w-1/2 desktop:text-5xl desktop:w-1/2 ">
           {selectedManufacturer}
         </h1>
-        <p className="text-center mobile:p-3 mobile:text-2xl mobilelg:p-3 mobilelg:text-2xl tablet:p-5 tablet:text-lg laptop:p-5 laptop:text-lg desktop:p-5 desktop:text-2xl">
+        <p className="text-center mobile:p-3 mobile:text-2xl mobilelg:p-3 mobilelg:text-2xl tablet:p-5 tablet:text-lg laptop:p-5 laptop:text-lg desktop:p-5 desktop:text-xl">
           {description}
         </p>
       </div>

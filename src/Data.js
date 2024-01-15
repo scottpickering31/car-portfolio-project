@@ -464,7 +464,7 @@ const carMakes = {
         horsepower: "503 hp (V8 model) or 630 hp (V12 model)",
         engine: "Twin-turbocharged V8 or V12",
         speed: 3.7,
-        image: "images/Aston Martin/HOR_XB1_AM_DB11.webp",
+        image: "images/Aston Martin/Aston-Martin-DB11.png",
         dayRate: 400,
         weekRate: function () {
           const weekRates = this.dayRate * 6.5;
@@ -491,7 +491,7 @@ const carMakes = {
         horsepower: "820 hp",
         engine: "Naturally aspirated V12",
         speed: 3,
-        image: "images/Aston Martin/HOR_XB1_AM_Vulcan.webp",
+        image: "images/Aston Martin/Aston-Martin-Vulcan.png",
         dayRate: 600,
         weekRate: function () {
           const weekRates = this.dayRate * 6.5;
@@ -518,7 +518,7 @@ const carMakes = {
         horsepower: "750 hp",
         engine: "Naturally aspirated V12",
         speed: 3.7,
-        image: "images/Aston Martin/HOR_XB1_AM_One-77.webp",
+        image: "images/Aston Martin/Aston-Martin-One-77.png",
         dayRate: 650,
         weekRate: function () {
           const weekRates = this.dayRate * 6.5;

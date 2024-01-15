@@ -19,9 +19,9 @@ function CarDetails({ selectedManufacturer, selectedModel, carMakes }) {
           <img
             src={carMakes[selectedManufacturer].logo}
             alt={carDetails.logo}
-            className="w-1/4 hover:scale-110 transition duration-300"
+            className="hover:scale-110 transition duration-300 mobile:w-1/4 mobilelg:w-1/4 tablet:w-1/4 laptop:w-1/4 desktop:w-1/6"
           />
-          <h2 className="text-5xl font-semibold underline mobile:text-3xl mobilelg:text-3xl tablet:text-5xl laptop:text-5xl desktop:text-5xl">
+          <h2 className="font-semibold underline mobile:text-3xl mobilelg:text-3xl tablet:text-3xl laptop:text-3xl desktop:text-3xl">
             {selectedModel}
           </h2>
         </div>
