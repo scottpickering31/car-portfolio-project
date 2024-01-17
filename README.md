@@ -17,7 +17,7 @@ Elite Drives is a web application built with Vite, React, and Redux, providing u
 - **Step 3: Review and Checkout**
   - Review your selected car, rental period, and total costs in the basket.
   - Seamlessly proceed to checkout with a user-friendly interface.
-  - Enjoy a secure and hassle-free payment process.
+  - Enjoy a secure and hassle-free payment process (Working on this)
 
 ## Technologies Used
 
