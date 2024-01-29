@@ -2,6 +2,8 @@
 
 Elite Drives is a web application built with Vite, React, and Redux, providing users with an immersive experience to explore and rent luxury supercars. The platform simplifies the rental process into three easy steps - Choose Your Car, Assess Costs, and Checkout.
 
+![Project Mockups](https://github.com/scottpickering31/car-portfolio-project/assets/97522229/8fa6f201-b1b3-4669-bcd1-9437f30bb9ae)
+
 ## Features
 
 - **Step 1: Choose Your Car**
@@ -50,3 +52,13 @@ npm run dev
 ## Contributing
 
 Contributions are welcome! Feel free to open issues or submit pull requests.
+
+## Screenshots
+
+![Macbook Full](https://github.com/scottpickering31/car-portfolio-project/assets/97522229/971b38d3-27fa-413c-8176-fef26b3dbcec)
+
+![Ipad Full](https://github.com/scottpickering31/car-portfolio-project/assets/97522229/c19ca271-1e62-4cc4-bdc3-505a85ec135f)
+
+![Iphone Full](https://github.com/scottpickering31/car-portfolio-project/assets/97522229/3b1730e4-6432-42c8-932d-33a6380ef1bf)
+
+
