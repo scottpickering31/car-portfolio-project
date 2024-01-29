@@ -30,8 +30,9 @@ Elite Drives is a web application built with Vite, React, and Redux, providing u
 ## Getting Started
 
 1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/scottpickering31/car-portfolio-project.git
+```bash
+git clone https://github.com/scottpickering31/car-portfolio-project.git
+```
 
 2. **Install Dependancies:**
 ```bash
