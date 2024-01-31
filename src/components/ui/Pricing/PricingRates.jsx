@@ -44,7 +44,7 @@ function PricingRates({
             className="w-28 mb-5 mobile:w-28 mobilelg:w-28 tablet:w-28 laptop:w-14 desktop:w-14"
             alt="Car Logo"
           />
-          <h1 className="pb-5 underline underline-offset-4 font-bold font-genos mobile:text-2xl mobilelg:text-3xl tablet:text-4xl laptop:text-xl desktop:text-xl">
+          <h1 className="pb-5 underline underline-offset-4 font-bold font-genos mobile:text-2xl mobilelg:text-3xl tablet:text-4xl laptop:text-3xl desktop:text-3xl">
             {selectedModel} - Cost Breakdown
           </h1>
         </div>

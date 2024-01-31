@@ -18,11 +18,11 @@ function ModelSelect({
         id="modelSelect"
         value={selectedModel}
         onChange={handleModelChange}
-        className="text-center block w-full rounded-md pt-2 pb-2 border border-gray-400 text-lg mobile:text-xl mobilelg:text-xl tablet:text-xl laptop:text-xl desktop:text-xl"
+        className="block w-full rounded-md pt-2 pb-2 border border-gray-400 text-lg mobile:text-base mobilelg:text-base tablet:text-xl laptop:text-xl desktop:text-xl"
       >
         <option
           value=""
-          className="mobile:text-base mobilelg:text-base tablet:text-2xl laptop:text-2xl desktop:text-2xl "
+          className="text-center mobile:text-base mobilelg:text-base tablet:text-xl laptop:text-xl desktop:text-xl "
         >
           -- Model --
         </option>
@@ -30,7 +30,7 @@ function ModelSelect({
           <option
             key={idx}
             value={model}
-            className="text-center mobile:text-2xl mobilelg:text-2xl mobilelg:overflow-auto mobilelg:h-1/2 tablet:text-2xl laptop:text-2xl desktop:text-2xl"
+            className="mobile:text-xl mobilelg:text-xl mobilelg:overflow-auto mobilelg:h-1/2 tablet:text-xl laptop:text-xl desktop:text-xl"
           >
             {model}
           </option>

@@ -1,10 +1,10 @@
 function EliteDrivesAbout() {
   return (
     <div className="h-medium flex justify-center flex-col text-center items-center font-genos mobile:p-0 desktop:p-10">
-      <h1 className="wrap w-2/3 mobile:text-lg tablet:text-6xl mobile:p-0 desktop:p-10">
+      <h1 className="wrap w-2/3 mobile:text-xl tablet:text-6xl mobile:p-0 desktop:p-10">
         Elite Drives - Europe's Best Supercar Rental Service
       </h1>
-      <p className=" text-gray-500 font-bold tracking-wider mobile:text-sm mobile:w-3/4 mobile:p-3 desktop:text-2xl laptop:w-3/4 ">
+      <p className=" text-gray-500 font-bold tracking-wider mobile:text-base mobile:w-5/6 mobile:p-3 desktop:text-2xl laptop:w-3/4 ">
         Welcome to EliteDrives, where luxury meets the road. As the premier
         destination for exclusive car rentals, we pride ourselves on unbeatable
         value, enticing offers, and a stunning fleet of vehicles.
